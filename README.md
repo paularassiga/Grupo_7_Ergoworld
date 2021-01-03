@@ -1,6 +1,6 @@
 # Ergoworld
 
-Acerca del proyecto: El sitio esta diseñado para la venta de productos ergonimicos, es decir productos que ofrezcan comodidad, eficiencia y buen nivel de productividad para el usuario.
+Acerca del proyecto: El sitio esta diseñado para la venta de productos ergonomicos, es decir productos que ofrezcan comodidad, eficiencia y buen nivel de productividad para el usuario.
 
 Acerca del nombre del proyecto: por definir.
 
