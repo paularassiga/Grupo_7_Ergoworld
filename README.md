@@ -1,4 +1,6 @@
-# Ergoworld. Todo lo que necesitas para llevar tu experiencia de trabajo en casa a otro nivel.
+# Ergoworld. 
+
+Todo lo que necesitas para llevar tu experiencia de trabajo a otro nivel.
 
 ## Acerca del proyecto
 
@@ -38,7 +40,7 @@ Descripción aquí
 
 # Paginas de referencia:
 
-* [The Roost Stand] (https://www.therooststand.com)
+* + [The Roost Stand] (https://www.therooststand.com)
 * https://www.humanscale.com
 * https://www.decibullz.com
 * https://www.skullcandy.com
