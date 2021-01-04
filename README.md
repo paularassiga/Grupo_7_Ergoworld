@@ -26,6 +26,8 @@ Suelen ser personas conscientes de su salud y de la importancia de cuidar la pos
 
 Economista (UdeSA). Emprendedora y especialista en negocios digitales con experiencia en Marketing Digital y Diseño UX/UI. Actualmente se encuentra trabajando en proyectos ubicados en EEUU y ofrece sus servicios de manera freelance.
 
+Email: paularassiga@gmail.com
+
 ## Guillermo
 
 Descripción aquí
@@ -40,15 +42,21 @@ Descripción aquí
 
 # Paginas de referencia:
 
+A continuación detallaremos las páginas web que usaremos de referencia. Tratamos de buscar los mejores sitios web que tengan que ver con productos ergonomicos pero también otros que estén en el mundo de la tecnología y que tengan un gran diseño web.
+
 * [The Roost Stand.](https://www.therooststand.com)
-Este emprendimiento ofrece un producto que estará en nuestro catálogo y está alineado a nuestra vision y meta: mejorar la productividad y la salud. Ofrece un sólo producto: un stand para cualquier tipo de computadora, minimalista, compacto y transportable. La idea, el diseño y el mensaje que quieren transmitir estará presente a lo largo del desarrollo de Ergoworld.
+Este emprendimiento ofrece un sólo producto que está alineado a la vision y meta de Ergoworld: mejorar la productividad y la salud. Su producto consiste en un stand para cualquier tipo de computadora, minimalista, compacto y transportable. La idea, el diseño y el mensaje que quieren transmitir estará presente a lo largo del desarrollo de Ergoworld.
 * [Human Scale.](https://www.humanscale.com)
+Este sitio web es uno de los pocos en el mercado que cuenta con una serie de productos que busca optimizar la experiencia de trabajo y la salud a través de todo tipo de productos ergonomicos, desde sillas hasta cables. Se encuentra basada en Nueva York y será una gran inspiración para Ergoworld.
 * [Decibullz.](https://www.decibullz.com)
+Es una empresa que se especializa en la venta de auriculares y productos relacionados. Fue galardonada varias veces como mejor diseño web, por lo cuál será una fuente de constante inspiración a la hora de diseñar el aspecto del sitio web de Ergoworld.
 * [Skullcandy.](https://www.skullcandy.com)
+También se especializa en auriculares y productos relacionados y su diseño web y experiencia de usuario es extraordinario por lo cuál también será una gran fuente de inspiración.
 * [Apple.](https://www.apple.com)
+Nadie puede negar que el diseño del sitio web de Apple es uno de los mejores que existen actualmente, su limitada paleta de colores, la simpleza y elegancia del mismo no tiene comparación, por lo tanto, será una gran referencia y un norte para Ergoworld.
 
 ## Branding: Paleta de colores y fuente
 
-https://google.com
+
 
 
