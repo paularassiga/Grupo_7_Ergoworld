@@ -24,7 +24,7 @@ Suelen ser personas conscientes de su salud y de la importancia de cuidar la pos
 
 ### Paula Rassiga 
 
-Economista (UdeSA). Emprendedora y especialista en negocios digitales con experiencia en Marketing Digital y Diseño UX/UI. Actualmente se encuentra trabajando en proyectos ubicados en EEUU y ofrece sus servicios de manera freelance.
+Economista (UdeSA). Emprendedora con experiencia en Marketing Digital y Diseño UX/UI.
 
 Email: paularassiga@gmail.com
 
