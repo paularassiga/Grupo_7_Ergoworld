@@ -40,7 +40,9 @@ Descripción aquí
 
 # Paginas de referencia:
 
-* + [The Roost Stand] (https://www.therooststand.com)
+* + [The Roost Stand](https://www.therooststand.com)
+
+* [The Roost Stand] (https://www.therooststand.com)
 * https://www.humanscale.com
 * https://www.decibullz.com
 * https://www.skullcandy.com
