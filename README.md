@@ -28,11 +28,13 @@ Economista (UdeSA). Emprendedora y especialista en negocios digitales con experi
 
 Email: paularassiga@gmail.com
 
-### Guillermo
-
-Descripción aquí
-
 ### Peterson
+
+Desarrollador autodictacta, su curiosidad y ganas de aprender son sus principales impulsores, estudiante de Cs. de La Computacion (UC).
+
+Email: petersonflemm@gmail.com
+
+### Guillermo
 
 Descripción aquí
 
