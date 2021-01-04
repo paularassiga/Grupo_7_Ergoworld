@@ -1,4 +1,4 @@
-# Ergoworld. 
+# Ergoworld 
 
 Productividad y salud. Todo lo que necesitas para llevar tu experiencia de trabajo a otro nivel.
 
