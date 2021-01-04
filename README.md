@@ -14,7 +14,7 @@ ERGOWORLD. *Ergo*  de ergonomico y *world* de mundo, dado que estamos comprometi
 
 El trabajo remoto llegó para quedarse.
 
-En tiempos donde muchas empresas como Spotify, Airbnb, Facebook, Twitter, Square se volvieron 100% remotas y el home office es cada vez mas común, la demanda para este tipo de productos solo va a crecer y, luego de analizar la oferta actual en el mercado de productos ergónomicos, nos dimos cuenta de que no hay un lugar al cuál poder acudir para encontrar todo lo que necesitas sin la necesidad de estar perdiendo tiempo comprando en distintos lugares, por lo cuál consideramos que esta es una gran oportunidad para capturar parte del mercado y posicionarnos como la marca líder en el área.
+En tiempos donde muchas empresas como Spotify, Airbnb, Facebook, Twitter, Square se volvieron 100% remotas y el home office es cada vez mas común, la demanda para este tipo de productos solo va a crecer y, luego de analizar la oferta actual en el mercado de productos ergónomicos, nos dimos cuenta de que no hay un lugar al cuál poder acudir para encontrar todo lo que necesitas sin la necesidad de estar perdiendo tiempo comprando en distintos lugares, por lo cuál consideramos que esta es una gran oportunidad para capturar parte del mercado y posicionarnos como la marca líder en el área. Como personas que les ha tocado estudiar y trabajar desde su hogar sabemos todos los problemas a los que uno se enfrenta ante esta situacion y decidimos tomar partido.
 
 Nuestro publico objetivo apunta a todas esas personas que buscan mejorar su experiencia, comodidad y salud al estar trabajando desde sus computadoras de escritorio o portátiles, sea desde su hogar u oficina.
 
@@ -34,13 +34,17 @@ Desarrollador autodictacta, su curiosidad y ganas de aprender son sus principale
 
 Email: petersonflemm@gmail.com
 
-### Guillermo
+### Guillermo Rodriguez
 
-Descripción aquí
+Soy estudiante de Tecnologias de la informacion y de Programacion Web Full Stack en Digital House. Me gusta la programacion y la tecnologia informatica en general.
+
+Email: guille4542@gmail.com
 
 ## Wireframes:
 
 [https://google.com/](https://google.com/)
+
+[Login](https://wireframe.cc/zBGGW3)
 
 ## Paginas de referencia:
 
