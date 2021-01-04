@@ -10,7 +10,7 @@ El sitio va a estar diseñado para la venta de todo tipo productos ergonomicos p
 
 ERGOWORLD. *Ergo*  de ergonomico y *world* de mundo, dado que estamos comprometidos con la disponibilidad de todo tipo de productos relacionados con el área de trabajo que cualquier persona pueda llegar a necesitar.
 
-# Publico Objetivo
+## Publico Objetivo
 
 El trabajo remoto llegó para quedarse.
 
@@ -20,27 +20,27 @@ Nuestro publico objetivo apunta a todas esas personas que buscan mejorar su expe
 
 Suelen ser personas conscientes de su salud y de la importancia de cuidar la postura para evitar problemas a futuro, les gustar estar al tanto de todas las nuevas tecnologías, son personas educadas y muy informadas, un tanto snob, que pasan mucho tiempo en la computadora trabajando como freelance, emprendedores, o de manera remota para alguna empresa. Aprecian la comodidad y el buen gusto y están dispuestos a invertir en su propia salud y trabajo para lograr mejores resultados y mejorar su experiencia de trabajo. 
 
-# Integrantes del equipo
+## Integrantes del equipo
 
-## Paula Rassiga 
+### Paula Rassiga 
 
 Economista (UdeSA). Emprendedora y especialista en negocios digitales con experiencia en Marketing Digital y Diseño UX/UI. Actualmente se encuentra trabajando en proyectos ubicados en EEUU y ofrece sus servicios de manera freelance.
 
 Email: paularassiga@gmail.com
 
-## Guillermo
+### Guillermo
 
 Descripción aquí
 
-## Peterson
+### Peterson
 
 Descripción aquí
 
-# Wireframes:
+## Wireframes:
 
 [https://google.com/](https://google.com/)
 
-# Paginas de referencia:
+## Paginas de referencia:
 
 A continuación detallaremos las páginas web que usaremos de referencia. Tratamos de buscar los mejores sitios web que tengan que ver con productos ergonomicos pero también otros que estén en el mundo de la tecnología y que tengan un gran diseño web.
 
@@ -56,6 +56,13 @@ También se especializa en auriculares y productos relacionados y su diseño web
 Nadie puede negar que el diseño del sitio web de Apple es uno de los mejores que existen actualmente, su limitada paleta de colores, la simpleza y elegancia del mismo no tiene comparación, por lo tanto, será una gran referencia y un norte para Ergoworld.
 
 ## Branding: Paleta de colores y fuente
+
+Para visualizar el manual de marca, donde están incluidos el logo (imagotipo, isotipo y logotipo), la paleta de colores y la familia tipográfica, hacer [click aquí](https://drive.google.com/file/d/1lzFLJjTtbebR_q5-PplWp8oDoarkS5K7/view?usp=sharing)
+
+Para descargar las fuentes:
+
+[Monsterrat](https://fonts.google.com/specimen/Montserrat?query=mo)
+[Roboto](https://fonts.google.com/specimen/Roboto)
 
 
 
