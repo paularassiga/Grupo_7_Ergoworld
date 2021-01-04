@@ -61,8 +61,8 @@ Para visualizar el manual de marca, donde están incluidos el logo (imagotipo, i
 
 Para descargar las fuentes:
 
-+[Monsterrat](https://fonts.google.com/specimen/Montserrat?query=mo)
-+[Roboto](https://fonts.google.com/specimen/Roboto)
+*[Monsterrat](https://fonts.google.com/specimen/Montserrat?query=mo)
+*[Roboto](https://fonts.google.com/specimen/Roboto)
 
 
 
