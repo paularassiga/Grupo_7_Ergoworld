@@ -40,18 +40,14 @@ Descripción aquí
 
 # Paginas de referencia:
 
-* + [The Roost Stand](https://www.therooststand.com)
+* [The Roost Stand.](https://www.therooststand.com)Este emprendimiento ofrece un producto que estará en nuestro catálogo y está alineado a nuestra vision y meta: mejorar la productividad y la salud. Ofrece un sólo producto: un stand para cualquier tipo de computadora, minimalista, compacto y transportable. La idea, el diseño y el mensaje que quieren transmitir estará presente a lo largo del desarrollo de Ergoworld.
+* [Human Scale.](https://www.humanscale.com)
+* [Decibullz.](https://www.decibullz.com)
+* [Skullcandy.](https://www.skullcandy.com)
+* [Apple.](https://www.apple.com)
 
-* [The Roost Stand] (https://www.therooststand.com)
-* https://www.humanscale.com
-* https://www.decibullz.com
-* https://www.skullcandy.com
-* https://www.apple.com
-
-## Paleta de colores:
+## Branding: Paleta de colores y fuente
 
 https://google.com
 
-## Fuente
 
-https://google.com
