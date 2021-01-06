@@ -46,6 +46,8 @@ Email: guille4542@gmail.com
 
 [Login](https://wireframe.cc/zBGGW3)
 
+[Pagina De Producto](https://wireframe.cc/X4Omsc)
+
 ## Paginas de referencia:
 
 A continuación detallaremos las páginas web que usaremos de referencia. Tratamos de buscar los mejores sitios web que tengan que ver con productos ergonomicos pero también otros que estén en el mundo de la tecnología y que tengan un gran diseño web.
