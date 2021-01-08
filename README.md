@@ -40,7 +40,7 @@ Soy estudiante de Tecnologias de la informacion y de Programacion Web Full Stack
 
 Email: guille4542@gmail.com
 
-## Wireframes:
+## Wireframes
 
 * [Home](https://wireframe.cc/lauEsT)
 
