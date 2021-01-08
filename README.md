@@ -42,11 +42,16 @@ Email: guille4542@gmail.com
 
 ## Wireframes:
 
-[https://google.com/](https://google.com/)
+* [Home](https://wireframe.cc/lauEsT)
 
-[Login](https://wireframe.cc/zBGGW3)
+* [Página de producto](https://wireframe.cc/X4Omsc)
 
-[Pagina De Producto](https://wireframe.cc/X4Omsc)
+* [Carrito de compras](https://wireframe.cc/4dEcmM)
+
+* [Formulario de registro](##)
+
+* [Formulario de login](https://wireframe.cc/zBGGW3)
+
 
 ## Paginas de referencia:
 
