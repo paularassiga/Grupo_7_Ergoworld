@@ -48,7 +48,7 @@ Email: guille4542@gmail.com
 
 * [Carrito de compras](https://wireframe.cc/4dEcmM)
 
-* [Formulario de registro](##)
+* [Formulario de registro](https://wireframe.cc/pro/pp/fc2dfc331406481)
 
 * [Formulario de login](https://wireframe.cc/zBGGW3)
 
