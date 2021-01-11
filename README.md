@@ -36,7 +36,7 @@ Email: petersonflemm@gmail.com
 
 ### Guillermo Rodriguez
 
-Soy estudiante de Tecnologias de la informacion y de Programacion Web Full Stack en Digital House. Me gusta la programacion y la tecnologia informatica en general.
+Estudiante de Tecnologias de la informacion y de Programacion Web Full Stack en Digital House. Le gusta la programacion y la tecnologia informatica en general.
 
 Email: guille4542@gmail.com
 
