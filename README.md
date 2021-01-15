@@ -42,6 +42,23 @@ Email: guille4542@gmail.com
 
 ## Wireframes
 
+Presentamos a continuación los wireframes desktop y mobile. El diseño será mobile first.
+
+### Versión Mobile
+
+* [Home](https://wireframe.cc/mJWzvI)
+
+* [Página de producto](https://wireframe.cc/G2SlQE)
+
+* [Carrito de compras](https://wireframe.cc/rBh7Us)
+
+* [Formulario de registro](https://wireframe.cc/jsGrAm)
+
+* [Formulario de login](https://wireframe.cc/mCNASv)
+
+
+### Versión Desktop
+
 * [Home](https://wireframe.cc/lauEsT)
 
 * [Página de producto](https://wireframe.cc/X4Omsc)
