@@ -94,6 +94,7 @@ Para descargar las fuentes:
 * [Monsterrat](https://fonts.google.com/specimen/Montserrat?query=mo)
 * [Roboto](https://fonts.google.com/specimen/Roboto)
 
+## Tablero Trello:
 
-
+[Tablero.](https://trello.com/b/r2BVXQWz/ecoworld-project-board)
 
