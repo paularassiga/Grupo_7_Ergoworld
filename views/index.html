@@ -1,25 +1,56 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/home.css">
     <link rel="stylesheet" href="css/header.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/deb1b00585.js" crossorigin="anonymous"></script>
     <title>Document</title>
 </head>
-<body>
 
-    
+<body>
     <header class="header" id="homeHeader">
-        <i class="fas fa-bars"></i>
-        <i class="fas fa-search"></i>
-<figure>
-    <img src="./images/logo-3.png" alt="logoErgoworld">
-</figure>
-        <i class="fas fa-user"></i>
-        <i class="fas fa-shopping-cart"></i>
+        <figure class="logoErgoworldDestokp">
+            <img src="./images/logo-4.png" alt="logoErgoworld" >
+        </figure>
+
+
+
+        <div class="onlyMovilIcon">
+            <i class="fas fa-bars"></i>
+        </div>
+        <form class="searchForm" action="/search" method="get">
+            <div class="input-container">
+                <div class="searchIconContainer">
+
+                    <i class="fas fa-search"></i>
+
+                </div>
+
+                <input type="search" placeholder="Buscar En Ergoworld" name="headerSearchHome"
+                    class="searchBarOnlyDesktop " id="searchTextHome" />
+            </div>
+
+        </form>
+        
+        
+        <figure>
+            <img src="./images/logo-3.png" alt="logoErgoworldMovil" class="onlyMovilLogo">
+        </figure>
+        <div class="iconoContainer">
+            <i class="fas fa-user"></i>
+            <p class="iconTextOnlyDesktop">Mi Cuenta</p>
+        </div>
+        <div class="iconoContainer">
+
+            <i class="fas fa-shopping-cart"></i>
+            <p class="iconTextOnlyDesktop">Mis Compras</p>
+        </div>
     </header>
 </body>
 </html>
