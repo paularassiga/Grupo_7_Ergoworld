@@ -4,6 +4,7 @@
   "description": "Productividad y salud. Todo lo que necesitas para llevar tu experiencia de trabajo a otro nivel.",
   "main": "index.js",
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.2",
     "express": "^4.17.1"
   },
   "devDependencies": {

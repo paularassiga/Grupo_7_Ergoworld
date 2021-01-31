@@ -1,0 +1,22 @@
+
+header{
+    height: 10vh;
+    display: flex;
+    background-color: #000000;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+header i {
+    color: #ffffff;
+    font-size: 1.2rem;
+    
+}
+
+header figure img{
+    height: 10vh;
+    width: auto;
+    color: #ffffff;
+}
