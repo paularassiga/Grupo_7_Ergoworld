@@ -21,9 +21,9 @@
 }
 
 .hero-content {
-    max-width: 550px;
     text-align: center;
-    color: #000000;    
+    color: #000000;
+    padding: 20px;    
 }
 
 
@@ -33,7 +33,31 @@
 }
 
 .hero-content h1 {
-    font-size: 3vw;
+    font-size: 11vw;
     
 }
+
+/* Media query */
+
+@media(min-width:700px) { 
+    /*.hero-wrapper {
+        border: red 1px solid;
+    } para testear la media*/ 
+
+    .hero-content {
+        max-width: 560px;
+    }
+
+    .hero-content figure img {
+        width: 20vw;
+        
+    }
+    
+    .hero-content h1 {
+        font-size: 3vw;
+        
+    }
+    
+}
+
 
