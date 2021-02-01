@@ -1,61 +1,81 @@
-
-header{
+nav {
     height: 10vh;
     display: flex;
     background-color: #000000;
     width: 100%;
-    justify-content: space-around;
-    align-items: center;
+    flex-wrap: wrap;
+
     color: #ffffff;
 }
-.logoErgoworldDestokp{
+
+nav ul {
+    display: flex;
+    list-style: none;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.logoErgoworldDestokp {
     display: none;
 }
-.searchBarOnlyDesktop{
+
+.searchBarOnlyDesktop {
     display: none;
+    font-family: roboto;
+    font-weight: 300;
 }
-header i {
+
+nav i {
     color: #ffffff;
     font-size: 1.2rem;
 }
 
-header figure img{
+nav figure img {
     height: 10vh;
     width: auto;
     color: #ffffff;
 }
-.iconTextOnlyDesktop{
+
+.iconTextOnlyDesktop {
     display: none;
-}
-input{
- font-size: 1rem;
- font-weight: bold;
+    font-family: "roboto";
+    font-weight:300;
 }
 
-@media(min-width:700px){
-    .logoErgoworldDestokp{
+input {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+@media(min-width:700px) {
+    .logoErgoworldDestokp {
         display: inline;
     }
-    header{
+
+    nav {
         height: 15vh;
     }
-    .onlyMovilIcon{
-        display: none;
-    }
-    .onlyMovilLogo{
+
+    .onlyMovilIcon {
         display: none;
     }
 
-    .searchBarOnlyDesktop{
+    .onlyMovilLogo {
+        display: none;
+    }
+
+    .searchBarOnlyDesktop {
         display: block;
         border: none;
         height: 50%;
         border-radius: 0px 5px 5px 0px;
         width: 30vw;
     }
-  
 
-    .iconTextOnlyDesktop{
+
+    .iconTextOnlyDesktop {
         display: inline;
     }
 
@@ -64,25 +84,34 @@ input{
         align-items: center;
         width: 100%;
         height: 100%;
-      }
-      .searchForm{
-        
+    }
+
+    .searchForm {
+
         height: 100%;
-      }
-      .searchIconContainer{
-          padding: 0 1vh 0 5vh;
-          display: flex;
-          align-items: center;
-          background-color: #ffffff;
-          height: 50%;
-          border-radius: 5px 0px 0px 5px;
-      }
-      .searchIconContainer i{
-        color: #000000;          
+    }
+
+    .searchFormContainer {
+        height: 100%;
+
+    }
+
+    .searchIconContainer {
+        padding: 0 1vh 0 5vh;
+        display: flex;
+        align-items: center;
+        background-color: #ffffff;
+        height: 50%;
+        border-radius: 5px 0px 0px 5px;
+    }
+
+    .searchIconContainer i {
+        color: #000000;
 
 
-      }
-      .iconoContainer{
-          font-weight: bold;
-      }
+    }
+
+    .iconoContainer {
+        font-weight: bold;
+    }
 }

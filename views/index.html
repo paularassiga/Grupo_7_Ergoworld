@@ -7,23 +7,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/home.css">
     <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com"> 
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com"> 
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/deb1b00585.js" crossorigin="anonymous"></script>
     <title>Document</title>
 </head>
 
 <body>
-    <header class="header" id="homeHeader">
-        <figure class="logoErgoworldDestokp">
-            <img src="./images/logo-4.png" alt="logoErgoworld" >
+
+ <!--Barra de navagacion -->
+
+    <nav class="navBar" id="homeHeader">
+<ul>
+    <li class="logoErgoworldDestokp">
+        <figure >
+            <img src="./images/logo-4.png" alt="logoErgoworld">
         </figure>
-
-
-
+    </li>
+    <li>
         <div class="onlyMovilIcon">
             <i class="fas fa-bars"></i>
         </div>
+        
+    </li>
+    <li class="searchFormContainer">
         <form class="searchForm" action="/search" method="get">
             <div class="input-container">
                 <div class="searchIconContainer">
@@ -38,19 +49,79 @@
 
         </form>
         
-        
+    </li>
+    <li>
         <figure>
-            <img src="./images/logo-3.png" alt="logoErgoworldMovil" class="onlyMovilLogo">
+            <img src="./images/logo-blanco-transparente.png" alt="logoErgoworldMovil" class="onlyMovilLogo">
         </figure>
+        
+    </li>
+    <li>
+
         <div class="iconoContainer">
             <i class="fas fa-user"></i>
             <p class="iconTextOnlyDesktop">Mi Cuenta</p>
         </div>
+    </li>
+    <li>
         <div class="iconoContainer">
 
             <i class="fas fa-shopping-cart"></i>
             <p class="iconTextOnlyDesktop">Mis Compras</p>
         </div>
-    </header>
+        
+    </li>
+</ul>     
+    </nav>
+
+    <!-- Cuerpo de la pagina -->
+    <div class="hero-wrapper">        
+          <div class="hero-content">
+            <figure>
+                <img src="./images/logo-fondo-blanco.jpg" alt="logo Ergoworld hero">
+            </figure>
+          <h1>Mejorá tu productividad y tu salud.</h1>
+        </div>        
+      </div>
+
+    <!--Pie de pagina -->  
+
+    <footer>
+        <figure class= 'contenedor-logo-footer'>
+            <img class='logo-footer' src="./images/logo-blanco-transparente.png" alt="logoErgoworld">
+        </figure>
+        <figure class='contenedor-redes-sociales-footer'>
+            <a class='icon-social-media' href= "https://www.instagram.com"><i class="fab fa-instagram"></i></a>
+            <a class='icon-social-media' href= "https://www.facebook.com"><i class="fab fa-facebook-square"></i></i></a>
+            <a class='icon-social-media'href= "https://www.twitter.com"><i class="fab fa-twitter"></i></a>
+            <a class='icon-social-media' href= "https://www.youtube.com"><i class="fab fa-youtube"></i></a>
+            <a class='icon-social-media' href= "https://www.pinterest.com"><i class="fab fa-pinterest"></i></a>       
+        </figure>
+        <section class="contenedor-botones-footer">
+            <div class='boton-footer'>
+                <a class='contenido-boton-footer' href= "#">SHOP NOW <i class="fas fa-chevron-right"></i></i></a>
+            </div>
+            <div class='boton-footer'>
+                <a class='contenido-boton-footer' href= "#">REGISTRATE <i class="fas fa-chevron-right"></i></i></a>
+            </div>
+            <div class='boton-footer'>
+                <a class='contenido-boton-footer' href= "#">MI CUENTA <i class="fas fa-chevron-right"></i></i></a>
+            </div>
+            <div class='boton-footer'>
+                <a class='contenido-boton-footer' href= "#">CONTACTO <i class="fas fa-chevron-right"></i></i></a>
+            </div>
+        </section>
+        <section class='avisos-legales-footer'>
+            <p>El contenido de este sitio web no debe considerarse consejo médico ni pretende serlo, su única finalidad es educativa.</p>
+        </section>
+        <section class='avisos-legales-footer'>
+            <p>@ 2020 Ergoworld</p>
+        </section class='terminos-condiciones'>
+        <section>
+            <p class='terminos'>Terminos y condiciones  -  </p>
+            <p class='condiciones'>Politicas de privacidad</p>
+        </section>
+    </footer>
 </body>
+
 </html>

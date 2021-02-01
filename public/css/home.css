@@ -6,3 +6,34 @@
 
 }
 
+.hero-wrapper {
+    height: 80vh;
+    background: rgb(60, 65, 68);
+    background-image:url(.././images/hero.jpg);
+    background-position: center;
+    background-size: cover;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+
+.hero-content {
+    max-width: 550px;
+    text-align: center;
+    color: #000000;    
+}
+
+
+.hero-content figure img {
+    width: 40vw;
+    
+}
+
+.hero-content h1 {
+    font-size: 3vw;
+    
+}
+
