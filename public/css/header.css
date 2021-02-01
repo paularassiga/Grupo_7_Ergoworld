@@ -4,7 +4,6 @@ header{
     display: flex;
     background-color: #000000;
     width: 100%;
-    flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
     color: #ffffff;
