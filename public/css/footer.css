@@ -1,0 +1,74 @@
+footer{
+    background-color: black;
+    width:100%;
+}
+
+p{
+    font-family: "roboto";
+    font-weight:100;
+    text-decoration: none;
+    color:white;
+    font-size:11px;
+    text-align:center;
+    
+}
+
+.contenedor-logo-footer{
+    padding:10px;
+}
+
+.logo-footer{
+    width:75px;
+    display:flex;
+    margin: auto;
+    margin-top: 10px;
+}
+
+.contenedor-redes-sociales-footer{
+    text-align:center;
+    padding:10px;
+}
+.icon-social-media{
+    color:white;
+    font-size:30px;
+    margin:10px;
+}
+
+.contenedor-botones-footer{
+    text-align:center;
+}
+
+.boton-footer{
+    width:80%;
+    margin:12px auto;
+    border: 2px solid white;
+    border-radius: 5px;
+    padding:8px;
+}
+
+.contenido-boton-footer{
+    font-family: "roboto";
+    font-weight:500;
+    text-decoration: none;
+    color:white;
+    letter-spacing: 1.5px;
+    font-size:15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.avisos-legales-footer{
+    width:80%;
+    margin:35px auto;
+}
+
+.terminos-condiciones{
+    width:100%;
+}
+.terminos .condiciones {
+    display:inline;
+    width:50%;
+}

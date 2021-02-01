@@ -23,6 +23,8 @@ nav ul {
 
 .searchBarOnlyDesktop {
     display: none;
+    font-family: roboto;
+    font-weight: 300;
 }
 
 nav i {
@@ -38,6 +40,8 @@ nav figure img {
 
 .iconTextOnlyDesktop {
     display: none;
+    font-family: "roboto";
+    font-weight:300;
 }
 
 input {
