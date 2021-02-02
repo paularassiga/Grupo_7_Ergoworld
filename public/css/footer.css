@@ -1,7 +1,7 @@
 footer{
     background-color: black;
     width:100%;
-    padding-bottom: 40px;
+    padding-bottom: 2.5rem
 }
 
 p{
@@ -9,30 +9,30 @@ p{
     font-weight:100;
     text-decoration: none;
     color:white;
-    font-size:11px;
+    font-size:0.6875rem;
     text-align:center;
     
 }
 
 .contenedor-logo-footer{
-    padding:10px;
+    padding:0.625rem;
 }
 
 .logo-footer{
-    width:75px;
+    width:4.6875rem;
     display:flex;
     margin: auto;
-    margin-top: 10px;
+    margin-top: 0.625rem;
 }
 
 .contenedor-redes-sociales-footer{
     text-align:center;
-    padding:10px;
+    padding:0.625rem;
 }
 .icon-social-media{
     color:white;
-    font-size:30px;
-    margin:10px;
+    font-size:1.875rem;
+    margin:0.625rem;
 }
 
 .contenedor-botones-footer{
@@ -41,10 +41,10 @@ p{
 
 .boton-footer{
     width:80%;
-    margin:12px auto;
-    border: 2px solid white;
-    border-radius: 5px;
-    padding:8px;
+    margin:0.75rem auto;
+    border: 0.125rem solid white;
+    border-radius: 0.3125rem;
+    padding:0.5rem;
 }
 
 .contenido-boton-footer{
@@ -52,18 +52,18 @@ p{
     font-weight:500;
     text-decoration: none;
     color:white;
-    letter-spacing: 1.5px;
-    font-size:15px;
+    letter-spacing: 0.09375rem;
+    font-size:0.9375rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-left: 15px;
-    margin-right: 15px;
+    margin-left: 0.9375rem;
+    margin-right: 0.9375rem;
 }
 
 .avisos-legales-footer{
     width:80%;
-    margin:35px auto;
+    margin:2.1875rem auto;
 }
 
 .terminos-condiciones{
@@ -76,14 +76,14 @@ p{
 
 #circle{
     color: white;
-    font-size: 2px;
+    font-size: 1.5px;
 }
 
 @media(min-width:430px){
 
     .contenedor-logo-footer, .contenedor-redes-sociales-footer, .contenedor-botones-footer {
-        max-width: 487px;
-        margin:10px auto;
+        max-width: 30.4375rem;
+        margin:0.625rem auto;
     }
 
     .avisos-legales-footer{
@@ -97,63 +97,94 @@ p{
 }
 
 @media(min-width:837px){
-    footer{
-        margin:auto;
-    }
 
     p{
-        text-align: left;
+        text-align:left;
     }
+    .left-desktop-footer{
+        display:flex;
+        flex-direction:column;
+        width:30%;
+        justify-content: left;
+        margin: 3.75rem;
+        margin-bottom: 1.875rem;
+    }
+
     .contenedor-logo-footer{
         margin:0;
+        margin-bottom: 1.5rem;
         padding:0;
-        position: relative;
-        left: 5vw;
-        top: 5vw;
-        margin-bottom:20px;
+        display:flex;
     }
 
     .logo-footer{
         margin:0;
-        width:20%;
+        padding:0;
+    }
+
+    .contenedor-redes-sociales-footer{
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: space-around;
+        width: 70%;
+        min-width: 13.125rem;
+    }
+
+    .icon-social-media{
+        margin:0;
+        padding:0;
+    }
+
+    .top-desktop-footer{
+        display:flex;
+        flex-direction: row;
+        width:100%;
+    }
+
+    .left-boton, .right-boton{
+        display:flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        width:45%;
+        margin:0.625rem;
+    }
+
+    .contenedor-botones-footer{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin:auto;
+        width:70%;
+    }
+
+    .boton-footer{
+        width:100%;
+
+    }
+
+    .bottomDesktop{
+        display:flex;
+        flex-direction: column;
+        width:100%;
+        margin-left:3.75rem;
     }
 
     .avisos-legales-footer{
         margin:0;
         padding:0;
-        position:relative;
-        width: 25%;
-        margin-bottom: 20px;
-        left: 5vw;
-        bottom: 5vw;
-        max-width:283px;
-    }
-
-
-    .contenedor-botones-footer{
-        position: relative;
-        width: 40%;
-        left: 55vw;
-        margin: 0;
-    }
-
-    .contenedor-redes-sociales-footer{
-        position: relative;
-        margin:0;
-        padding:0;
-        left:4vw;
-        top: 9vw;
-        max-width: 283px;
-        margin-bottom:10px;
+        align-items: flex-start;
+        width:30%;
+        margin-bottom: 0.75rem;
     }
 
     .terminos-condiciones{
-        display: flex;
-        flex-direction: row;
-        position: relative;
         margin:0;
-        width: 30%;
-        left: 5vw;
-        max-width:283px;
+        padding:0;
+        display:flex;
+        align-items: center;
+        width: 28%;
+        max-width:16rem;
+
     }
 }
