@@ -9,14 +9,17 @@ const publicPath = path.resolve(__dirname, './public');
 
 app.use(express.static(publicPath));
 
+//Requiero el módulo que contiene las rutas (mainRoutes)
+
+let mainRoutes = require("./routers/mainRoutes.js");
+
 //Definiendo las vistas
 
-app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, '/views/index.html'))
-})
+app.use('/', mainRoutes);
 
 // Llamando al servidor
 
 app.listen(3000, () => {
     console.log('server ready puerto 3000')
 })
+
