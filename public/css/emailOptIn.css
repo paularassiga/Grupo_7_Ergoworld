@@ -1,0 +1,98 @@
+p{
+    font-family: "roboto";
+    font-weight: 300;
+}
+
+input, button{
+    border-radius: 4px;
+    border: none;
+    padding:19px;
+    width:100%;
+    margin: auto;
+    display:flex;
+    justify-content: center;
+}
+
+input{
+    background-color: #7d7a7b;
+    font-family: "roboto";
+    font-weight: 300;
+    font-size:14px;
+}
+
+.contenedor-email-optIn{
+    background-color: #2b2a2a;
+    margin: auto;
+    padding:20px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+}
+
+.textos{
+    margin:10px auto;
+    margin-bottom:20px;
+    width:90%;
+}
+
+.main-title{
+    font-family: 'Montserrat';
+    font-weight: 700;
+    font-size: 23px;
+}
+
+.contenedor-input{
+    margin:10px auto;
+}
+
+.text-input::placeholder{
+    color: white;
+    padding:5px;
+  }
+
+#boton-enviar{
+    background-color: #396fb5;
+    color:white;
+}
+
+@media(min-width:430px){
+
+    .textos, .contenedor-input {
+        max-width: 30.4375rem;
+        margin:0.625rem auto;
+    }
+}
+
+@media(min-width:837px){
+
+    .contenedor-email-optIn{
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+
+    .contenido-optin{
+        margin:auto;
+        max-width:80%;
+        display:flex;
+        justify-content: space-around;
+        align-items: center;
+        
+    }
+
+    .contenedor-textos{
+        width:50%;
+    }
+
+    .email-optIn{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 50%;
+        align-items: center;
+    }
+
+    .contenedor-input {
+        width: 45%;
+        margin: 5px;
+    }
+}

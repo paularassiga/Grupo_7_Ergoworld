@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/home.css">
     <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/emailOptIn.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="preconnect" href="https://fonts.gstatic.com"> 
@@ -28,6 +29,7 @@
             <img src="./images/logo-4.png" alt="logoErgoworld">
         </figure>
     </li>
+    <section class=iconTextContainer-1>
     <li>
         <div class="onlyMovilIcon">
             <i class="fas fa-bars"></i>
@@ -39,7 +41,7 @@
             <div class="input-container">
                 <div class="searchIconContainer">
 
-                    <i class="fas fa-search"></i>
+                    <i id='lupita' class="fas fa-search"></i>
 
                 </div>
 
@@ -50,27 +52,27 @@
         </form>
         
     </li>
+</section>
     <li>
         <figure>
             <img src="./images/logo-blanco-transparente.png" alt="logoErgoworldMovil" class="onlyMovilLogo">
         </figure>
         
     </li>
-    <li>
-
-        <div class="iconoContainer">
-            <i class="fas fa-user"></i>
-            <p class="iconTextOnlyDesktop">Mi Cuenta</p>
-        </div>
-    </li>
-    <li>
-        <div class="iconoContainer">
-
-            <i class="fas fa-shopping-cart"></i>
-            <p class="iconTextOnlyDesktop">Mis Compras</p>
-        </div>
-        
-    </li>
+        <section class=iconTextContainer>
+        <li>
+            <div class="iconoContainer" id='contenedor-nav'>
+                <i class="fas fa-user"></i>
+                <p class="iconTextOnlyDesktop">Mi Cuenta</p>
+            </div>
+        </li>
+        <li>
+            <div class="iconoContainer" id='contenedor-nav'>
+                <i class="fas fa-shopping-cart"></i>
+                <p class="iconTextOnlyDesktop">Mis Compras</p>
+            </div>
+        </li>
+        </section>
 </ul>     
     </nav>
 
@@ -83,9 +85,28 @@
           <h1>Mejorá tu productividad y tu salud.</h1>
         </div>        
       </div>
-
+    <!--Email Opt In -->
+    <section class="contenedor-email-optIn">
+            <section class='contenido-optin'>
+            <section class='contenedor-textos'>
+                <section class='textos'>
+                    <p class= 'main-title'>Suscribite a nuestro newsletter</p>
+                </section>
+                <section class='textos'>
+                    <p>Y accedé a los mejoresdescuentos para mejorar tu salud y productividad.</p>
+                </section>
+            </section>
+            <form class=email-optIn>
+                <div class= contenedor-input>
+                    <input class='text-input'  type='email' id='email' placeholder="ejemplo@ejemplo.com" name='email'>
+                </div>
+                <div class= contenedor-input>
+                    <button type='submit' id='boton-enviar'>Enviar</button>
+                </div>
+            </form>
+        </section>
+    </section>  
     <!--Pie de pagina -->  
-
     <footer>
         <section class= 'top-desktop-footer'>
             <section class='left-desktop-footer'>
