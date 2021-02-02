@@ -114,7 +114,6 @@ p{
         margin:0;
         margin-bottom: 1.5rem;
         padding:0;
-        display:flex;
     }
 
     .logo-footer{
@@ -126,13 +125,12 @@ p{
         margin: 0;
         padding: 0;
         display: flex;
-        justify-content: space-around;
         width: 70%;
         min-width: 13.125rem;
     }
 
     .icon-social-media{
-        margin:0;
+        margin:0.625rem;
         padding:0;
     }
 
