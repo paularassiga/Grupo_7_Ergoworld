@@ -46,7 +46,7 @@ nav figure img {
     color: #ffffff;
 }
 
-.iconTextOnlyDesktop {
+a .iconTextOnlyDesktop {
     display: none;
     font-family: "roboto";
     font-weight:300;
@@ -72,7 +72,7 @@ input {
 }
 
 #lupita{
-    padding:0;
+    padding:1px;
     
 }
 
@@ -80,8 +80,19 @@ input {
     padding-left:0;
 }
 
+.fa-bars:hover{
+    color: #2897ff;
+}
+
 @media(min-width:583px){
    
+    .a-header{
+        text-decoration: none;
+        color:white;
+        font-family:'roboto';
+        font-weight:300;
+
+    }
 
     .logoErgoworldDestokp {
         display: none;
@@ -115,7 +126,7 @@ input {
     }
 
 
-    .iconTextOnlyDesktop {
+    a .iconTextOnlyDesktop {
         display: none;
     }
 
@@ -211,7 +222,7 @@ input {
     }
 
 
-    .iconTextOnlyDesktop {
+    a .iconTextOnlyDesktop {
         display: inline;
         font-size: 16px;
     }
@@ -236,7 +247,7 @@ input {
     }
 
     .searchIconContainer {
-        padding: 3px 0px;
+        padding: 4px 0px;
         display: flex;
         align-items: center;
         background-color: #ffffff;
@@ -265,5 +276,9 @@ input {
         display: flex;
         align-items: center;
         flex-wrap: nowrap;
+    }
+
+    #lupita {
+        padding: 0px;
     }
 }
