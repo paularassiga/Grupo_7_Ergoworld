@@ -46,6 +46,27 @@ html,body
     
 }
 
+.home1 {
+    height: 60vh;
+    background: #fff;
+    color: #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+.home1 h2 {
+    font-size: 11vw;
+    margin-bottom: 1rem;
+}
+
+.home1 p {
+    font-size: 1.5vw;
+    margin-bottom: 1rem;
+}
+
+
 /* Media query */
 
 @media(min-width:700px) { 
@@ -64,6 +85,11 @@ html,body
     
     .hero-content h1 {
         font-size: 3vw;
+        
+    }
+
+    .hero-content h2 {
+        font-size: 4vw;
         
     }
     
