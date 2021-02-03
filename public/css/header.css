@@ -73,7 +73,109 @@ input {
 
 #lupita{
     padding:0;
+    
 }
+
+#searchTextHome{
+    padding-left:0;
+}
+
+@media(min-width:583px){
+   
+
+    .logoErgoworldDestokp {
+        display: none;
+    }
+
+    .iconTextContainer{
+        display:flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    nav {
+        padding:10px;
+    }
+
+    .onlyMovilIcon {
+        display: none;
+    }
+
+    .onlyMovilLogo {
+        display: block;
+        align-self:-1;
+    }
+
+    .searchBarOnlyDesktop {
+        display: block;
+        border: none;
+        height: 50%;
+        border-radius: 0px 5px 5px 0px;
+        width: 30vw;
+    }
+
+
+    .iconTextOnlyDesktop {
+        display: none;
+    }
+
+    .input-container {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        margin:0;
+    }
+
+    .searchForm {
+        margin:0;
+
+        height: 100%;
+    }
+
+    .searchFormContainer {
+        height: 100%;
+
+    }
+
+    .searchIconContainer {
+        padding: 3px 0px;
+        display: flex;
+        align-items: center;
+        background-color: #ffffff;
+        height: 50%;
+        border-radius: 5px 0px 0px 5px;
+    }
+
+    .searchIconContainer i {
+        color: #000000;
+        padding: 19px 0px;
+    }
+
+    .iconoContainer {
+        font-weight: bold;
+    }
+    
+
+    .container-logo-blanco{
+        width: 30%;
+        order:-1;
+    
+    }
+
+    #contenedor-nav{
+        margin:10px;
+    }
+
+    #homeHeader{
+        padding:10px;
+        margin:auto;
+        display: flex;
+        align-items: center;
+        flex-wrap: nowrap;
+    }
+}
+
 @media(min-width:1123px) {
     .logoErgoworldDestokp {
         display: inline;
@@ -94,8 +196,10 @@ input {
         display: none;
     }
 
-    .onlyMovilLogo {
-        display: none;
+    .container-logo-blanco{
+        display:none;
+        order:0;
+    
     }
 
     .searchBarOnlyDesktop {
@@ -132,7 +236,7 @@ input {
     }
 
     .searchIconContainer {
-        padding: 6px 1vh 0 5vh;
+        padding: 3px 0px;
         display: flex;
         align-items: center;
         background-color: #ffffff;
