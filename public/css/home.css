@@ -1,24 +1,23 @@
-*{
+* {
     margin: 0 auto;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
-
 }
 
-html,body
-{
+html,
+body {
     width: 100%;
     height: 100%;
     margin: 0px;
     padding: 0px;
-    overflow-x: hidden; 
+    overflow-x: hidden;
 }
 
 .hero-wrapper {
-    height: 80vh;
+    min-height: 85vh;
     background: rgb(60, 65, 68);
-    background-image:url(.././images/hero.jpg);
+    background-image: url(.././images/hero.jpg);
     background-position: center;
     background-size: cover;
     color: #fff;
@@ -26,73 +25,136 @@ html,body
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    
 }
 
 .hero-content {
     text-align: center;
     color: #000000;
-    padding: 20px;    
+    padding: 20px;
 }
-
 
 .hero-content figure img {
     width: 40vw;
-    
 }
 
 .hero-content h1 {
     font-size: 11vw;
-    
 }
 
 .home1 {
-    height: 60vh;
     background: #fff;
     color: #000000;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    
 }
+
+.home1 .hero-content {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
 .home1 h2 {
     font-size: 11vw;
     margin-bottom: 1rem;
 }
 
 .home1 p {
-    font-size: 1.5vw;
+    font-size: 1.7rem;
     margin-bottom: 1rem;
+}
+
+.home1 p:nth-child(3) {
+    font-weight: 700;
+}
+
+.home2 {
+    background-color: #e8e8e8;
+    text-align: center;
+}
+
+.home2 h2 {
+    margin-bottom: 1.5rem;
+}
+
+.home2 p {
+    margin-bottom: 1.5rem;
+}
+
+.home2-content1 {
+    padding: 3rem 3rem 1rem 3rem;
+    background-color: #000000;
+    color: #fff;
+}
+
+.botones-hom2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-items: center;
+}
+
+.contenido-boton-home2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "roboto";
+    font-weight: 500;
+    text-decoration: none;
+    letter-spacing: 0.09375rem;
+    font-size: 0.9375rem;
+}
+
+.home2-content1 .botones-hom2 a {
+    color: #396fb7;
+}
+
+.home2-content2 .botones-hom2 a {
+    color: #396fb7;
+}
+
+.home2-content2 {
+    padding: 3rem 3rem 1rem 3rem;
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.home2-wrap figure img {
+    width: 40vw;
 }
 
 
 /* Media query */
 
-@media(min-width:700px) { 
+@media(min-width:700px) {
     /*.hero-wrapper {
         border: red 1px solid;
-    } para testear la media*/ 
-
+    } para testear la media*/
     .hero-content {
         max-width: 560px;
     }
-
     .hero-content figure img {
         width: 20vw;
-        
     }
-    
     .hero-content h1 {
         font-size: 3vw;
-        
     }
-
     .hero-content h2 {
         font-size: 4vw;
-        
     }
-    
+    /* home2 */
+    .home2-wrap {
+        padding: 2rem;
+        display: flex;
+        gap: 1rem;
+    }
+    .home2-content1 {
+        width: 50%;
+    }
+    .home2-content2 {
+        width: 50%;
+    }
+    .home2-wrap figure img {
+        width: 20vw;
+    }
 }
-
-
