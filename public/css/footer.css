@@ -83,8 +83,32 @@ footer{
     background-color:  #254e85;
 }
 
-.fa-user:hover, .fa-shopping-cart:hover, .fa-search:hover, fa-bars:hover{
-    color:  #b3b3b3;
+.fa-chevron-right:hover{
+    animation-name: spin;
+    animation-duration:1000ms;
+    animation-iteration-count:infinite;
+    animation-direction: alternate;
+    color: #2897ff;
+}
+
+.contenido-boton-footer:hover, .icon-social-media:hover, .fa-user:hover, .fa-shopping-cart:hover, .fa-search:hover, fa-bars:hover, #terminos:hover, #condiciones:hover {
+    color: #2897ff;
+}
+
+.boton-footer:hover{
+    border: 0.125rem solid #2897ff;
+}
+
+
+
+@keyframes spin {
+    0%{
+        transform: rotateX(0deg)
+    }
+
+    100%{
+        transform: rotateX(360deg)
+    }
 }
 
 @media(min-width:430px){
@@ -102,23 +126,10 @@ footer{
         width: 61%;
     }
 
-}
-
-.fa-chevron-right:hover{
-    animation-name: spin;
-    animation-duration:1000ms;
-    animation-iteration-count:infinite;
-    animation-direction: alternate;
-}
-
-@keyframes spin {
-    0%{
-        transform: rotateX(0deg)
+    .iconTextOnlyDesktop:hover{
+        color:  #2897ff;
     }
 
-    100%{
-        transform: rotateX(360deg)
-    }
 }
 
 @media(min-width:837px){
