@@ -63,8 +63,17 @@ body {
     text-decoration:none;
 }
 
+.text-inciarsesion{
+    color: #2897ff;
+    text-align: center;
+    margin:auto;
+    display:flex;
+    justify-content: center;
+    margin-bottom:20px;
+}
+
 @media(min-width:583px){
-    .contenedor-input-login, #boton-enviar-login{
+    .contenedor-input-login, #boton-enviar-login, .text-inciarsesion{
         max-width:30.4375rem;
     }
 }
