@@ -16,6 +16,8 @@ let mainRoutes = require("./routers/mainRoutes.js");
 //Definiendo las vistas
 
 app.use('/', mainRoutes);
+app.use('/login', mainRoutes);
+app.use('/register', mainRoutes);
 
 // Llamando al servidor
 

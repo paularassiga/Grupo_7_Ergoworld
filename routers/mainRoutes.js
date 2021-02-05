@@ -11,6 +11,8 @@ const express = require('express');
   /*Acá van todas las rutas*/
 
  router.get('/', mainControllers.index);
+ router.get('/login', mainControllers.login);
+ router.get('/register', mainControllers.register);
 
   /*Exporto módulo para llevarlo al entry point*/
 
