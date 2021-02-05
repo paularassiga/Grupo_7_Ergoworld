@@ -46,6 +46,25 @@ body {
     color:#9e9a9c;
 }
 
+.contenedor-mantener-sesion{
+    width:100%;
+    margin:0 auto;
+    display:flex;
+}
+.mantener-sesion{
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    width:80%;
+    margin-top:0.5rem;
+    margin-bottom:1rem;
+    color:white;
+}
+
+[type="checkbox"] {
+   width:8%;
+    }
+
 #boton-enviar-login{
     background-color: #396fb5;
     color:white;
@@ -76,4 +95,9 @@ body {
     .contenedor-input-login, #boton-enviar-login, .text-inciarsesion{
         max-width:30.4375rem;
     }
+
+    [type="checkbox"] {
+        width:3%;
+         }
+     
 }
