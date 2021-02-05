@@ -12,4 +12,75 @@ body {
     margin: 0px;
     padding: 0px;
     overflow-x: hidden;
+    background-color: #4a4a4a;
+}
+
+.contenedor-formulario{
+    padding:4.375rem 0px;
+}
+
+.h-register{
+    color:white;
+    margin:auto;
+    text-align: center;
+    margin-bottom: 1.25rem;
+}
+
+.linea{
+    width: 9.1875rem;
+    display: flex;
+    margin-bottom:2.8125rem;
+}
+
+.contenedor-input-register{
+    color:#9e9a9c;
+    width: 90%;
+}
+
+.text-input-register{
+    background-color: white;
+    margin:0.625rem auto;
+}
+
+.text-input-register::placeholder{
+    color:#9e9a9c;
+}
+
+#boton-enviar-register{
+    background-color: #396fb5;
+    color:white;
+    width:90%;
+    margin:auto;
+    margin-bottom:2.1875rem;
+}
+
+#boton-enviar-register:hover{
+    color:#2c548a;
+}
+
+#boton-reset-register{
+    background-color: #9e9a9c;
+    color:black;
+    width:90%;
+    margin:auto;
+    margin-bottom:0.625rem;
+}
+
+#boton-reset-register:hover{
+    color:#2c548a;
+}
+
+.texto-enviar{
+    color:white;
+    text-decoration:none;
+}
+
+#boton-reset{
+    color:#4a4a4a;
+}
+
+@media(min-width:583px){
+    .contenedor-input-register, #boton-reset-register, #boton-enviar-register{
+        max-width:30.4375rem;
+    }
 }
