@@ -55,7 +55,7 @@ body {
 }
 
 #boton-enviar-register:hover{
-    color:#2c548a;
+    background-color:#2c548a;
 }
 
 #boton-reset-register{
@@ -67,7 +67,7 @@ body {
 }
 
 #boton-reset-register:hover{
-    color:#2c548a;
+    background-color:#aacdfa;
 }
 
 .texto-enviar{
