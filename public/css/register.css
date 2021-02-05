@@ -79,8 +79,16 @@ body {
     color:#4a4a4a;
 }
 
+.text-inciarsesion{
+    color: #2897ff;
+    text-align: center;
+    margin:auto;
+    display:flex;
+    justify-content: center;
+}
+
 @media(min-width:583px){
-    .contenedor-input-register, #boton-reset-register, #boton-enviar-register{
+    .contenedor-input-register,.text-inciarsesion, #boton-reset-register, #boton-enviar-register{
         max-width:30.4375rem;
     }
 }
