@@ -68,7 +68,7 @@ input {
 
 .fa, .fas {
     font-weight: 900;
-    margin: 16px;
+    margin: 1rem;
 }
 
 #lupita{
@@ -105,7 +105,7 @@ input {
     }
 
     nav {
-        padding:10px;
+        padding:10.625rem;
     }
 
     .onlyMovilIcon {
@@ -121,7 +121,7 @@ input {
         display: block;
         border: none;
         height: 50%;
-        border-radius: 0px 5px 5px 0px;
+        border-radius: 0px 0.3125rem 0.3125rem 0px;
         width: 30vw;
     }
 
@@ -150,17 +150,17 @@ input {
     }
 
     .searchIconContainer {
-        padding: 3px 0px;
+        padding: 0.1875rem 0px;
         display: flex;
         align-items: center;
         background-color: #ffffff;
         height: 50%;
-        border-radius: 5px 0px 0px 5px;
+        border-radius: 0.3125rem 0px 0px 0.3125rem;
     }
 
     .searchIconContainer i {
         color: #000000;
-        padding: 19px 0px;
+        padding: 1.1875rem 0px;
     }
 
     .iconoContainer {
@@ -175,11 +175,11 @@ input {
     }
 
     #contenedor-nav{
-        margin:10px;
+        margin:0.625rem;
     }
 
     #homeHeader{
-        padding:10px;
+        padding:0.625rem;
         margin:auto;
         display: flex;
         align-items: center;
@@ -200,7 +200,7 @@ input {
     }
 
     nav {
-        padding:10px;
+        padding:0.625rem;
     }
 
     .onlyMovilIcon {
@@ -217,14 +217,14 @@ input {
         display: block;
         border: none;
         height: 50%;
-        border-radius: 0px 5px 5px 0px;
+        border-radius: 0px 0.3125rem 0.3125rem 0px;
         width: 30vw;
     }
 
 
     a .iconTextOnlyDesktop {
         display: inline;
-        font-size: 16px;
+        font-size: 1rem;
     }
 
     .input-container {
@@ -247,17 +247,17 @@ input {
     }
 
     .searchIconContainer {
-        padding: 4px 0px;
+        padding: 0.25rem 0px;
         display: flex;
         align-items: center;
         background-color: #ffffff;
         height: 50%;
-        border-radius: 5px 0px 0px 5px;
+        border-radius: 0.3125rem 0px 0px 0.3125rem;
     }
 
     .searchIconContainer i {
         color: #000000;
-        padding: 19px 0px;
+        padding: 1.1875rem 0px;
 
 
     }
@@ -267,11 +267,11 @@ input {
     }
 
     #contenedor-nav{
-        margin:10px;
+        margin:0.625rem;
     }
 
     #homeHeader{
-        padding:10px;
+        padding:0.625rem;
         margin:auto;
         display: flex;
         align-items: center;

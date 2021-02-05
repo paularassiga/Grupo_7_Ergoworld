@@ -12,4 +12,59 @@ body {
     margin: 0px;
     padding: 0px;
     overflow-x: hidden;
+    background-color: #4a4a4a;
+}
+
+.contenedor-formulario{
+    padding:4.375rem 0px;
+}
+
+.h-login{
+    color:white;
+    margin:auto;
+    text-align: center;
+    margin-bottom: 1.25rem;
+}
+
+.linea{
+    width: 9.1875rem;
+    display: flex;
+    margin-bottom:2.8125rem;
+}
+
+.contenedor-input-login{
+    color:#9e9a9c;
+    width: 90%;
+}
+
+.text-input-login{
+    background-color: white;
+    margin:0.625rem auto;
+}
+
+.text-input-login::placeholder{
+    color:#9e9a9c;
+}
+
+#boton-enviar-login{
+    background-color: #396fb5;
+    color:white;
+    width:90%;
+    margin:auto;
+    margin-bottom:2.1875rem;
+}
+
+#boton-enviar-login:hover{
+    color:#2c548a;
+}
+
+.texto-enviar{
+    color:white;
+    text-decoration:none;
+}
+
+@media(min-width:583px){
+    .contenedor-input-login, #boton-enviar-login{
+        max-width:30.4375rem;
+    }
 }

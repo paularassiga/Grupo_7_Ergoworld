@@ -13,6 +13,8 @@ const express = require('express');
  router.get('/', mainControllers.index);
  router.get('/login', mainControllers.login);
  router.get('/register', mainControllers.register);
+ router.get('/productCart', mainControllers.productCart);
+ router.get('/productDetail', mainControllers.productDetail);
 
   /*Exporto módulo para llevarlo al entry point*/
 
