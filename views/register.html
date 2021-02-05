@@ -81,16 +81,16 @@
             </figure>
             <form>
                 <div class='contenedor-input-register'>
-                    <input class='text-input-register' type='text' id='nombreUsuario' placeholder="Nombre" name='nombreUsuario'>
+                    <input required class='text-input-register' type='text' id='nombreUsuario' placeholder="Nombre" name='nombreUsuario' minlength="3">
                 </div>
                 <div class='contenedor-input-register'>
-                    <input class='text-input-register' type='text' id='apellidoUsuario' placeholder="Apellido" name='apellidoUsuario'>
+                    <input required class='text-input-register' type='text' id='apellidoUsuario' placeholder="Apellido" name='apellidoUsuario'minlength="3">
                 </div>
                 <div class='contenedor-input-register'>
-                    <input class='text-input-register' type='email' id='email' placeholder="Email" name='email'>
+                    <input required class='text-input-register' type='email' id='email' placeholder="Email" name='email'>
                 </div>
                 <div class='contenedor-input-register'>
-                    <input class='text-input-register' type='password' id='password' placeholder="Contraseña" name='pasword'>
+                    <input required class='text-input-register' type='password' id='password' placeholder="Contraseña" name='pasword'>
                 </div>
                 <div class='contenedor-button'>
                     <button type='reset' id='boton-reset-register'><a class='texto-enviar' id='boton-reset' href="/">Borrar</a></button>
