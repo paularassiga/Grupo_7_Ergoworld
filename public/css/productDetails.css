@@ -10,6 +10,8 @@ img {
     width: 100%;
 }
 
+
+
 .productDetailsContainer {
     margin: 5vw;
     background-color: white;
@@ -40,21 +42,27 @@ img {
 }
 
 .reviewContainer p {
-    font-weight: bold;
+    font-weight: 400;
     margin: 0;
     padding: 0;
-    padding-left: 3vw;
+    padding-left: 2vw;
+}
+
+.fa-plus, .fa-minus{
+    font-size:25px;
 }
 
 .precioContainer {
     display: flex;
     justify-content: center;
-    padding: 5vw;
+    align-items: center;
+    padding: 3vw;
 }
 
 .precioContainer .precio {
     font-weight: bold;
     padding-left: 3vw;
+    font-size: 30px;
 
 }
 
@@ -67,14 +75,14 @@ img {
 
 .cantidadContainer p {
     font-weight: bold;
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 
 .cantidadContainer button {
     font-size: 2rem;
     border-radius: 15px;
-    width: 10vh;
-    height: 8vh;
+    width: 8vh;
+    height: 6vh;
     margin: 5vw;
     display: flex;
     justify-content: center;
@@ -96,7 +104,8 @@ img {
     align-items: center;
     height: 10vh;
     width: 80vw;
-    margin: 5vh;
+    margin: 3vh;
+    margin-bottom:6vh;
 }
 
 .agregarAlCarritoBoton:hover {
@@ -124,14 +133,17 @@ img {
 
 
 .enviosGratisContainer {
-    padding: 5vh;
+    padding: 0vh;
     display: flex;
     align-items: center;
     justify-content: center;
+    text-align: left;
+    margin: 0vh;
+    margin-top: 5vh;
 }
 
 .enviosGratisContainer p {
-    font-weight: bold;
+    font-weight: 500;
     font-size: 1.2rem;
 }
 .enviosGratisContainer i{
@@ -145,7 +157,7 @@ img {
 
 .descripcionContainer {
 
-    padding-top: 10vh;
+    margin-top: 13vh;
 }
 
 .descripcionContainer * {
@@ -202,7 +214,10 @@ img {
     color: #2897ff;
 }
 
-
+#ultimo-container{
+    margin-bottom:100px;
+    margin-top:200px;
+}
 
 /* adaptacion a escritorio */
 @media(min-width:700px) {
@@ -256,7 +271,8 @@ img {
     .agregarAlCarritoBoton {
         margin: 0;
         margin-top: 5vh;
-        width: 50%;
+        width: 83%;
+        max-width:300px;
     }
 
     .beneficiosOfrecidos {
@@ -266,18 +282,21 @@ img {
         justify-content: space-around;
         align-items: center;
         width: 100%;
+        max-width: 880px;
     }
 
     .beneficiosOfrecidos ul {
         margin: 0;
         padding: 0;
-        font-weight: bold;
+        font-weight: 400;
+        width:50%;
     }
 
     .enviosGratisContainer {
         
         padding: 0;
         margin: 0;
+        width:50%;
     }
 
 
@@ -286,7 +305,7 @@ img {
         padding-bottom: 3vh;
         display: flex;
         justify-content: center;
-        width: 50%;
+        width: 76%;
 
     }
 
@@ -299,24 +318,28 @@ img {
 
     .descripcionContainer {
         display: flex;
-        padding-top: 20vh;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 14vh;
+        width:100%;
     }
 
     .descripcionContainer figure {
-        padding: 5vw;
-        height: 100%;
         display: flex;
         justify-content: center;
     }
 
     .inverso {
         flex-direction: row-reverse;
+
     }
 
     .descripcion {
         width: 50%;
-        padding: 5vw;
+        padding: 0;
         align-self: center;
+        margin: 0 45px;
+        max-width: 400px;
     }
 
     .precioContainer {
@@ -339,8 +362,20 @@ img {
 
     }
 
+    .reviewsText{
+        width:100%;
+    }
 
+    .reviewContainer p {
+        padding-left: 1vw;
+    }
 
+    .descripcionContainer img{
+        min-width:350px;
+    }
+    .inverso img{
+        min-width:350px;
+    }
 
 
 

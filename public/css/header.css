@@ -78,6 +78,7 @@ input {
 
 #searchTextHome{
     padding-left:0;
+    padding:20px 0;
 }
 
 .fa-bars:hover{
@@ -150,7 +151,7 @@ input {
     }
 
     .searchIconContainer {
-        padding: 0.1875rem 0px;
+        padding:2.5px;
         display: flex;
         align-items: center;
         background-color: #ffffff;
@@ -247,7 +248,6 @@ input {
     }
 
     .searchIconContainer {
-        padding: 0.25rem 0px;
         display: flex;
         align-items: center;
         background-color: #ffffff;
