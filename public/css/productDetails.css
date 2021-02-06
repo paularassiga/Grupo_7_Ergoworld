@@ -83,6 +83,11 @@ img {
     font-weight: bold;
 }
 
+
+.cantidadContainer button:hover {
+    color: #2897ff;
+}
+
 .agregarAlCarritoBoton {
     background-color: #396fb7;
     color: white;
@@ -92,6 +97,10 @@ img {
     height: 10vh;
     width: 80vw;
     margin: 5vh;
+}
+
+.agregarAlCarritoBoton:hover {
+    background-color: #2897ff;
 }
 
 .listaBeneficios {
@@ -104,10 +113,7 @@ img {
 }
 
 
-.listaBeneficios ul {
-    line-height-step: 0;
-    list-style-type: none
-}
+
 
 .listaBeneficios li i {
     color: #396fb7;
@@ -126,31 +132,44 @@ img {
 
 .enviosGratisContainer p {
     font-weight: bold;
+    font-size: 1.2rem;
 }
-
+.enviosGratisContainer i{
+    font-size: 2rem;
+}
 .detallesAvanzados {
     text-align: left;
     width: 80vw;
 
 }
 
-.detallesAvanzados h1 {
-    padding-top: 10vh;
+.descripcionContainer {
 
+    padding-top: 10vh;
 }
 
-.onlyDestock {
+.descripcionContainer * {
+
+    padding-top: 3vh;
+}
+
+/* eliminamos lo que es solo escritor */
+.onlyDesktop {
     display: none;
 }
 
 
 
 
-/* Mover al footer */
+
+
+/* mover esto al footer  */
 
 
 .contenedor-home3 {
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background-color: #4a4a4a;
     width: 100%;
     padding: 80px 0;
@@ -158,7 +177,6 @@ img {
 
 .contenedor-seccion-home3 {
     width: 70%;
-    text-align: center;
     margin-bottom: 43px;
 }
 
@@ -185,9 +203,17 @@ img {
 }
 
 
+
+/* adaptacion a escritorio */
 @media(min-width:700px) {
-    .onlyDestock {
+
+    /* Eliminamos lo marcado como solo movil y activamos solo Desktop */
+    .onlyDesktop {
         display: block;
+    }
+
+    .onlyMovile {
+        display: none;
     }
 
     .productDetailsContainer {
@@ -198,6 +224,15 @@ img {
         width: 100%;
         justify-content: center;
         text-align: left;
+    }
+    /* Movemos el orden de las imagenes y descripciones */
+
+    .productDetailsContainer * {
+        order: 10;
+    }
+
+    .productDetailsContainer figure {
+        width: 50%;
     }
 
     .precioContainer {
@@ -224,9 +259,27 @@ img {
         width: 50%;
     }
 
-    .productDetailsContainer * {
-        order: 10;
+    .beneficiosOfrecidos {
+        margin-top: 10%;
+
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
     }
+
+    .beneficiosOfrecidos ul {
+        margin: 0;
+        padding: 0;
+        font-weight: bold;
+    }
+
+    .enviosGratisContainer {
+        
+        padding: 0;
+        margin: 0;
+    }
+
 
     .reviewContainer {
         padding-top: 3vh;
@@ -246,6 +299,14 @@ img {
 
     .descripcionContainer {
         display: flex;
+        padding-top: 20vh;
+    }
+
+    .descripcionContainer figure {
+        padding: 5vw;
+        height: 100%;
+        display: flex;
+        justify-content: center;
     }
 
     .inverso {
@@ -254,6 +315,8 @@ img {
 
     .descripcion {
         width: 50%;
+        padding: 5vw;
+        align-self: center;
     }
 
     .precioContainer {
@@ -276,20 +339,34 @@ img {
 
     }
 
-    .listaBeneficios{
-        margin-top: 10%;
+
+
+
+
+
+
+
+
+
+
+
+    /* mover lo siguiente al footer */
+
+
+    .contenedor-home3 {
+        padding: 80px 0;
     }
 
-    figure {
-        width: 50%;
+    .contenedor-seccion-home3 {
+        max-width: 373px;
     }
 
-
-
-
-    /* Movemos el orden de las imagenes y descripciones */
-
-    .onlyMovile {
-        display: none;
+    .contenedor-home3 {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        padding: 30px;
     }
+
 }

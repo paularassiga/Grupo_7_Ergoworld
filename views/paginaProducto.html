@@ -5,10 +5,8 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/productDetails.css">
-    <link rel="stylesheet" href="/css/header.css">
-    <link rel="stylesheet" href="/css/emailOptIn.css">
-    <link rel="stylesheet" href="/css/footer.css">
+
+
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link
@@ -18,8 +16,13 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
         rel="stylesheet">
-    <link rel='stylesheet' href='/css/normalize.css'>
     <script src="https://kit.fontawesome.com/deb1b00585.js" crossorigin="anonymous"></script>
+
+    <link rel='stylesheet' href='/css/normalize.css'>
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/emailOptIn.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/productDetails.css">
     <title>Ergoworld - Detalle de producto</title>
 </head>
 
@@ -29,7 +32,7 @@
         <ul>
             <li class="logoErgoworldDestokp">
                 <figure>
-                    <a href="/"><img src="./images/logo-4.png" alt="logoErgoworld"></a>
+                    <a href="/"><img src="/images/logo-4.png" alt="logoErgoworld"></a>
                 </figure>
             </li>
             <section class=iconTextContainer-1>
@@ -85,10 +88,14 @@
     </nav>
 
 
-
+    <!-- vista principal del producto con immagenes y detalles especificos -->
     <section class="productDetailsContainer">
 
-        <div class="mainDescriptionContainer">
+
+
+
+        <!-- seccion con titulo y precio -->
+        <section class="mainDescriptionContainer">
 
             <h1 class="descriptionTitle">SOPORTE PARA
                 COMPUTADORA
@@ -117,7 +124,7 @@
                 </p>
             </div>
 
-            <div class="onlyDestock">
+            <div class="onlyDesktop">
 
                 <div class="precioContainer">
                     <p>Precio:</p>
@@ -139,10 +146,13 @@
                     Agregar Al Carrito
                 </button>
             </div>
+            </div>
 
-        </div>
+        </section>
+        <section>
 
-        </div>
+
+        </section>
         <figure class="mainImage">
             <img src="/images/base-laptop.jpg" alt="base para laptop">
         </figure>
@@ -169,31 +179,42 @@
             </button>
         </div>
 
-        <ul class="listaBeneficios">
-            <li><i class="fas fa-check-circle"></i>
-                Garantía por 2 años
-            </li>
-            <li><i class="fas fa-check-circle"></i>
-                Hecho con plástico reciclado
-            </li>
-            <li><i class="fas fa-check-circle"></i>
-                Libre de BPA
-            </li>
-            <li><i class="fas fa-check-circle"></i>
-                La mejor calidad del mercado.
-            </li>
 
-        </ul>
+        <!-- lista de beneficios de ser cliente -->
 
-        <div class="enviosGratisContainer"><i class="fas fa-truck"></i>
+        <section class="beneficiosOfrecidos">
+            <ul class="listaBeneficios">
+                <li><i class="fas fa-check-circle"></i>
+                    Garantía por 2 años
+                </li>
+                <li><i class="fas fa-check-circle"></i>
+                    Hecho con plástico reciclado
+                </li>
+                <li><i class="fas fa-check-circle"></i>
+                    Libre de BPA
+                </li>
+                <li><i class="fas fa-check-circle"></i>
+                    La mejor calidad del mercado.
+                </li>
+
+            </ul>
+
+            <div class="enviosGratisContainer"><i class="fas fa-truck"></i>
 
 
-            <p>
-                ¡Envíos gratis a cualquier parte
-                del mundo!
-            </p>
-        </div>
-        <div class="detallesAvanzados">
+                <p>
+                    ¡Envíos gratis a cualquier parte
+                    del mundo!
+                </p>
+            </div>
+
+        </section>
+
+
+
+        <!-- mas fotos y detalles del producto -->
+
+        <section class="detallesAvanzados">
 
             <div class="descripcionContainer">
                 <figure class="imagen">
@@ -260,11 +281,11 @@
 
 
 
-        </div>
+        </section>
     </section>
 
 
-    <section class="contenedor-home">
+    <section class="contenedor-home3">
         <article class='contenedor-seccion-home3'>
             <figure class='contenedorIcon-home3'>
                 <i id='icon-home3' class="fas fa-brain"></i>
