@@ -30,7 +30,7 @@ body {
 .hero-content {
     text-align: center;
     color: #000000;
-    padding: 20px;
+    padding: 1.25rem;
 }
 
 .hero-content figure img {
@@ -70,15 +70,15 @@ body {
 }
 
 #h-home1{
-    font-size:35px;
+    font-size:2.1875rem;
 }
 
 #sabias-que{
-    font-size: 16px;
+    font-size: 1rem;
 }
 
 #p-home1{
-    font-size:16px;
+    font-size:1rem;
     font-weight:500;
 }
 
@@ -114,8 +114,8 @@ body {
 }
 
 #flecha-home2{
-    font-size:11px;
-    margin:10px;
+    font-size:0.6875rem;
+    margin:0.625rem;
 }
 
 .contenido-boton-home2 {
@@ -146,7 +146,7 @@ body {
 
 .home2-wrap figure img {
     width: 80vw;
-    margin:10px auto;
+    margin:0.625rem auto;
 }
 
 .botones-hom2 a:hover, #flecha-home2:hover{
@@ -163,12 +163,12 @@ body {
 .contenedor-home3{
     background-color: #4a4a4a;
     width:100%;
-    padding: 80px 0;
+    padding: 5rem 0;
 }
 
 .contenedor-seccion-home3{
     width:70%;
-    margin-bottom: 43px;
+    margin-bottom: 2.6875rem;
 }
 
 .contenedorIcon-home3{
@@ -177,7 +177,7 @@ body {
 
 #icon-home3{
     color:white;
-    font-size: 55px;
+    font-size: 3.4375rem;
 }
 
 .titulo-home3, .p-home3{
@@ -197,7 +197,7 @@ body {
     } para testear la media*/
     
     .hero-content {
-        max-width: 560px;
+        max-width: 35rem;
     }
     .hero-content figure img {
         width: 20vw;
@@ -226,11 +226,11 @@ body {
     }
 
     .contenedor-home3{
-        padding: 80px 0;
+        padding: 5rem 0;
     }
     
     .contenedor-seccion-home3{
-        max-width:373px;
+        max-width:23.3125rem;
     }
 
     .contenedor-home3{
@@ -238,7 +238,7 @@ body {
         flex-direction: row;
         align-items:center;
         justify-content: space-around;
-        padding:30px;
+        padding:1.875rem;
     }
 }
 
@@ -255,10 +255,10 @@ body {
     }
 
     .botones-hom2{
-        max-width:270px;
+        max-width:16.875rem;
     }
 
     .home2-wrap figure img {
-        max-width: 300px;
+        max-width: 18.75rem;
     }
 }

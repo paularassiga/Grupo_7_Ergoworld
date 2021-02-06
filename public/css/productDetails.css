@@ -49,7 +49,7 @@ img {
 }
 
 .fa-plus, .fa-minus{
-    font-size:25px;
+    font-size:1.5625rem;
 }
 
 .precioContainer {
@@ -62,7 +62,7 @@ img {
 .precioContainer .precio {
     font-weight: bold;
     padding-left: 3vw;
-    font-size: 30px;
+    font-size: 1.875rem;
 
 }
 
@@ -80,7 +80,7 @@ img {
 
 .cantidadContainer button {
     font-size: 2rem;
-    border-radius: 15px;
+    border-radius: 0.9375rem;
     width: 8vh;
     height: 6vh;
     margin: 5vw;
@@ -162,7 +162,7 @@ img {
 
 .descripcionContainer * {
 
-    padding-top: 3vh;
+    padding-top: 1vh;
 }
 
 /* eliminamos lo que es solo escritor */
@@ -184,12 +184,12 @@ img {
     align-items: center;
     background-color: #4a4a4a;
     width: 100%;
-    padding: 80px 0;
+    padding: 5rem 0;
 }
 
 .contenedor-seccion-home3 {
     width: 70%;
-    margin-bottom: 43px;
+    margin-bottom: 2.6875rem;
 }
 
 .contenedorIcon-home3 {
@@ -198,7 +198,7 @@ img {
 
 #icon-home3 {
     color: white;
-    font-size: 55px;
+    font-size: 3.4375rem;
 }
 
 .titulo-home3,
@@ -215,7 +215,7 @@ img {
 }
 
 #ultimo-container{
-    margin-bottom:100px;
+    margin-bottom:6.25rem;
 }
 
 
@@ -273,7 +273,7 @@ img {
         margin: 0;
         margin-top: 5vh;
         width: 83%;
-        max-width:300px;
+        max-width:18.75rem;
     }
 
     .beneficiosOfrecidos {
@@ -283,7 +283,7 @@ img {
         justify-content: space-around;
         align-items: center;
         width: 100%;
-        max-width: 880px;
+        max-width: 55rem;
     }
 
     .beneficiosOfrecidos ul {
@@ -339,8 +339,8 @@ img {
         width: 50%;
         padding: 0;
         align-self: center;
-        margin: 0 45px;
-        max-width: 400px;
+        margin: 0 2.8125rem;
+        max-width: 25rem;
     }
 
     .precioContainer {
@@ -372,15 +372,15 @@ img {
     }
 
     .descripcionContainer img{
-        min-width:350px;
+        min-width:21.875rem;
     }
     .inverso img{
-        min-width:350px;
+        min-width:21.875rem;
     }
 
     #ultimo-container{
-        margin-bottom:100px;
-        margin-top:200px;
+        margin-bottom:6.25rem;
+        margin-top:12.5rem;
     }
 
 
@@ -395,11 +395,11 @@ img {
 
 
     .contenedor-home3 {
-        padding: 80px 0;
+        padding: 5rem 0;
     }
 
     .contenedor-seccion-home3 {
-        max-width: 373px;
+        max-width: 23.3125rem;
     }
 
     .contenedor-home3 {
@@ -407,7 +407,7 @@ img {
         flex-direction: row;
         align-items: center;
         justify-content: space-around;
-        padding: 30px;
+        padding: 1.875rem;
     }
 
 }

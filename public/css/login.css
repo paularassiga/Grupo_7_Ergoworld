@@ -88,7 +88,7 @@ body {
     margin:auto;
     display:flex;
     justify-content: center;
-    margin-bottom:20px;
+    margin-bottom:1.25rem;
 }
 
 @media(min-width:583px){
