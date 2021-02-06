@@ -1,0 +1,295 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+img {
+    width: 100%;
+}
+
+.productDetailsContainer {
+    margin: 5vw;
+    background-color: white;
+    text-align: center;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: center;
+}
+
+.productDetailsContainer p {
+    font-size: 1.2rem
+}
+
+.reviewContainer {
+    padding-top: 3vh;
+    padding-bottom: 3vh;
+    display: flex;
+    justify-content: center;
+
+
+}
+
+.reviewContainer i {
+    color: gold;
+    margin: 0;
+    padding: 0;
+}
+
+.reviewContainer p {
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+    padding-left: 3vw;
+}
+
+.precioContainer {
+    display: flex;
+    justify-content: center;
+    padding: 5vw;
+}
+
+.precioContainer .precio {
+    font-weight: bold;
+    padding-left: 3vw;
+
+}
+
+.cantidadContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.cantidadContainer p {
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.cantidadContainer button {
+    font-size: 2rem;
+    border-radius: 15px;
+    width: 10vh;
+    height: 8vh;
+    margin: 5vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #7d7a7b;
+    font-weight: bold;
+}
+
+.agregarAlCarritoBoton {
+    background-color: #396fb7;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    width: 80vw;
+    margin: 5vh;
+}
+
+.listaBeneficios {
+    list-style: none;
+    flex-direction: column;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+}
+
+
+.listaBeneficios ul {
+    line-height-step: 0;
+    list-style-type: none
+}
+
+.listaBeneficios li i {
+    color: #396fb7;
+    padding: 1vh;
+    margin: 0;
+}
+
+
+
+.enviosGratisContainer {
+    padding: 5vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.enviosGratisContainer p {
+    font-weight: bold;
+}
+
+.detallesAvanzados {
+    text-align: left;
+    width: 80vw;
+
+}
+
+.detallesAvanzados h1 {
+    padding-top: 10vh;
+
+}
+
+.onlyDestock {
+    display: none;
+}
+
+
+
+
+/* Mover al footer */
+
+
+.contenedor-home3 {
+    text-align: center;
+    background-color: #4a4a4a;
+    width: 100%;
+    padding: 80px 0;
+}
+
+.contenedor-seccion-home3 {
+    width: 70%;
+    text-align: center;
+    margin-bottom: 43px;
+}
+
+.contenedorIcon-home3 {
+    text-align: center;
+}
+
+#icon-home3 {
+    color: white;
+    font-size: 55px;
+}
+
+.titulo-home3,
+.p-home3 {
+    text-align: center;
+    color: white;
+}
+
+.titulo-home3:hover,
+.contenedorIcon-home3:hover,
+.p-home3:hover,
+#icon-home3:hover {
+    color: #2897ff;
+}
+
+
+@media(min-width:700px) {
+    .onlyDestock {
+        display: block;
+    }
+
+    .productDetailsContainer {
+        padding: 10%;
+        margin: 0;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: center;
+        text-align: left;
+    }
+
+    .precioContainer {
+        padding: 0;
+    }
+
+    .cantidadContainer {
+        margin-top: 5vh;
+    }
+
+    .cantidadContainer button {
+        padding: 0;
+        margin: 0;
+        margin-right: 2vh;
+    }
+
+    .cantidadContainer p {
+        margin-right: 2vh;
+    }
+
+    .agregarAlCarritoBoton {
+        margin: 0;
+        margin-top: 5vh;
+        width: 50%;
+    }
+
+    .productDetailsContainer * {
+        order: 10;
+    }
+
+    .reviewContainer {
+        padding-top: 3vh;
+        padding-bottom: 3vh;
+        display: flex;
+        justify-content: center;
+        width: 50%;
+
+    }
+
+    .detallesAvanzados {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0;
+        margin: 0;
+    }
+
+    .descripcionContainer {
+        display: flex;
+    }
+
+    .inverso {
+        flex-direction: row-reverse;
+    }
+
+    .descripcion {
+        width: 50%;
+    }
+
+    .precioContainer {
+        justify-content: flex-start;
+    }
+
+    .cantidadContainer {
+        justify-content: flex-start;
+    }
+
+    .mainImage {
+        width: 50%;
+        order: 1;
+        padding-right: 10%;
+    }
+
+    .mainDescriptionContainer {
+        width: 50%;
+        order: 2;
+
+    }
+
+    .listaBeneficios{
+        margin-top: 10%;
+    }
+
+    figure {
+        width: 50%;
+    }
+
+
+
+
+    /* Movemos el orden de las imagenes y descripciones */
+
+    .onlyMovile {
+        display: none;
+    }
+}

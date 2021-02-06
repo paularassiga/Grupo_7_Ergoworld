@@ -12,10 +12,12 @@ app.use(express.static(publicPath));
 //Requiero el módulo que contiene las rutas (mainRoutes)
 
 let mainRoutes = require("./routers/mainRoutes.js");
+let productoRoutes = require("./routers/productoRoutes.js");
 
 //Definiendo las vistas
 
 app.use('/', mainRoutes);
+app.use('/producto', productoRoutes);
 
 // Llamando al servidor
 
