@@ -4,9 +4,9 @@ p{
 }
 
 input, button{
-    border-radius: 4px;
+    border-radius: 0.25rem;
     border: none;
-    padding:19px;
+    padding:1.1875rem;
     width:100%;
     margin: auto;
     display:flex;
@@ -17,21 +17,21 @@ input{
     background-color: #7d7a7b;
     font-family: "roboto";
     font-weight: 300;
-    font-size:14px;
+    font-size:0.875rem;
 }
 
 .contenedor-email-optIn{
     background-color: #2b2a2a;
     margin: auto;
-    padding:21px;
-    padding-top: 40px;
-    padding-bottom: 40px;
+    padding:1.3125rem;
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
 
 }
 
 .textos{
-    margin:10px auto;
-    margin-bottom:20px;
+    margin:0.625rem auto;
+    margin-bottom:1.25rem;
     width:90%;
     color:white;
     text-align: center;
@@ -40,16 +40,16 @@ input{
 .main-title{
     font-family: 'Montserrat';
     font-weight: 700;
-    font-size: 23px;
+    font-size: 1.4375rem;
 }
 
 .contenedor-input{
-    margin:10px auto;
+    margin:0.625rem auto;
 }
 
 .text-input::placeholder{
     color: white;
-    padding:5px;
+    padding:0.3125rem;
   }
 
 #boton-enviar{
@@ -68,8 +68,8 @@ input{
 @media(min-width:837px){
 
     .contenedor-email-optIn{
-        padding-top: 80px;
-        padding-bottom: 80px;
+        padding-top: 5rem;
+        padding-bottom: 5rem;
     }
 
     .contenido-optin{
@@ -95,6 +95,6 @@ input{
 
     .contenedor-input {
         width: 45%;
-        margin: 5px;
+        margin: 0.3125rem;
     }
 }

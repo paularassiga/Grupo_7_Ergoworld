@@ -18,6 +18,10 @@ let productoRoutes = require("./routers/productoRoutes.js");
 
 app.use('/', mainRoutes);
 app.use('/producto', productoRoutes);
+app.use('/login', mainRoutes);
+app.use('/register', mainRoutes);
+app.use('/productCart', mainRoutes);
+app.use('/productDetail', mainRoutes);
 
 // Llamando al servidor
 
