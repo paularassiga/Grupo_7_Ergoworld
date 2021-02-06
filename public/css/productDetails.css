@@ -216,8 +216,9 @@ img {
 
 #ultimo-container{
     margin-bottom:100px;
-    margin-top:200px;
 }
+
+
 
 /* adaptacion a escritorio */
 @media(min-width:700px) {
@@ -375,6 +376,11 @@ img {
     }
     .inverso img{
         min-width:350px;
+    }
+
+    #ultimo-container{
+        margin-bottom:100px;
+        margin-top:200px;
     }
 
 
