@@ -1,6 +1,5 @@
 const express = require('express');
 const path = require('path');
-
 const app = express();
 
 //Definiendo la carpeta public
@@ -23,9 +22,13 @@ app.use('/register', mainRoutes);
 app.use('/productCart', mainRoutes);
 app.use('/productDetail', mainRoutes);
 
+
+//Para deployar
+app.set('puerto', process.env.PORT || 3000);
+
 // Llamando al servidor
 
-app.listen(3000, () => {
-    console.log('server ready puerto 3000')
-})
+app.listen (app.get('puerto'), ()=> console.log(`Servidor corriendo de manera satisfactoria  ${app.get('puerto')}` ));
+
+
 
