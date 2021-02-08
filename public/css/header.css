@@ -78,7 +78,7 @@ input {
 
 #searchTextHome{
     padding-left:0;
-    padding:1.25rem 0;
+    padding:19.5px 0;
 }
 
 .fa-bars:hover{
@@ -151,7 +151,7 @@ input {
     }
 
     .searchIconContainer {
-        padding:2.5px;
+        padding:20px;
         display: flex;
         align-items: center;
         background-color: #ffffff;
@@ -185,6 +185,11 @@ input {
         display: flex;
         align-items: center;
         flex-wrap: nowrap;
+    }
+
+    #lupita {
+        padding:0;
+        margin:0;
     }
 }
 
@@ -279,6 +284,7 @@ input {
     }
 
     #lupita {
-        padding: 0px;
+        padding:0;
+        margin:0;
     }
 }
