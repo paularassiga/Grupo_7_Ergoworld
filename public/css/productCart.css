@@ -127,6 +127,10 @@
     color:#9e9a9c;
 }
 
+.fa-times-circle:hover{
+    color:#2897ff;
+}
+
 .precio-carrito{
     font-size:18px;
     margin-bottom: 24px;
@@ -183,6 +187,10 @@
     padding: 20px 20px;
 }
 
+.actualizar-boton:hover{
+    background-color:#9c9c9c;
+}
+
 .contenedor-boton-comprar{
     width:90%;
     margin:10px auto;
@@ -196,6 +204,10 @@
     font-weight: 600;
     background-color: #396fb7;
     padding: 20px 20px;
+}
+
+.agregarAlCarritoBoton:hover{
+    background-color:#2c548a;
 }
 
 .terminos-condiciones-carrito{
@@ -214,8 +226,12 @@
 .terminos-condiciones-carrito a{
     font-family:'roboto';
     font-size:12px;
-    color:#396fb7;
+    color:#2897ff;
     text-decoration: none;
+}
+
+.terminos-condiciones-carrito a:hover{
+    color:#2c548a;
 }
 
 @media(min-width:583px){
@@ -284,6 +300,13 @@
     }
 
     .carrito-seccion-2 {
-        width: 33%
+        width: 46%;
+    }
+
+    .contenedor-ultimo-carrito{
+        display:flex;
+        flex-direction:row;
+        justify-content: space-between;
+        width:90%;
     }
 }
