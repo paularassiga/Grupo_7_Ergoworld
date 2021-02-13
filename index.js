@@ -7,7 +7,8 @@ const app = express();
 const publicPath = path.resolve(__dirname, './public');
 
 app.use(express.static(publicPath));
-
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'ejs');
 //Requiero el módulo que contiene las rutas (mainRoutes)
 
 let mainRoutes = require("./routers/mainRoutes.js");
