@@ -35,12 +35,13 @@ body {
 .contenedor-input-create{
     color:#9e9a9c;
     width: 90%;
+    margin:2.5rem auto;
 }
 
 .form-label{
     font-weight: 500;
     color:rgb(219, 219, 219);
-    font-size:18px;
+    font-size:1.125rem;
 }
 
 .form-input{
@@ -57,11 +58,14 @@ body {
 }
 
 .contenedor-specific-options{
-    margin: 1.25em;
+    margin: 0.25em 0px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width:100%;
+}
+
+.h-category{
+    margin:0;
 }
 
 .categories{
@@ -70,6 +74,7 @@ body {
     flex-direction: row;
     align-items:center;
     width:100%;
+    margin:0.5625rem 1.25rem;
 }
 
 .options{
@@ -79,12 +84,13 @@ body {
 #checkbox-options{
     display:flex;
     flex-direction: column;
-    align-items: center;
-    width:40%;
+    align-items: flex-start;
+    width:100%;
 }
 
 [type="checkbox"] {
    margin:0;
+   width:10%;
 }
 
 #boton-enviar-create{
@@ -92,7 +98,7 @@ body {
     color:white;
     width:90%;
     margin:auto;
-    margin-bottom:2.1875rem;
+    margin-bottom:1.1875rem;
 }
 
 #boton-enviar-create:hover{

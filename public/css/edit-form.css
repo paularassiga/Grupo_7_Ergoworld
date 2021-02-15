@@ -19,7 +19,7 @@ body {
     padding:4.375rem 0px;
 }
 
-.h-register{
+.h-edit{
     color:white;
     margin:auto;
     text-align: center;
@@ -32,33 +32,80 @@ body {
     margin-bottom:2.8125rem;
 }
 
-.contenedor-input-register{
+.contenedor-input-edit{
     color:#9e9a9c;
     width: 90%;
+    margin:2.5rem auto;
 }
 
-.text-input-register{
+.form-label{
+    font-weight: 500;
+    color:rgb(219, 219, 219);
+    font-size:1.125rem;
+}
+
+.form-input{
     background-color: white;
     margin:0.625rem auto;
 }
 
-.text-input-register::placeholder{
+.text-input-edit::placeholder{
     color:#9e9a9c;
 }
 
-#boton-enviar-register{
+.contenedor-options{
+    width: 90%;
+}
+
+.contenedor-specific-options{
+    margin: 0.25em 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.h-category{
+    margin:0;
+}
+
+.categories{
+    color:white;
+    display:flex;
+    flex-direction: row;
+    align-items:center;
+    width:100%;
+    margin:1.5625rem 1.25rem;
+}
+
+.options{
+    color:white;
+}
+
+#checkbox-options{
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width:100%;
+}
+
+[type="checkbox"] {
+   margin:0;
+   width:10%;
+}
+
+#boton-enviar-edit{
     background-color: #396fb5;
     color:white;
     width:90%;
     margin:auto;
-    margin-bottom:2.1875rem;
+    margin-bottom:1.1875rem;
 }
 
-#boton-enviar-register:hover{
+#boton-enviar-edit:hover{
     background-color:#2c548a;
 }
 
-#boton-reset-register{
+#boton-reset-edit{
     background-color: #80ade7;
     color:black;
     width:90%;
@@ -66,7 +113,7 @@ body {
     margin-bottom:0.625rem;
 }
 
-#boton-reset-register:hover{
+#boton-reset-edit:hover{
     background-color:#aacdfa;
 }
 
@@ -79,16 +126,9 @@ body {
     color:#2c548a;
 }
 
-.text-inciarsesion{
-    color: #2897ff;
-    text-align: center;
-    margin:auto;
-    display:flex;
-    justify-content: center;
-}
 
 @media(min-width:583px){
-    .contenedor-input-register,.text-inciarsesion, #boton-reset-register, #boton-enviar-register{
+    .contenedor-input-edit, #boton-reset-edit, #boton-enviar-edit{
         max-width:30.4375rem;
     }
 }
