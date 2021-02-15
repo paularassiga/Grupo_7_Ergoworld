@@ -16,18 +16,18 @@ let mainControllers = {
     },
     register: (req,res) => {
 
-        res.render("register")
+        res.render("user/register")
 
     },
     productCart: (req,res) => {
 
-        res.render("productCart")
+        res.render("products/productCart")
 
     },
     productDetail: (req,res) => {
 
 
-        res.render("productDetail")
+        res.render("products/productDetail")
 
     }
 }
