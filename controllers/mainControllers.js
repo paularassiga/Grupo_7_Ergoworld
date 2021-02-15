@@ -11,7 +11,7 @@ let mainControllers = {
         res.render("index")
     },
     login: (req,res) => {
-        res.render("login")
+        res.render("user/login")
 
     },
     register: (req,res) => {

@@ -1,42 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-        rel="stylesheet">
-    <script src="https://kit.fontawesome.com/deb1b00585.js" crossorigin="anonymous"></script>
-
-    <link rel='stylesheet' href='/css/normalize.css'>
-    <link rel="stylesheet" href="/css/header.css">
-    <link rel="stylesheet" href="/css/emailOptIn.css">
-    <link rel="stylesheet" href="/css/footer.css">
-    <link rel="stylesheet" href="/css/productDetails.css">
-    <title>Ergoworld - Detalle de producto</title>
-</head>
+<!-- Head -->
+<%- include('../partials/head', 
+{title: 'Detalle de producto', 
+css: ['/css/productDetails.css']}) %>
 
 <body>
 
     <%- include('../partials/navbar') %> 
 
-
-
     <!-- vista principal del producto con immagenes y detalles especificos -->
     <section class="productDetailsContainer">
-
-
-
 
         <!-- seccion con titulo y precio -->
         <section class="mainDescriptionContainer">
@@ -74,10 +48,6 @@
                     <p>Precio:</p>
                     <p class="precio">$2000</p>
 
-
-
-
-
                 </div>
                 <div class="cantidadContainer">
                     <button class="masButton"><i class="fas fa-plus"></i></button>
@@ -106,10 +76,6 @@
             <div class="precioContainer">
                 <p>Precio:</p>
                 <p class="precio">$2000</p>
-
-
-
-
 
             </div>
             <div class="cantidadContainer">
@@ -153,8 +119,6 @@
             </div>
 
         </section>
-
-
 
         <!-- mas fotos y detalles del producto -->
 
@@ -223,11 +187,8 @@
 
             </div>
 
-
-
         </section>
     </section>
-
 
     <section class="contenedor-home3">
         <article class='contenedor-seccion-home3'>
@@ -266,16 +227,6 @@
     </section>
 
     <%- include('../partials/footer') %> 
-
-
-
-
-
-
-
-
-
-
 
 </body>
 
