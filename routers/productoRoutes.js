@@ -11,6 +11,13 @@ const express = require('express');
 
  router.get('/detalle/:id', productoControllers.detalle);
 
+   /*CREAR PRODUCTO*/
+ router.get('/create', productoControllers.create);
+
+
+   /*EDITAR PRODUCTO*/
+ router.get('/edit', productoControllers.edit); 
+
   /*Exporto módulo para llevarlo al entry point*/
 
   module.exports = router;
