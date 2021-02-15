@@ -40,3 +40,39 @@
 ###### Este documento esta inspirado en la Starfish retrospective
 
 
+# RETRO SPRINT 2
+### Start Doing 
+##### (cosas innovadoras o que por cierta curiosidad queremos probar)
+- Vistas dinámicas y un sitio funcional y rápido.
+- Imágenes menos pesadas pero estéticas y de buena calidad.
+
+------------
+
+### More of
+##### (cosas que estamos usando o haciendo y que queremos que mejoren)
+- La comunicación y división de tareas podría mejorar, a pesar de que logramos cumplir con las consignas y los deadlines, es un poco desorganizada y la distribución de tareas no existe, hacemos las cosas sobre la marcha y cada uno elije que hacer, lo cuál está bueno porque permite a cada uno de los integrantes sentirse que tiene flexibilidad y autonomía pero no permite utilizar el potencial que cada uno tiene, pues cada uno tiene.
+- Explotar la gran capacidad de Peterson y Guille en el back y el código y de Pau en el diseño.
+------------
+
+### Keep Doing
+##### (Es aquello que venimos haciendo y que nos brinda valor. Debemos seguir haciéndolo pero no será preocupación mejorarlo.)
+- La estética y funcionalidad del sitio quedó muy bien y debemos seguir poniéndo el esfuerzo para que todo quede bien, superando expectativas.
+- Proactividad y responsabilidad por parte de los miembros, siempre todos estamos buscando avanzar y contribuir con el trabajo sin que nadie tenga que estar pidiéndolo.
+- Ayuda mutua, ante cualquier problema, todos ayudamos y nos apoyamos.
+
+------------
+### Less of
+##### (Aquello que intentamos pero no nos dan tanto beneficio como se esperaba. Está bien, démosle como una segunda oportunidad, pero no esta en nuestras prioridades.)
+- Uso de etiqueta semánticas y menos <div></div>.
+- Tiempo que perdemos en arrancar con el próximo sprint, estaría bueno comenzar a penas terminamos para garantizarnos llegar tranquilos a la fecha de entrega.
+
+------------
+### Stop Doing
+##### ( aquellas practicas que a pesar de ser [Less of] pues podemos eliminarlas.)
+- Empezar tarde a realizar los sprints.
+- No dividir las tareas a priori.
+------------
+###### Este documento esta inspirado en la Starfish retrospective
+
+
+
