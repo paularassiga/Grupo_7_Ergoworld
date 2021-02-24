@@ -5,6 +5,9 @@ const path = require('path'); /*Para usar path.join*/
 /*Funciones*/
 
 let productoControllers = {
+    index: (req,res) => {
+      res.render('products/products');
+  },
     detalle: (req,res) => {
         res.render('products/productDetail');
     },

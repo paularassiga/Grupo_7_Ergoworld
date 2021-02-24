@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- Head -->
+    <%- include('../partials/head', 
+    {title: 'Editá tu producto', 
+    css: ['/css/products.css']}) %>
+<body>
+    <!-- Cuerpo de la pagina -->
+    <%- include('../partials/navbar') %> 
+    <!-- home 1 -->
+
+    <!-- Listado productos -->
+    <section class='contenedor-title'>
+        <h2 class='h-products'>Nuestros</h2>
+        <h2 class='h-products' id='bottom-title'>PRODUCTOS</h2>
+        <figure>
+           <img class='linea' src="./images/line.png">
+        </figure>
+    </section>
+    <section class="home2">
+        <div class="home2-wrap">
+            <div id='contendedor-home2-1' class="home2-content1">
+                <h2>PRO CLICK ERGONOMIC MOUSE</h2>
+                <p>Pro Click es un mouse de computadora ergonómico inalámbrico de última generación diseñado para brindar comodidad y productividad. Diseñado con una inclinación de 30 grados, promueve una postura ergonómica natural del brazo para aliviar
+                    la tensión no deseada de la muñeca y brindar comodidad durante todo el día.</p>
+
+                <div class="botones-hom2">
+                    <a class="contenido-boton-home2" href="/productDetail">Leer más<i id='flecha-home2' class="fas fa-chevron-right" aria-hidden="true"></i></a>
+                    <a class="contenido-boton-home2" href="#">Comprar<i id='flecha-home2' class="fas fa-chevron-right" aria-hidden="true"></i></a>
+                </div>
+                <figure>
+                    <img src="/images/pro_click_3.png" alt="pro click mouse">
+                </figure>
+            </div>
+
+
+            <div class="home2-content2">
+                <h2>SOPORTE PARA COMPUTADORA PORTÁTIL</h2>
+                <p>Eleva la pantalla entre 15 y 25 centímetros por encima de la mesa. Fácil de usar y extremadamente portátil. Se adapta a casi todas las computadoras portátiles. Se abre y cierra con un sól movimiento.</p>
+
+                <div class="botones-hom2">
+                    <a class="contenido-boton-home2" href="/productDetail">Leer más<i id='flecha-home2' class="fas fa-chevron-right" aria-hidden="true"></i></a>
+                    <a class="contenido-boton-home2" href="#">Comprar<i id='flecha-home2' class="fas fa-chevron-right" aria-hidden="true"></i></a>
+                </div>
+                <figure>
+                    <img src="/images/base-laptop.jpg" alt="base laptop">
+                </figure>
+            </div>
+        </div>
+    </section>
+
+    <!-- Home 3 -->
+    <section class="contenedor-home3">
+        <article class='contenedor-seccion-home3'>
+            <figure class='contenedorIcon-home3'>
+                <i id= 'icon-home3' class="fas fa-brain"></i>
+            </figure>
+            <h3 class='titulo-home3'>
+                Diseñado por expertos
+            </h3>
+            <p class='p-home3'>
+                Priorizando  el confort y la productividad.
+            </p>
+        </article>
+        <article class='contenedor-seccion-home3'>
+            <figure class='contenedorIcon-home3'>
+                <i id= 'icon-home3' class="fas fa-cogs"></i>
+            </figure>
+            <h3 class='titulo-home3'>
+                Hecho a tu medida
+            </h3>
+            <p class='p-home3'>
+                Cada producto es 100% personalizable para que se ajuste perfectamente a tus necesidades.
+            </p>
+        </article>
+        <article class='contenedor-seccion-home3'>
+            <figure class='contenedorIcon-home3'>
+                <i id= 'icon-home3' class="fas fa-luggage-cart"></i>
+            </figure>
+            <h3 class='titulo-home3'>
+                100% transportable
+            </h3>
+            <p class='p-home3'>
+                Para que puedas llevar tu oficina a donde más te guste.
+            </p>
+        </article>
+    </section>
+
+    <%- include('../partials/footer') %> 
+
+</body>
+
+</html>

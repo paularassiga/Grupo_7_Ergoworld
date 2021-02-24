@@ -9,6 +9,10 @@ const express = require('express');
 
   /*Acá van todas las rutas*/
 
+  /*LISTADO DE TODOS LOS PRODUCTOS*/
+
+ router.get('/', productoControllers.index)
+
  router.get('/detalle/:id', productoControllers.detalle);
 
    /*CREAR PRODUCTO*/
