@@ -19,7 +19,7 @@
                <img class='linea' src="../images/line.png">
             </figure>
             <!--Sólo vista estática sin variables dinámicas por ahora -->
-            <form action="/products/edit?_method=PUT" method="POST">
+            <form action="/products/create" method="POST" enctype="multipart/form-data">
                 <div class='contenedor-input-create'>
                     <label for="name" class="form-label">Nombre del producto:</label>
                     <input type="text" id="name" name="name" placeholder="Ej: Teclado Ergonómico" class="form-input" required>
@@ -111,10 +111,10 @@
                 </div>
             </div>
                 <div class='contenedor-button'>
-                 <button type='submit' id='boton-enviar-create'><a class='texto-enviar' href="/">Crear Producto</a></button>
+                 <button type='submit' id='boton-enviar-create'><a class='texto-enviar' >Crear Producto</a></button>
                 </div>
                 <div class='contenedor-button'>
-                    <button type='reset' id='boton-reset-create'><a class='texto-enviar' id='boton-reset' href="/">Borrar</a></button>
+                    <button type='reset' id='boton-reset-create'><a class='texto-enviar' id='boton-reset' >Borrar</a></button>
                    </div>
             </form>
         </section>

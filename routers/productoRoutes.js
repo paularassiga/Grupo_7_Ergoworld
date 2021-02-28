@@ -17,7 +17,7 @@ const express = require('express');
 
    /*CREAR PRODUCTO*/
  router.get('/create', productoControllers.create);
-
+ router.post('/create', productoControllers.store)
 
    /*EDITAR PRODUCTO*/
  router.get('/edit', productoControllers.edit); 
