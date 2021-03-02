@@ -17,7 +17,7 @@ let productoRoutes = require("./routers/productoRoutes.js");
 //Definiendo las vistas
 
 app.use('/', mainRoutes);
-app.use('/products', productoRoutes);
+app.use('/productos', productoRoutes);
 // app.use('/login', mainRoutes);
 // app.use('/register', mainRoutes);
 // app.use('/productCart', mainRoutes);

@@ -16,11 +16,11 @@ const express = require('express');
  router.get('/detalle/:id', productoControllers.detalle);
 
    /*CREAR PRODUCTO*/
- router.get('/create', productoControllers.create);
- router.post('/create', productoControllers.store)
+ router.get('/crear', productoControllers.create);
+ router.post('/crear', productoControllers.store)
 
    /*EDITAR PRODUCTO*/
- router.get('/edit', productoControllers.edit); 
+ router.get('/editar', productoControllers.edit); 
 
   /*Exporto módulo para llevarlo al entry point*/
 
