@@ -2,10 +2,25 @@
     {
         "id":1,
         "name":"PRO CLICK ERGONOMIC MOUSE",
-        "description": "por definir",
+        "description": "Eleva la pantalla entre 15 y 25 centímetros por encima de la mesa. Fácil de usar y extremadamente portátil. Se adapta a casi todas las computadoras portátiles. Se abre y cierra con un sólo movimiento.",
+        "price": 2000,
         "image": "image-name",
         "category": "definir",
-        "colors": ["negro", "gris"]
-
+        "features": ["Garantía por 2 años", "Hecho con plástico reciclado", "Libre de BPA", "La mejor calidad del mercado."],
+        "detail1":{
+            "title": "Altura ajustable",
+            "description": "Ajustar la altura de la pantalla de su computadora portátil es fundamental para lograr la máxima comodidad y productividad.",
+            "image": "image-name"
+        },
+        "detail2":{
+            "title": "Fácil de usar y extremadamente portátil",
+            "description": "Un simple movimiento abre y cierra el Roost Stand. Peso: 6 onzas (170 g) Cerrado: 1,30 x 1,17 x 13 pulgadas (3,3 x 3,0 x 33,0 cm)",
+            "image": "image-name"
+        },
+        "detail3":{
+            "title": "Se adapta a casi todas las computadoras portátiles",
+            "description": "Este fantástico stand se ajusta automáticamente para adaptarse a tu computadora portátil.",
+            "image": "image-name"
+        }
     }
 ]
