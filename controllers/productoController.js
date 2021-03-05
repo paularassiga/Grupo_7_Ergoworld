@@ -19,7 +19,7 @@ let productoControllers = {
   },
 
   store:  (req, res) => {
- console.log(req.body)
+ console.log(req.body);
     let productos = [];
     
     let nuevoProducto = {

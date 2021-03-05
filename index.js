@@ -2,6 +2,8 @@ const express = require('express');
 const path = require('path');
 const app = express();
 
+
+
 //Definiendo la carpeta public
 
 const publicPath = path.resolve(__dirname, './public');
