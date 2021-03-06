@@ -14,11 +14,15 @@
 
     <main>
         <section class='contenedor-formulario'>
+            <video playsinline autoplay muted loop poster="./images/poster.jpg" id="bgvid">
+                <source src="./images/typing.mp4" type="video/webm">
+                <source src="./images/typing.mp4" type="video/mp4">
+              </video>
             <h2 class='h-register'>Creá tu cuenta</h2>
             <figure>
-               <img class='linea' src="./images/line.png">
+               <img class='linea' src="./images/line-black.png">
             </figure>
-            <form>
+            <form class = 'contenedor-formulario-1'>
                 <div class='contenedor-input-register'>
                     <input required class='text-input-register' type='text' id='nombreUsuario' placeholder="Nombre" name='nombreUsuario' minlength="3">
                 </div>
@@ -39,7 +43,7 @@
                 </div>
             </form>
             <section>
-                <a class='text-inciarsesion' href='/login'>¿Ya tenés una cuenta? Iniciá sesión</a>
+                <a class='text-inciarsesion' id='last' href='/login'>¿Ya tenés una cuenta? Iniciá sesión</a>
             </section>
         </section>
     </main>

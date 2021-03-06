@@ -16,9 +16,13 @@
         <section class='contenedor-formulario'>
             <h2 class='h-login'>Ingresá a tu cuenta</h2>
             <figure>
-               <img class='linea' src="./images/line.png">
+               <img class='linea' src="./images/line-black.png">
             </figure>
-            <form>
+            <video playsinline autoplay muted loop poster="./images/poster.jpg" id="bgvid">
+                <source src="./images/typing.mp4" type="video/webm">
+                <source src="./images/typing.mp4" type="video/mp4">
+              </video>
+            <form class = 'contenedor-formulario-1'>
                 <div class='contenedor-input-login'>
                     <input class='text-input-login' type='email' id='email' placeholder="Email" name='email' required>
                 </div>
@@ -41,7 +45,7 @@
                 <a class='text-inciarsesion' href='#'>¿Olvidaste tu contraseña?</a>
             </section>
             <section>
-                <a class='text-inciarsesion' href='/'>Regresar a la tienda</a>
+                <a class='text-inciarsesion' id='last' href='/'>Regresar a la tienda</a>
             </section>
         </section>
     </main>
