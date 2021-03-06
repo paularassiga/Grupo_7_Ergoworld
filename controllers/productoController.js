@@ -4,8 +4,12 @@ const products = require("../data/productModel.js");
 const {
   validationResult
 } = require("express-validator");
-const { report } = require('../routers/productoRoutes.js');
-
+const {
+  report
+} = require('../routers/productoRoutes.js');
+const {
+  getAll
+} = require('../data/productModel')
 
 /*Funciones*/
 
@@ -29,34 +33,53 @@ let productoControllers = {
 
 
 
-    if(errors.isEmpty()){
-      let productos = [];
+    if (errors.isEmpty()) {
+      let productos = getAll();
 
+
+
+      console.log('PRODUCTOS" \n');
+      console.log(productos);
+      let nuevoId = [productos.length - 1]['id'] != undefined ? [productos.length - 1]['id'] : 0;
+      console.log("Nuevo ID: \n");
+
+      console.log(nuevoId + 1);
       let nuevoProducto = {
-        id: 1,
+        id: nuevoId + 1,
         ...req.body
       }
+
       productos.push(nuevoProducto);
       console.log(productos);
       let stringProducto = JSON.stringify(productos);
-      fs.writeFileSync(path.join(__dirname, '../data/productos.json'), stringProducto, function (result, error) {
+      fs.writeFileSync(path.join(__dirname, '../data/products.json'), stringProducto, function (result, error) {
+        console.log(error);
+        console.log(result);
         if (error) {
-          res.send(error)
-        } else {
+          console.log("Error");
+          console.log(error);
           res.render('products/product-create-form', {
-            mensage: "El producto ha sido creado correctamente"
+            errors: "Error al guardar el producto"
           });
+        } else {
+          console.log('Producto Guardado Correctamente');
+
         }
       });
       // res.send(nuevoProducto)
-      
-    }else{
-
-
-      res.render('products/product-create-form', {oldData: req.body, errors: errors.mapped()});
+      res.render('products/product-create-form', {
+        mensage: "El producto ha sido creado correctamente"
+      });
+    } else {
+      console.log("ERRORES:\n");
+      console.log(errors.mapped());
+      res.render('products/product-create-form', {
+        oldData: req.body,
+        errors: errors.mapped()
+      });
 
     }
-    
+
   },
   edit: async (req, res) => {
 

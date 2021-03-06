@@ -29,10 +29,10 @@
                 <% } %> 
                 </div>
                 <div class='contenedor-input-create'>
-                    <label for="short-description" class="form-label">Resumen del producto:</label>
-                    <input type="text" id="short-description" name="short-description" placeholder="Ej: Eleva la pantalla entre 15 y 25 centímetros por encima de la mesa. Fácil de usar y extremadamente portátil. Se adapta a casi todas las computadoras portátiles. Se abre y cierra con un sól movimiento." class="form-input" required>
-                    <% if(locals.errors && errors.short-description) { %> 
-                        <p class="feedback"><%= errors.short-description %>  </p>
+                    <label for="shortDescription" class="form-label">Resumen del producto:</label>
+                    <input type="text" id="shortDescription" name="shortDescription" placeholder="Ej: Eleva la pantalla entre 15 y 25 centímetros por encima de la mesa. Fácil de usar y extremadamente portátil. Se adapta a casi todas las computadoras portátiles. Se abre y cierra con un sól movimiento." class="form-input" required>
+                    <% if(locals.errors && errors.shortDescription) { %> 
+                        <p class="feedback"><%= errors.shortDescription%>  </p>
                     <% } %> 
                 </div>
                 <div class='contenedor-input-create'>
@@ -46,93 +46,93 @@
                 </div>
                 <div class='contenedor-input-create'>
                     <label for="name" class="form-label">Características:</label>
-                    <input type="text" id="characteristic-1" name="characteristic-1" placeholder="Ej: Garantía por 2 años" class="form-input" required>
-                    <% if(locals.errors && errors.characteristic-1) { %> 
-                        <p class="feedback"><%= errors.characteristic-1 %>  </p>
+                    <input type="text" id="characteristic1" name="characteristic1" placeholder="Ej: Garantía por 2 años" class="form-input" required>
+                    <% if(locals.errors && errors.characteristic1) { %> 
+                        <p class="feedback"><%= errors.characteristic1 %>  </p>
                     <% } %> 
                     
-                    <input type="text" id="characteristic-2" name="characteristic-2" placeholder="Ej: Hecho con plástico reciclado" class="form-input" required>
+                    <input type="text" id="characteristic2" name="characteristic2" placeholder="Ej: Hecho con plástico reciclado" class="form-input" required>
                     
-                    <% if(locals.errors && errors.characteristic-2) { %> 
-                        <p class="feedback"><%= errors.characteristic-2 %>  </p>
+                    <% if(locals.errors && errors.characteristic2) { %> 
+                        <p class="feedback"><%= errors.characteristic2 %>  </p>
                     <% } %> 
                     
                     
-                    <input type="text" id="characteristic-3" name="characteristic-3" placeholder="Ej: Libre de BPA" class="form-input" required>
-                    <% if(locals.errors && errors.characteristic-3) { %> 
-                        <p class="feedback"><%= errors.characteristic-3 %>  </p>
+                    <input type="text" id="characteristic3" name="characteristic3" placeholder="Ej: Libre de BPA" class="form-input" required>
+                    <% if(locals.errors && errors.characteristic3) { %> 
+                        <p class="feedback"><%= errors.characteristic3 %>  </p>
                     <% } %> 
                    
-                    <input type="text" id="characteristic-4" name="characteristic-4" placeholder="Ej: La mejor calidad del mercado." class="form-input" required>
-                    <% if(locals.errors && errors.characteristic-4) { %> 
-                        <p class="feedback"><%= errors.characteristic-4 %>  </p>
+                    <input type="text" id="characteristic4" name="characteristic4" placeholder="Ej: La mejor calidad del mercado." class="form-input" required>
+                    <% if(locals.errors && errors.characteristic4) { %> 
+                        <p class="feedback"><%= errors.characteristic4 %>  </p>
                     <% } %> 
                 
                 </div>
                 <div class='contenedor-input-create'>
-                    <label for="title-description-1" class="form-label">Titulo Descripción 1:</label>
-                    <input type="text" id="title-description-1" name="title-description-1" placeholder="Ej: Altura ajustable" class="form-input" required>
-                    <% if(locals.errors && errors.title-description-1) { %> 
-                        <p class="feedback"><%= errors.title-description-1 %>  </p>
+                    <label for="titleDescription1" class="form-label">Titulo Descripción 1:</label>
+                    <input type="text" id="titleDescription1" name="titleDescription1" placeholder="Ej: Altura ajustable" class="form-input" required>
+                    <% if(locals.errors && errors.titleDescription1) { %> 
+                        <p class="feedback"><%= errors.titleDescription1 %>  </p>
                     <% } %> 
                 </div>
                 <div class='contenedor-input-create'>
-                    <label for="description-1" class="form-label">Descripción 1:</label>
-                    <input type="text" id="description-1" name="description-1" placeholder="Ej: Ajustar la altura de la pantalla de su computadora portátil es fundamental para lograr la máxima comodidad y productividad." class="form-input" required>
-                    <% if(locals.errors && errors.description-1) { %> 
-                        <p class="feedback"><%= errors.description-1 %>  </p>
+                    <label for="description1" class="form-label">Descripción 1:</label>
+                    <input type="text" id="description1" name="description1" placeholder="Ej: Ajustar la altura de la pantalla de su computadora portátil es fundamental para lograr la máxima comodidad y productividad." class="form-input" required>
+                    <% if(locals.errors && errors.description1) { %> 
+                        <p class="feedback"><%= errors.description1 %>  </p>
                     <% } %> 
                 </div>
                 <div class='contenedor-input-create'>
                     <label for="name" class="form-label">Titulo Descripción 2:</label>
-                    <input type="text" id="title-description-2" name="title-description-2" placeholder="Ej: Fácil de usar y extremadamente portátil" class="form-input" required>
-                    <% if(locals.errors && errors.title-description-2) { %> 
-                        <p class="feedback"><%= errors.title-description-2 %>  </p>
+                    <input type="text" id="titleDescription2" name="titleDescription2" placeholder="Ej: Fácil de usar y extremadamente portátil" class="form-input" required>
+                    <% if(locals.errors && errors.titleDescription2) { %> 
+                        <p class="feedback"><%= errors.titleDescription2 %>  </p>
                     <% } %> 
                 
                 
                 </div>
                 <div class='contenedor-input-create'>
                     <label for="name" class="form-label">Descripción 2:</label>
-                    <input type="text" id="description-2" name="description-2" placeholder="Ej: Un simple movimiento abre y cierra el Roost Stand. Peso: 6 onzas (170 g) Cerrado: 1,30 x 1,17 x 13 pulgadas (3,3 x 3,0 x 33,0 cm)" class="form-input" required>
+                    <input type="text" id="description2" name="description2" placeholder="Ej: Un simple movimiento abre y cierra el Roost Stand. Peso: 6 onzas (170 g) Cerrado: 1,30 x 1,17 x 13 pulgadas (3,3 x 3,0 x 33,0 cm)" class="form-input" required>
                 
-                    <% if(locals.errors && errors.description-2) { %> 
-                        <p class="feedback"><%= errors.description-2 %>  </p>
+                    <% if(locals.errors && errors.description2) { %> 
+                        <p class="feedback"><%= errors.description2 %>  </p>
                     <% } %> 
                 </div>
                 <div class='contenedor-input-create'>
                     <label for="name" class="form-label">Titulo Descripción 3:</label>
-                    <input type="text" id="title-description-3" name="title-description-3" placeholder="Ej: Se adapta a casi todas las computadoras portátiles" class="form-input" required>
-                    <% if(locals.errors && errors.title-description-3) { %> 
-                        <p class="feedback"><%= errors.title-description-3 %>  </p>
+                    <input type="text" id="titleDescription3" name="titleDescription3" placeholder="Ej: Se adapta a casi todas las computadoras portátiles" class="form-input" required>
+                    <% if(locals.errors && errors.titleDescription3) { %> 
+                        <p class="feedback"><%= errors.titleDescription3 %>  </p>
                     <% } %> 
                
                 </div>
                 <div class='contenedor-input-create'>
                     <label for="name" class="form-label">Descripción 3:</label>
-                    <input type="text" id="description-3" name="description-3" placeholder="Ej: Este fantástico stand se ajusta automáticamente para adaptarse a tu computadora portátil." class="form-input" required>
-                    <% if(locals.errors && errors.description-3) { %> 
-                        <p class="feedback"><%= errors.description-3 %>  </p>
+                    <input type="text" id="description3" name="description3" placeholder="Ej: Este fantástico stand se ajusta automáticamente para adaptarse a tu computadora portátil." class="form-input" required>
+                    <% if(locals.errors && errors.description3) { %> 
+                        <p class="feedback"><%= errors.description3 %>  </p>
                     <% } %> 
                 
                 </div>
                 <div class='contenedor-input-create'>
                     <label for="name" class="form-label">Imágenes:</label>
-                    <input type="file" id="image-1" name="image-1" class="form-input" required>
-                    <% if(locals.errors && errors.image-1) { %> 
-                        <p class="feedback"><%= errors.image-1 %>  </p>
+                    <input type="file" id="image1" name="image1" class="form-input" required>
+                    <% if(locals.errors && errors.image1) { %> 
+                        <p class="feedback"><%= errors.image1 %>  </p>
                     <% } %> 
-                    <input type="file" id="image-2" name="image-2" class="form-input" required>
-                    <% if(locals.errors && errors.image-2) { %> 
-                        <p class="feedback"><%= errors.image-2 %>  </p>
+                    <input type="file" id="image2" name="image2" class="form-input" required>
+                    <% if(locals.errors && errors.image2) { %> 
+                        <p class="feedback"><%= errors.image2 %>  </p>
                     <% } %> 
-                    <input type="file" id="image-3" name="image-3" class="form-input" required>
-                    <% if(locals.errors && errors.image-3) { %> 
-                        <p class="feedback"><%= errors.image-3 %>  </p>
+                    <input type="file" id="image3" name="image3" class="form-input" required>
+                    <% if(locals.errors && errors.image3) { %> 
+                        <p class="feedback"><%= errors.image3 %>  </p>
                     <% } %> 
-                    <input type="file" id="image-4" name="image-4" class="form-input" required>
-                    <% if(locals.errors && errors.image-4) { %> 
-                        <p class="feedback"><%= errors.image-4 %>  </p>
+                    <input type="file" id="image4" name="image4" class="form-input" required>
+                    <% if(locals.errors && errors.image4) { %> 
+                        <p class="feedback"><%= errors.image4 %>  </p>
                     <% } %> 
                 </div>
                 <div class= 'contenedor-options'>
