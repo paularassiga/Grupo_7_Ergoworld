@@ -35,7 +35,7 @@ let productoControllers = {
 
     if (errors.isEmpty()) {
       let productos = getAll();
-
+      console.log(req.files);
 
 
       console.log('PRODUCTOS" \n');
@@ -46,7 +46,11 @@ let productoControllers = {
       console.log(nuevoId + 1);
       let nuevoProducto = {
         id: nuevoId + 1,
-        ...req.body
+        ...req.body,
+        image1: req.files[0].filename,
+        image2: req.files[1].filename,
+        image3: req.files[2].filename,
+        image4: req.files[3].filename
       }
 
       productos.push(nuevoProducto);
