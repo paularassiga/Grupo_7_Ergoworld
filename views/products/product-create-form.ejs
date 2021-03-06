@@ -18,6 +18,7 @@
             <figure>
                <img class='linea' src="../images/line.png">
             </figure>
+
             <!--Sólo vista estática sin variables dinámicas por ahora -->
             <form action="/productos/crear" method="POST" enctype="multipart/form-data">
                 <div class='contenedor-input-create'>
@@ -25,12 +26,12 @@
                     <input type="text" id="name" name="name" placeholder="Ej: Teclado Ergonómico" class="form-input" required>
                 </div>
                 <div class='contenedor-input-create'>
-                    <label for="name" class="form-label">Resumen del producto:</label>
+                    <label for="short-description" class="form-label">Resumen del producto:</label>
                     <input type="text" id="short-description" name="short-description" placeholder="Ej: Eleva la pantalla entre 15 y 25 centímetros por encima de la mesa. Fácil de usar y extremadamente portátil. Se adapta a casi todas las computadoras portátiles. Se abre y cierra con un sól movimiento." class="form-input" required>
                 </div>
                 <div class='contenedor-input-create'>
-                    <label for="name" class="form-label">Precio:</label>
-                    <input type="text" id="price" name="price" placeholder="Ej: $2000" class="form-input" required>
+                    <label for="price" class="form-label">Precio:</label>
+                    <input type="number" id="price" name="price" placeholder="Ej: $2000" class="form-input" required>
                 </div>
                 <div class='contenedor-input-create'>
                     <label for="name" class="form-label">Características:</label>
@@ -40,11 +41,11 @@
                     <input type="text" id="characteristic-4" name="characteristic-4" placeholder="Ej: La mejor calidad del mercado." class="form-input" required>
                 </div>
                 <div class='contenedor-input-create'>
-                    <label for="name" class="form-label">Titulo Descripción 1:</label>
+                    <label for="title-description-1" class="form-label">Titulo Descripción 1:</label>
                     <input type="text" id="title-description-1" name="title-description-1" placeholder="Ej: Altura ajustable" class="form-input" required>
                 </div>
                 <div class='contenedor-input-create'>
-                    <label for="name" class="form-label">Descripción 1:</label>
+                    <label for="description-1" class="form-label">Descripción 1:</label>
                     <input type="text" id="description-1" name="description-1" placeholder="Ej: Ajustar la altura de la pantalla de su computadora portátil es fundamental para lograr la máxima comodidad y productividad." class="form-input" required>
                 </div>
                 <div class='contenedor-input-create'>
