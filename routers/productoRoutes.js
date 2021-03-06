@@ -60,8 +60,10 @@ const uploadFile = multer({storage});
  router.post('/crear', uploadFile.any(), validateCrearProducto,  productoControllers.store)
 
    /*EDITAR PRODUCTO*/
- router.get('/editar', productoControllers.edit); 
+ router.get('/editar/:id',  productoControllers.edit); 
+ router.post('/editar/:id', uploadFile.any(), validateCrearProducto,  productoControllers.edit); 
 
   /*Exporto módulo para llevarlo al entry point*/
+  router.delete('/borrar/:id',  productoControllers.delete); 
 
   module.exports = router;

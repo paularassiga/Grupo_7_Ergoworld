@@ -90,8 +90,28 @@ let productoControllers = {
 
     res.render('products/product-edit-form');
 
-  }
-}
+  },
+
+  delete: (req, res)=> {
+    let productos = getAll();
+    const deletedId = req.params.id;
+    const producto = productos.filter(producto => producto.id != deletedId);
+    let productoGuardar = JSON.stringify(producto,null,2)
+    fs.writeFileSync(path.join(__dirname, '../data/products.json'), stringProducto, function (result, error) {
+     
+      if (error) {
+        console.log("Error");
+        console.log(error);
+        res.render('products/index', {
+          errors: "Error al guardar lista de productos"
+        });
+      } else {
+        console.log('Producto Eliminado Correctamente');
+
+      }})
+    res.redirect('/index');
+    }}
+
 
 /*Exporto*/
 module.exports = productoControllers;
