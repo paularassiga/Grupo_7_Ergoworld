@@ -12,15 +12,32 @@ body {
     margin: 0px;
     padding: 0px;
     overflow-x: hidden;
-    background-color: #4a4a4a;
+    background-color: transparent;
 }
+
+video {
+    object-fit: cover;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index:-1;
+  }
+
+ .contenedor-formulario-1{
+      background-color:rgba(79, 79, 79, 0.8);
+      padding: 30px 0;
+      max-width: 95%;
+    
+  }
 
 .contenedor-formulario{
     padding:4.375rem 0px;
 }
 
 .h-login{
-    color:white;
+    color:black;
     margin:auto;
     text-align: center;
     margin-bottom: 1.25rem;
@@ -89,15 +106,28 @@ body {
     display:flex;
     justify-content: center;
     margin-bottom:1.25rem;
+    background-color:rgba(79, 79, 79, 0.8);
+    padding:10px;
+    margin:0 auto;
+    max-width: 95%;
+}
+
+
+#last{
+    padding-bottom: 30px;
 }
 
 @media(min-width:583px){
-    .contenedor-input-login, #boton-enviar-login, .text-inciarsesion{
+    .contenedor-input-login, #boton-enviar-login{
         max-width:30.4375rem;
     }
 
     [type="checkbox"] {
         width:3%;
          }
+    
+    .contenedor-formulario-1, .text-inciarsesion{
+       max-width: 560px;
+        }
      
 }
