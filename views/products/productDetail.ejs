@@ -55,10 +55,24 @@ css: ['/css/productDetails.css']}) %>
                     <button class="menosBotton"><i class="fas fa-minus"></i></button>
 
                 </div>
+                <div class='container-bottons'>
+                <button class="editarProducto">
+                    <a href='/productos/editar/:id'>
+                    <i class="fas fa-edit"></i>
+                    Editar Producto
+                </a>
+                </button>
+                <form action="/products/delete/:id?_method=DELETE" method="POST" style="display: inline-flex">
+                    <button type="submit" class="delete-button">
+                        <i class="fas fa-trash-alt"></i>
+                        Eliminar Producto
+                    </button>
+                </form>
                 <button class="agregarAlCarritoBoton">
                     <i class="fas fa-cart-plus"></i>
                     Agregar Al Carrito
                 </button>
+            </div>
             </div>
             </div>
 
@@ -83,6 +97,17 @@ css: ['/css/productDetails.css']}) %>
                 <p class="cantidad">1</p>
                 <button class="menosBotton"><i class="fas fa-minus"></i></button>
             </div>
+            <button class="editarProducto">
+                <i class="fas fa-edit"></i>
+                Editar Producto
+            </button>
+            <form action="/products/delete/:id?_method=DELETE" method="POST" style="display: inline-flex">
+                
+                <button type="submit" class="delete-button">
+                    <i class="fas fa-trash-alt"></i>
+                    Eliminar Producto
+                </button>
+            </form>
             <button class="agregarAlCarritoBoton">
                 <i class="fas fa-cart-plus"></i>
                 Agregar Al Carrito

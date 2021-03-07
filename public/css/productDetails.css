@@ -96,6 +96,14 @@ img {
     color: #2897ff;
 }
 
+.container-botton{
+    display:flex;
+    flex-direction: row;
+    width:100%;
+    margin:0;
+    padding:0;
+}
+
 .agregarAlCarritoBoton {
     background-color: #396fb7;
     color: white;
@@ -104,13 +112,53 @@ img {
     align-items: center;
     height: 10vh;
     width: 80vw;
-    margin: 3vh;
+    margin: 2vh;
     margin-bottom:6vh;
 }
 
 .agregarAlCarritoBoton:hover {
     background-color: #2897ff;
 }
+
+
+.editarProducto{
+    background-color: grey;
+    height: 10vh;
+    width: 80vw;
+    margin: 2vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.editarProducto:hover {
+    background-color: rgb(88, 88, 88);
+}
+
+.editarProducto a{
+    text-decoration: none;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.delete-button{
+    color:white;
+    background-color: rgb(179, 42, 42);
+    height: 10vh;
+    width: 80vw;
+    margin: 2vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.delete-button:hover {
+    background-color:rgb(219, 83, 83);
+}
+
+
 
 .listaBeneficios {
     list-style: none;
@@ -269,10 +317,9 @@ img {
         margin-right: 2vh;
     }
 
-    .agregarAlCarritoBoton {
+    .agregarAlCarritoBoton, .editarProducto, .delete-button {
         margin: 0;
-        margin-top: 5vh;
-        width: 83%;
+        margin-top: 1vh;
         max-width:18.75rem;
     }
 
@@ -349,6 +396,7 @@ img {
 
     .cantidadContainer {
         justify-content: flex-start;
+        margin-bottom: 4vh;
     }
 
     .mainImage {
