@@ -4,7 +4,6 @@ const methodOverride =  require('method-override'); // poder usar los métodos P
 
 
 const app = express();
-const methodOverride =  require('method-override'); // Pasar poder usar los métodos PUT y DELETE
 
 //Definiendo la carpeta public
 
@@ -14,16 +13,9 @@ app.use(express.static(publicPath));
 
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
-<<<<<<< HEAD
 app.use(express.urlencoded({ extended: false })); //URL encode  - Para que nos pueda llegar la información desde el formulario al req.body
 app.use(methodOverride('_method')); // Pasar poder pisar el method="POST" en el formulario por PUT y DELETE
-=======
-//URL encode  - Para que nos pueda llegar la información desde el formulario al req.body
-app.use(express.urlencoded({ extended: false }));
-//Requiero el módulo que contiene las rutas (mainRoutes)
-app.use(methodOverride('_method')); // Pasar poder pisar el method="POST" en el formulario por PUT y DELETE
 
->>>>>>> 875f53604e0c1e78c80ad576e68d339e2983e014
 
 //Requiero el módulo que contiene las rutas (mainRoutes)
 let mainRoutes = require("./routers/mainRoutes.js");
