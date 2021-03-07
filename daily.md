@@ -23,3 +23,21 @@
 ### Status del Sprint #3
 - Terminamos con las vistas de edición y creación de producto, revisamos que tódo esté bien. 
 - Hicimos un último check para asegurarnos de que esté todo en orden.
+
+# Reunión 2/3/2021
+### Status del Sprint #4
+- Revisamos la base de datos de productos y definimos los campos.
+- Distribuimos los métodos que va a hacer cada uno, estamos listos para arrancar a trabajar.
+
+# Reunión 6/3/2021
+### Status del Sprint #4
+- Avanzamos con el CRUD, el método CREATE está casi listo gracias a Guille, tira errores pero Peterson está revisando y simplificando el código.
+- Cambiamos las vistas, agregamos los botones para borrar y editar.
+- Cada uno tiene un método para terminar al 100%, venimos bien y ya casi estamos terminando con el sprint #4.
+
+# Reunión 7/3/2021
+### Status del Sprint #4
+- CRUD listo, todo está funcionando a la perfección.
+- Vistas dinámicas listas.
+- Bases de datos listas.
+
