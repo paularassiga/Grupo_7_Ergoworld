@@ -9,8 +9,11 @@ const {getAll} = require('../data/productModel')
 
 let productoControllers = {
   index: (req, res) => {
-    res.render('products/products');
+    let productos = getAll();  
+
+    res.render('products/products', {'productos':productos});
   },
+  
   detalle: (req, res) => {
     res.render('products/productDetail');
   },
