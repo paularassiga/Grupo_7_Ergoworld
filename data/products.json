@@ -82,26 +82,5 @@
     "image2": "1615132807916_img_.jpeg",
     "image3": "1615132807922_img_.jpeg",
     "image4": "1615132807924_img_.jpeg"
-  },
-  {
-    "id": 5,
-    "name": "NOVA",
-    "shortDescription": "Ofrece una adaptabilidad infinita. La lente personalizada y la matriz de LED crean un grupo uniforme de luz que se puede ajustar exactamente a las preferencias de cada usuario.",
-    "price": "7000",
-    "characteristic1": "Garantía por 2 años",
-    "characteristic2": "Hecho con plástico reciclado",
-    "characteristic3": "Libre de BPA",
-    "characteristic4": "La mejor calidad del mercado.",
-    "titleDescription1": "Salud para tus ojos",
-    "description1": "La luz LED minimiza el deslumbramiento y crea huellas de luz perfectamente uniformes.",
-    "titleDescription2": "Diseñado por expertos",
-    "description2": " Las bisagras permiten un movimiento 100% ajustable, al tiempo que garantiza la estabilidad y la longevidad del producto.",
-    "titleDescription3": "100% adaptable",
-    "description3": "Ajuste fácilmente los niveles de brillo con atenuación táctil, mientras la función de atenuación inteligente recuerda su brillo nivel para la próxima vez que encienda la luz.",
-    "category": "iluminacion",
-    "image1": "1615133658959_img_.jpg",
-    "image2": "1615133658964_img_.jpeg",
-    "image3": "1615133658968_img_.jpeg",
-    "image4": "1615133658971_img_.jpeg"
   }
 ]

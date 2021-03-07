@@ -49,12 +49,12 @@ css: ['/css/productDetails.css']}) %>
                 </div>
                 <div class='container-bottons'>
                 <button class="editarProducto">
-                    <a href='/productos/editar/:id'>
+                    <a href='/productos/editar/<%= detalleProducto.id%>'>
                     <i class="fas fa-edit"></i>
                     Editar Producto
                 </a>
                 </button>
-                <form action="/products/delete/:id?_method=DELETE" method="POST" style="display: inline-flex">
+                <form action="/productos/borrar/<%= detalleProducto.id%>?_method=DELETE" method="POST" style="display: inline-flex">
                     <button type="submit" class="delete-button">
                         <i class="fas fa-trash-alt"></i>
                         Eliminar Producto
