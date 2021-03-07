@@ -12,6 +12,7 @@ body {
     margin: 0px;
     padding: 0px;
     overflow-x: hidden;
+    background-color: #e8e8e8;
 }
 
 .hero-wrapper {
@@ -53,6 +54,7 @@ body {
 .home1 .hero-content {
     padding-top: 4rem;
     padding-bottom: 4rem;
+    background-color: #e8e8e8
 }
 
 .home1 h2 {
@@ -82,9 +84,14 @@ body {
     font-weight:500;
 }
 
+
 .home2 {
     background-color: #e8e8e8;
     text-align: center;
+}
+
+.home2-wrap{
+    width:95%;
 }
 
 .home2 h2 {
@@ -97,8 +104,9 @@ body {
 
 .home2-content1 {
     padding: 3rem 3rem 1rem 3rem;
-    background-color: #000000;
-    color: #fff;
+    background-color: white;
+    color: black;
+    margin: 10px 0 10px 0;
 }
 
 
@@ -131,16 +139,6 @@ body {
 
 .home2-content1 .botones-hom2 a {
     color: #2897ff;
-}
-
-.home2-content2 .botones-hom2 a {
-    color: #2897ff;
-}
-
-.home2-content2 {
-    padding: 3rem 3rem 1rem 3rem;
-    background-color: #ffffff;
-    color: #000000;
 }
 
 
@@ -195,6 +193,9 @@ body {
     /*.hero-wrapper {
         border: red 1px solid;
     } para testear la media*/
+    .home1{
+        background-color: #e8e8e8;
+    }
     
     .hero-content {
         max-width: 35rem;
@@ -208,14 +209,34 @@ body {
     .hero-content h2 {
         font-size: 4vw;
     }
+
     /* home2 */
+
+    .contenedor-general{
+        display:flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        width:100%;
+    }
+
+    .home2{
+        width:50%;
+    }
+
+    .contenedor-home2-1{
+        width:100%;
+    }
+
     .home2-wrap {
-        padding: 2rem;
-        display: flex;
-        gap: 1rem;
+        width:90%;
+        margin:0 auto;
+        padding:0;
     }
     .home2-content1 {
-        width: 50%;
+        width: 100%;
+        height:600px;
     }
     
     .home2-content2 {
@@ -244,14 +265,18 @@ body {
 
 @media(min-width:1000px){
 
+    .contenedor-general{
+        width:80%;
+    }
+
     .home2-wrap{
         display:flex;
         justify-content: center;
         flex-wrap: wrap;
     }
-    .home2-content1, .home2-content2{
-        max-width: 40%;
-        margin:0;
+
+    .home2-content1{
+        margin:10px 0;
     }
 
     .botones-hom2{
