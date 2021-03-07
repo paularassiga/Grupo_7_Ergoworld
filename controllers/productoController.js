@@ -25,16 +25,16 @@ let productoControllers = {
 
     if (errors.isEmpty()) {
       let productos = getAll();     
-      let nuevoId = productos.length + 1;
+      const nuevoId = productos.length + 1;
 
-        let nuevoProducto = {
-        id: nuevoId,
-        ...req.body,
-        image1: req.files[0].filename,
-        image2: req.files[1].filename,
-        image3: req.files[2].filename,
-        image4: req.files[3].filename
-      }
+      let nuevoProducto = {
+      id: nuevoId,
+      ...req.body,
+      image1: req.files[0].filename,
+      image2: req.files[1].filename,
+      image3: req.files[2].filename,
+      image4: req.files[3].filename
+      };
 
       productos.push(nuevoProducto);
       
@@ -51,14 +51,41 @@ let productoControllers = {
       });
 
     }
+  },
+  // Update - Form to edit
+  edit: (req, res) => {
+    let products = getAll();
+    const productId = req.params.id;
+    const productToEdit = products.find(e => e.id == productId);
+
+    res.render('products/product-edit-form', {productToEdit});
 
   },
-  edit: async (req, res) => {
+  // Update - Method to update
+  update: (req, res) => {
+		let products = getAll();
+    const productId = req.params.id;
+    const productToEdit = products.find(e => e.id == productId);
+    console.log(productToEdit);
 
+    productToEdit = [
+      ...req.body
+    ];
 
-    res.render('products/product-edit-form');
+    console.log(productToEdit);
+		//const iP = products.findIndex(e => e.id == idProducto )
+/* 
+		products[iP].name = req.body.name;
+		products[iP].price = req.body.price;
+		products[iP].discount = req.body.discount;
+		products[iP].category = req.body.category;
+		products[iP].description = req.body.description;
 
-  },
+		const producString = JSON.stringify(products, null, 2);
+		fs.writeFileSync(productsFilePath, producString); */
+		res.send('modificado con exito');
+		
+	},
 
   delete: (req, res)=> {
     let productos = getAll();

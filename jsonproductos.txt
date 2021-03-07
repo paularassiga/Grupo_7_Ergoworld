@@ -19,34 +19,5 @@
     "image2": "1615072824548_img_.jpg",
     "image3": "1615072824557_img_.jpg",
     "image4": "1615072824561_img_.jpg"
-  },
-  {
-    "id": 2,
-    "name": "test",
-    "shortDescription": "test",
-    "price": "100",
-    "characteristic1": "1",
-    "characteristic2": "2",
-    "characteristic3": "3",
-    "characteristic4": "4",
-    "titleDescription1": "1",
-    "description1": "2",
-    "titleDescription2": "3",
-    "description2": "4",
-    "titleDescription3": "1",
-    "description3": "2",
-    "category": [
-      "sillas",
-      "monitores",
-      "stands",
-      "iluminacion",
-      "teclados",
-      "paneles",
-      "cables"
-    ],
-    "image1": "1615091520833_img_.jpg",
-    "image2": "1615091521002_img_.jpg",
-    "image3": "1615091521011_img_.jpg",
-    "image4": "1615091521013_img_.jpg"
   }
 ]

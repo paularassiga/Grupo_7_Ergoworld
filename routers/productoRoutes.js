@@ -56,7 +56,7 @@ const uploadFile = multer({storage});
 
    /*EDITAR PRODUCTO*/
  router.get('/editar/:id',  productoControllers.edit); 
- router.post('/editar/:id', uploadFile.any(), validateCrearProducto,  productoControllers.edit); 
+ router.put('/editar/:id', uploadFile.any(),  productoControllers.update); 
 
   /*Exporto módulo para llevarlo al entry point*/
   router.delete('/borrar/:id',  productoControllers.delete); 
