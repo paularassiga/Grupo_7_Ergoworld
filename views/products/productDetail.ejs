@@ -15,6 +15,10 @@ css: ['/css/productDetails.css']}) %>
         <!-- seccion con titulo y precio -->
         <section class="mainDescriptionContainer">
 
+            <% if(locals.message && message) { %> 
+                <p class="descriptionTitle"><%= message %>  </p>
+            <% } %> 
+
             <h1 class="descriptionTitle"><%=detalleProducto.name%></h1>
 
             <p class="descriptionText"><%=detalleProducto.shortDescription%></p>

@@ -47,10 +47,8 @@ let productoControllers = {
       let stringProducto = JSON.stringify(productos, null, 2);
       fs.writeFileSync(path.join(__dirname, '../data/products.json'), stringProducto);
       res.render('products/product-create-form', 
-      {mensage: "El producto ha sido creado correctamente"});
-         
-          
-    } else {
+      {mensage: "El producto ha sido creado correctamente"});             
+      } else {
       res.render('products/product-create-form', {
         oldData: req.body,
         errors: errors.mapped()
@@ -71,23 +69,23 @@ let productoControllers = {
   update: (req, res) => {
 		let products = getAll();
     const productId = req.params.id;
-    const productToEdit = products.find(e => e.id == productId);
-    console.log(productToEdit);
+    const indexProduct = products.findIndex(e => e.id == productId);
+    let detalleProducto = products.find( (productos) => productos.id == req.params.id);
+    //Modifico el producto
+    products[indexProduct] = {
+      id: products[indexProduct].id,
+      ...req.body,
+      //Valido con un if ternario si el usuario subio una imagen, en caso contrario se mantiene la imagen orignal :)
+      image1: req.files[0] ? req.files[0].filename : products[indexProduct].image1,
+      image2: req.files[1] ? req.files[1].filename : products[indexProduct].image2,
+      image3: req.files[2] ? req.files[2].filename : products[indexProduct].image3,
+      image4: req.files[3] ? req.files[3].filename : products[indexProduct].image4,
+    };    
+    
+    const stringProducto = JSON.stringify(products, null, 2);
+    fs.writeFileSync(path.join(__dirname, '../data/products.json'), stringProducto);
 
-   
-    console.log(productToEdit);
-		//const iP = products.findIndex(e => e.id == idProducto )
-/* 
-		products[iP].name = req.body.name;
-		products[iP].price = req.body.price;
-		products[iP].discount = req.body.discount;
-		products[iP].category = req.body.category;
-		products[iP].description = req.body.description;
-
-		const producString = JSON.stringify(products, null, 2);
-		fs.writeFileSync(productsFilePath, producString); */
-		res.send('modificado con exito');
-		
+     res.render('products/productDetail', {'detalleProducto':detalleProducto, 'message': "Producto editado con éxito"});
 	},
 
   delete: (req, res)=> {
