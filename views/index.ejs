@@ -30,38 +30,27 @@
 
     <!-- home 2 -->
 
-    <section class="home2">
-        <div class="home2-wrap">
-            <div id='contendedor-home2-1' class="home2-content1">
-                <h2>PRO CLICK ERGONOMIC MOUSE</h2>
-                <p>Pro Click es un mouse de computadora ergonómico inalámbrico de última generación diseñado para brindar comodidad y productividad. Diseñado con una inclinación de 30 grados, promueve una postura ergonómica natural del brazo para aliviar
-                    la tensión no deseada de la muñeca y brindar comodidad durante todo el día.</p>
-
-                <div class="botones-hom2">
-                    <a class="contenido-boton-home2" href="/productDetail">Leer más<i id='flecha-home2' class="fas fa-chevron-right" aria-hidden="true"></i></a>
-                    <a class="contenido-boton-home2" href="#">Comprar<i id='flecha-home2' class="fas fa-chevron-right" aria-hidden="true"></i></a>
+    <section class = 'contenedor-general'>
+        <% for (let i=0; i<productos.length; i++){ %>
+        <section class="home2">
+            <div class="home2-wrap">
+                <div id='contendedor-home2-1' class="home2-content1">
+                    <h2><%=productos[i].name%></h2>
+                    <p><%=productos[i].shortDescription%></p>
+    
+                    <div class="botones-hom2">
+                        <a class="contenido-boton-home2" href="/productos/detalle/<%=productos[i].id%>">Leer más<i id='flecha-home2' class="fas fa-chevron-right" aria-hidden="true"></i></a>
+                        <a class="contenido-boton-home2" href="#">Comprar<i id='flecha-home2' class="fas fa-chevron-right" aria-hidden="true"></i></a>
+                    </div>
+                    <figure>
+                        <img src="/images/products/<%=productos[i].image1%>">
+                    </figure>
                 </div>
-                <figure>
-                    <img src="/images/pro_click_3.png" alt="pro click mouse">
-                </figure>
             </div>
-
-
-            <div class="home2-content2">
-                <h2>SOPORTE PARA COMPUTADORA PORTÁTIL</h2>
-                <p>Eleva la pantalla entre 15 y 25 centímetros por encima de la mesa. Fácil de usar y extremadamente portátil. Se adapta a casi todas las computadoras portátiles. Se abre y cierra con un sól movimiento.</p>
-
-                <div class="botones-hom2">
-                    <a class="contenido-boton-home2" href="/productDetail">Leer más<i id='flecha-home2' class="fas fa-chevron-right" aria-hidden="true"></i></a>
-                    <a class="contenido-boton-home2" href="#">Comprar<i id='flecha-home2' class="fas fa-chevron-right" aria-hidden="true"></i></a>
-                </div>
-                <figure>
-                    <img src="/images/base-laptop.jpg" alt="base laptop">
-                </figure>
-            </div>
-        </div>
-    </section>
-
+        </section>
+        <% } %>
+        </section>
+        
     <!-- Home 3 -->
     <section class="contenedor-home3">
         <article class='contenedor-seccion-home3'>

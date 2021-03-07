@@ -9,10 +9,18 @@ const {getAll} = require('../data/productModel')
 
 let productoControllers = {
   index: (req, res) => {
-    res.render('products/products');
+    let productos = getAll();  
+
+    res.render('products/products', {'productos':productos});
   },
-  detalle: (req, res) => {
-    res.render('products/productDetail');
+  
+  detail: (req, res) => {
+
+    let productos = getAll();  
+
+    let detalleProducto = productos.find( (productos) => productos.id == req.params.id);
+
+    res.render('products/productDetail', {'detalleProducto':detalleProducto});
   },
 
   create: (req, res) => {
@@ -88,24 +96,24 @@ let productoControllers = {
 	},
 
   delete: (req, res)=> {
-    let productos = getAll();
-    const deletedId = req.params.id;
-    const producto = productos.filter(producto => producto.id != deletedId);
-    let productoGuardar = JSON.stringify(producto,null,2)
-    fs.writeFileSync(path.join(__dirname, '../data/products.json'), stringProducto, function (result, error) {
-     
-      if (error) {
-        console.log("Error");
-        console.log(error);
-        res.render('products/index', {
-          errors: "Error al guardar lista de productos"
-        });
-      } else {
-        console.log('Producto Eliminado Correctamente');
 
-      }})
-    res.redirect('/index');
-    }}
+    let productos = getAll();
+
+    productosActualizados = productos.filter((x) => x.id != req.params.id)
+
+		productosActualizadosJSON = JSON.stringify(productosActualizados, null, 2);
+
+		fs.writeFileSync(path.join(__dirname, '../data/products.json'), productosActualizadosJSON);
+
+		res.redirect('/products/borrado-exitoso');
+    },
+  
+  borradoExitoso:(req,res) => {
+
+    res.render('products/borrado-exitoso')
+
+  }
+  }
 
 
 /*Exporto*/
