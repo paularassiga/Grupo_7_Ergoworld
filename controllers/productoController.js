@@ -14,8 +14,13 @@ let productoControllers = {
     res.render('products/products', {'productos':productos});
   },
   
-  detalle: (req, res) => {
-    res.render('products/productDetail');
+  detail: (req, res) => {
+
+    let productos = getAll();  
+
+    let detalleProducto = productos.find( (productos) => productos.id == req.params.id);
+
+    res.render('products/productDetail', {'detalleProducto':detalleProducto});
   },
 
   create: (req, res) => {

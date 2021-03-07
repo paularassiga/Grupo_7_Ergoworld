@@ -15,17 +15,9 @@ css: ['/css/productDetails.css']}) %>
         <!-- seccion con titulo y precio -->
         <section class="mainDescriptionContainer">
 
-            <h1 class="descriptionTitle">SOPORTE PARA
-                COMPUTADORA
-                PORTÁTIL</h1>
+            <h1 class="descriptionTitle"><%= detalleProducto.name%></h1>
 
-            <p class="descriptionText">Eleva la pantalla entre 15 y 25
-                centímetros por encima de la mesa.
-                Fácil de usar y extremadamente
-                portátil. Se adapta a casi todas
-                las computadoras portátiles.
-                Se abre y cierra con un sólo
-                movimiento.</p>
+            <p class="descriptionText"><%= detalleProducto.shortDescription%></p>
             <div class="reviewContainer">
                 <i class="fas fa-star"></i>
 
@@ -46,7 +38,7 @@ css: ['/css/productDetails.css']}) %>
 
                 <div class="precioContainer">
                     <p>Precio:</p>
-                    <p class="precio">$2000</p>
+                    <p class="precio"><%= detalleProducto.price%></p>
 
                 </div>
                 <div class="cantidadContainer">
@@ -82,14 +74,14 @@ css: ['/css/productDetails.css']}) %>
 
         </section>
         <figure class="mainImage">
-            <img src="/images/base-laptop.jpg" alt="base para laptop">
+            <img src="/images/products/<%= detalleProducto.image1%>" alt="base para laptop">
         </figure>
 
 
         <div class="onlyMovile">
             <div class="precioContainer">
                 <p>Precio:</p>
-                <p class="precio">$2000</p>
+                <p class="precio"><%= detalleProducto.price%></p>
 
             </div>
             <div class="cantidadContainer">
@@ -120,101 +112,55 @@ css: ['/css/productDetails.css']}) %>
         <section class="beneficiosOfrecidos">
             <ul class="listaBeneficios">
                 <li><i class="fas fa-check-circle"></i>
-                    Garantía por 2 años
+                    <%= detalleProducto.characteristic1%>
                 </li>
                 <li><i class="fas fa-check-circle"></i>
-                    Hecho con plástico reciclado
+                    <%= detalleProducto.characteristic2%>
                 </li>
                 <li><i class="fas fa-check-circle"></i>
-                    Libre de BPA
+                    <%= detalleProducto.characteristic3%>
                 </li>
                 <li><i class="fas fa-check-circle"></i>
-                    La mejor calidad del mercado.
+                    <%= detalleProducto.characteristic4%>
                 </li>
-
             </ul>
-
             <div class="enviosGratisContainer"><i class="fas fa-truck"></i>
-
-
-                <p>
-                    ¡Envíos gratis a cualquier parte
-                    del mundo!
-                </p>
+                <p>¡Envíos gratis a cualquier parte del mundo!</p>
             </div>
-
         </section>
 
         <!-- mas fotos y detalles del producto -->
 
         <section class="detallesAvanzados">
-
             <div class="descripcionContainer">
                 <figure  class="imagen">
-                    <img id='imagen-descripcion' src="/images/stand-1.jpg" alt="stand para notebook">
+                    <img id='imagen-descripcion' src="/images/products/<%= detalleProducto.image2%>" alt="stand para notebook">
                 </figure>
-
                 <div class="descripcion">
-
-                    <h1>Altura ajustable
-                    </h1>
-
-
-                    <p>
-                        Ajustar la altura de la pantalla de su
-                        computadora portátil es fundamental
-                        para lograr la máxima comodidad y
-                        productividad.
-                    </p>
-
+                    <h1><%= detalleProducto.titleDescription1%></h1>
+                    <p><%= detalleProducto.description1%></p>
                 </div>
             </div>
-
             <div class="descripcionContainer inverso">
-
-
                 <figure  class="imagen">
-                    <img id='imagen-descripcion' src="/images/stand-2.jpg" alt="notebook">
+                    <img id='imagen-descripcion' src="/images/products/<%= detalleProducto.image3%>" alt="notebook">
                 </figure>
                 <div class="descripcion">
-                    <h1>
-                        Fácil de usar y
-                        extremadamente
-                        portátil
-                    </h1>
-                    <p>
-                        Un simple movimiento abre y
-                        cierra el Roost Stand.
-                        Peso: 6 onzas (170 g)
-                        Cerrado: 1,30 x 1,17 x 13 pulgadas
-                        (3,3 x 3,0 x 33,0 cm)
-                    </p>
+                    <h1><%= detalleProducto.titleDescription2%></h1>
+                    <p><%= detalleProducto.description2%></p>
                 </div>
             </div>
-
             <div id='ultimo-container' class="descripcionContainer">
                 <figure  class="imagen 5">
-                    <img id='imagen-descripcion' src="/images/stand-3.jpg" alt="notebook">
+                    <img id='imagen-descripcion' src="/images/products/<%= detalleProducto.image4%>" alt="notebook">
                 </figure>
                 <div class="descripcion">
-                    <h1>
-                        Se adapta a casi
-                        todas las
-                        computadoras
-                        portátiles
-                    </h1>
-                    <p>
-                        Este fantástico stand se ajusta
-                        automáticamente para adaptarse a tu
-                        computadora portátil.
-                    </p>
+                    <h1><%= detalleProducto.titleDescription3%></h1>
+                    <p><%= detalleProducto.description3%></p>
                 </div>
-
             </div>
-
         </section>
     </section>
-
     <section class="contenedor-home3">
         <article class='contenedor-seccion-home3'>
             <figure class='contenedorIcon-home3'>

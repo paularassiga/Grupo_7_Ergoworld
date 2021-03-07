@@ -48,7 +48,7 @@ const uploadFile = multer({storage});
 
  router.get('/', productoControllers.index)
 
- router.get('/detalle/:id', productoControllers.detalle);
+ router.get('/detalle/:id', productoControllers.detail);
 
    /*CREAR PRODUCTO*/
  router.get('/crear', productoControllers.create);
