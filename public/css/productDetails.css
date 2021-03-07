@@ -10,7 +10,12 @@ img {
     width: 100%;
 }
 
-
+.descriptionTitle-msg{
+    background-color: #396fb7;
+    color: white;
+    font-weight: 400;
+    padding: 10px;
+}
 
 .productDetailsContainer {
     margin: 5vw;

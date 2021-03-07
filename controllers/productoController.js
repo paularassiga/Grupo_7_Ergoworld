@@ -85,7 +85,7 @@ let productoControllers = {
     const stringProducto = JSON.stringify(products, null, 2);
     fs.writeFileSync(path.join(__dirname, '../data/products.json'), stringProducto);
 
-     res.render('products/productDetail', {'detalleProducto':detalleProducto, 'message': "Producto editado con éxito"});
+     res.render('products/productDetail', {'detalleProducto':detalleProducto, 'message': "Producto editado con éxito, actualiza para ver los cambios."});
 	},
 
   delete: (req, res)=> {
