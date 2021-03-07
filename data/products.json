@@ -22,34 +22,6 @@
   },
   {
     "id": 2,
-<<<<<<< HEAD
-    "name": "test",
-    "shortDescription": "test",
-    "price": "100",
-    "characteristic1": "1",
-    "characteristic2": "2",
-    "characteristic3": "3",
-    "characteristic4": "4",
-    "titleDescription1": "1",
-    "description1": "2",
-    "titleDescription2": "3",
-    "description2": "4",
-    "titleDescription3": "1",
-    "description3": "2",
-    "category": [
-      "sillas",
-      "monitores",
-      "stands",
-      "iluminacion",
-      "teclados",
-      "paneles",
-      "cables"
-    ],
-    "image1": "1615091520833_img_.jpg",
-    "image2": "1615091521002_img_.jpg",
-    "image3": "1615091521011_img_.jpg",
-    "image4": "1615091521013_img_.jpg"
-=======
     "name": "PRO CLICK ERGONOMIC MOUSE",
     "shortDescription": "Mouse de computadora ergonómico inalámbrico de última generación diseñado para brindar comodidad y productividad.",
     "price": "5000",
@@ -110,6 +82,5 @@
     "image2": "1615132807916_img_.jpeg",
     "image3": "1615132807922_img_.jpeg",
     "image4": "1615132807924_img_.jpeg"
->>>>>>> 875f53604e0c1e78c80ad576e68d339e2983e014
   }
 ]

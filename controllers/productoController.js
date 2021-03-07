@@ -11,16 +11,14 @@ let productoControllers = {
   index: (req, res) => {
     let productos = getAll();  
 
-    res.render('products/products', {'productos':productos});
+     res.render('products/products', {'productos':productos});
   },
-  
   detail: (req, res) => {
-
     let productos = getAll();  
 
-    let detalleProducto = productos.find( (productos) => productos.id == req.params.id);
+     let detalleProducto = productos.find( (productos) => productos.id == req.params.id);
 
-    res.render('products/productDetail', {'detalleProducto':detalleProducto});
+     res.render('products/productDetail', {'detalleProducto':detalleProducto});
   },
 
   create: (req, res) => {
@@ -76,10 +74,7 @@ let productoControllers = {
     const productToEdit = products.find(e => e.id == productId);
     console.log(productToEdit);
 
-    productToEdit = [
-      ...req.body
-    ];
-
+   
     console.log(productToEdit);
 		//const iP = products.findIndex(e => e.id == idProducto )
 /* 
@@ -96,23 +91,22 @@ let productoControllers = {
 	},
 
   delete: (req, res)=> {
-
     let productos = getAll();
 
-    productosActualizados = productos.filter((x) => x.id != req.params.id)
+     productosActualizados = productos.filter((x) => x.id != req.params.id)
 
-		productosActualizadosJSON = JSON.stringify(productosActualizados, null, 2);
+ 		productosActualizadosJSON = JSON.stringify(productosActualizados, null, 2);
 
-		fs.writeFileSync(path.join(__dirname, '../data/products.json'), productosActualizadosJSON);
+ 		fs.writeFileSync(path.join(__dirname, '../data/products.json'), productosActualizadosJSON);
 
-		res.redirect('/products/borrado-exitoso');
+ 		res.redirect('/productos/borrado-exitoso');
     },
-  
-  borradoExitoso:(req,res) => {
+    
+    borradoExitoso:(req,res) => {
 
-    res.render('products/borrado-exitoso')
-
-  }
+      res.render('products/borrado-exitoso')
+ 
+    }
   }
 
 
