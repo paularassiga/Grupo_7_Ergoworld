@@ -16,7 +16,6 @@ app.set('view engine', 'ejs');
 app.use(express.urlencoded({ extended: false })); //URL encode  - Para que nos pueda llegar la información desde el formulario al req.body
 app.use(methodOverride('_method')); // Pasar poder pisar el method="POST" en el formulario por PUT y DELETE
 
-
 //Requiero el módulo que contiene las rutas (mainRoutes)
 let mainRoutes = require("./routers/mainRoutes.js");
 let productoRoutes = require("./routers/productoRoutes.js");
