@@ -15,22 +15,25 @@
     <main>
         <section class='contenedor-formulario'>
             <h2 class='h-create'>Creá tu producto</h2>
+            <% if(locals.mensage && mensage) { %> 
+                <p class="h-create"><%= mensage %>  </p>
+            <% } %> 
             <figure>
-               <img class='linea' src="../images/line.png">
+               <img class='linea' src="/images/line.png">
             </figure>
 
             <!--Sólo vista estática sin variables dinámicas por ahora -->
             <form action="/productos/crear" method="POST" enctype="multipart/form-data">
                 <div class='contenedor-input-create'>
                     <label for="name" class="form-label">Nombre del producto:</label>
-                    <input type="text" id="name" name="name" placeholder="Ej: Teclado Ergonómico" class="form-input" required>
+                    <input type="text" id="name" name="name"  placeholder="Ej: Teclado Ergonómico" class="form-input" value="<%= typeof oldData != 'undefined' ? oldData.name : '' %>">
                 <% if(locals.errors && errors.name) { %> 
-                    <p class="feedback"><%= errors.name %>  </p>
+                    <p class="feedback"><%= errors.name.msg %>  </p>
                 <% } %> 
                 </div>
                 <div class='contenedor-input-create'>
                     <label for="shortDescription" class="form-label">Resumen del producto:</label>
-                    <input type="text" id="shortDescription" name="shortDescription" placeholder="Ej: Eleva la pantalla entre 15 y 25 centímetros por encima de la mesa. Fácil de usar y extremadamente portátil. Se adapta a casi todas las computadoras portátiles. Se abre y cierra con un sól movimiento." class="form-input" required>
+                    <input type="text" id="shortDescription" name="shortDescription" placeholder="Ej: Eleva la pantalla entre 15 y 25 centímetros por encima de la mesa. Fácil de usar y extremadamente portátil. Se adapta a casi todas las computadoras portátiles. Se abre y cierra con un sól movimiento." class="form-input">
                     <% if(locals.errors && errors.shortDescription) { %> 
                         <p class="feedback"><%= errors.shortDescription%>  </p>
                     <% } %> 
