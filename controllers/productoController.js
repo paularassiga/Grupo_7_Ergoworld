@@ -9,18 +9,10 @@ const {getAll} = require('../data/productModel')
 
 let productoControllers = {
   index: (req, res) => {
-    let productos = getAll();  
-
-    res.render('products/products', {'productos':productos});
+    res.render('products/products');
   },
-  
-  detail: (req, res) => {
-
-    let productos = getAll();  
-
-    let detalleProducto = productos.find( (productos) => productos.id == req.params.id);
-
-    res.render('products/productDetail', {'detalleProducto':detalleProducto});
+  detalle: (req, res) => {
+    res.render('products/productDetail');
   },
 
   create: (req, res) => {
@@ -76,10 +68,7 @@ let productoControllers = {
     const productToEdit = products.find(e => e.id == productId);
     console.log(productToEdit);
 
-    productToEdit = [
-      ...req.body
-    ];
-
+   
     console.log(productToEdit);
 		//const iP = products.findIndex(e => e.id == idProducto )
 /* 
@@ -96,24 +85,24 @@ let productoControllers = {
 	},
 
   delete: (req, res)=> {
-
     let productos = getAll();
+    const deletedId = req.params.id;
+    const producto = productos.filter(producto => producto.id != deletedId);
+    let productoGuardar = JSON.stringify(producto,null,2)
+    fs.writeFileSync(path.join(__dirname, '../data/products.json'), stringProducto, function (result, error) {
+     
+      if (error) {
+        console.log("Error");
+        console.log(error);
+        res.render('products/index', {
+          errors: "Error al guardar lista de productos"
+        });
+      } else {
+        console.log('Producto Eliminado Correctamente');
 
-    productosActualizados = productos.filter((x) => x.id != req.params.id)
-
-		productosActualizadosJSON = JSON.stringify(productosActualizados, null, 2);
-
-		fs.writeFileSync(path.join(__dirname, '../data/products.json'), productosActualizadosJSON);
-
-		res.redirect('/products/borrado-exitoso');
-    },
-  
-  borradoExitoso:(req,res) => {
-
-    res.render('products/borrado-exitoso')
-
-  }
-  }
+      }})
+    res.redirect('/index');
+    }}
 
 
 /*Exporto*/
