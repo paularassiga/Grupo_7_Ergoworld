@@ -78,8 +78,14 @@ let productoControllers = {
 
 		fs.writeFileSync(path.join(__dirname, '../data/products.json'), productosActualizadosJSON);
 
-		return res.send("El producto ha sido borrado exitosamente");
-    }
+		res.redirect('/products/borrado-exitoso');
+    },
+  
+  borradoExitoso:(req,res) => {
+
+    res.render('products/borrado-exitoso')
+
+  }
   }
 
 
