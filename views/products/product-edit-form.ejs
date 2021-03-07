@@ -30,7 +30,7 @@
                         </div>
                         <div class='contenedor-input-edit'>
                             <label for="shortDescription" class="form-label">Resumen del producto:</label>
-                            <textarea rows="6" cols="48" id="shortDescription" name="shortDescription" placeholder="Ej: Eleva la pantalla entre 15 y 25 centímetros por encima de la mesa. Fácil de usar y extremadamente portátil. Se adapta a casi todas las computadoras portátiles. Se abre y cierra con un sól movimiento." class="form-input"><%= typeof productToEdit != 'undefined' ? productToEdit.shortDescription : '' %></textarea 
+                            <textarea class= 'form-input-text' rows="6" cols="48" id="shortDescription" name="shortDescription" placeholder="Ej: Eleva la pantalla entre 15 y 25 centímetros por encima de la mesa. Fácil de usar y extremadamente portátil. Se adapta a casi todas las computadoras portátiles. Se abre y cierra con un sól movimiento." class="form-input"><%= typeof productToEdit != 'undefined' ? productToEdit.shortDescription : '' %></textarea 
                             <% if(locals.errors && errors.shortDescription) { %> 
                                 <p class="feedback"><%= errors.shortDescription%>  </p>
                             <% } %> 
@@ -163,6 +163,10 @@
                             <label class='categories'>
                                 <input type='checkbox' name='category' value='cables' class='options' <%= productToEdit.category.includes('cables') ? 'checked' : '' %>>
                                 Organizador de cables
+                            </label>
+                            <label class='categories'>
+                                <input type='checkbox' name='category' value='mouses' class='options'>
+                                Mouses
                             </label>
                             <% if(locals.errors && errors.category) { %> 
                                 <p class="feedback"><%= errors.category %>  </p>
