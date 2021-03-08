@@ -24,6 +24,13 @@ textarea{
     font-weight: 300;
 }
 
+.feedback{
+    background-color: #396fb7;
+    color: white;
+    font-weight: 400;
+    padding: 10px;
+}
+
 .contenedor-formulario{
     padding:4.375rem 0px;
 }

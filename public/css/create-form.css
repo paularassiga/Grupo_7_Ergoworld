@@ -15,6 +15,17 @@ body {
     background-color: #4a4a4a;
 }
 
+.mensaje-creado{
+    background-color: #396fb7;
+    color: white;
+    font-weight: 400;
+    padding: 10px;
+    margin: auto;
+    width: 40%;
+    text-align: center;
+    margin-bottom: 19px;
+}
+
 .contenedor-formulario{
     padding:4.375rem 0px;
 }

@@ -15,10 +15,9 @@
     <main>
         <section class='contenedor-formulario'>
             <h2 class='h-edit'>Estás editando el producto: <br> <%= typeof productToEdit != 'undefined' ? productToEdit.name : 'Producto no encontrado' %></h2>
-           
             <figure>
-               <img class='linea' src="../images/line.png">
-            </figure>
+                <img class='imagen-producto' src="../images/line.png">
+             </figure>
             <!--Sólo vista estática sin variables dinámicas por ahora -->             
                     <form action="/productos/editar/<%= productToEdit.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
                         <div class='contenedor-input-edit'>
@@ -26,6 +25,7 @@
                             <input type="text" id="name" name="name"  placeholder="Ej: Teclado Ergonómico" class="form-input" value="<%= typeof productToEdit != 'undefined' ? productToEdit.name : '' %>">
                         <% if(locals.errors && errors.name) { %> 
                             <p class="feedback"><%= errors.name.msg %>  </p>
+                            <a href='/'>Volver a la home</a>
                         <% } %> 
                         </div>
                         <div class='contenedor-input-edit'>
@@ -78,8 +78,9 @@
                         </div>
                         <div class='contenedor-input-create'>
                             <label for="description1" class="form-label">Descripción 1:</label>
-                            <input type="text" id="description1" name="description1" placeholder="Ej: Ajustar la altura de la pantalla de su computadora portátil es fundamental para lograr la máxima comodidad y productividad." class="form-input" required value="<%= typeof productToEdit != 'undefined' ? productToEdit.description1 : '' %>">
-                            <% if(locals.errors && errors.description1) { %> 
+                            <textarea type="text" id="description1" name="description1" placeholder="Ej: Ajustar la altura de la pantalla de su computadora portátil es fundamental para lograr la máxima comodidad y productividad." class="form-input" required value="<%= typeof productToEdit != 'undefined' ? productToEdit.description1 : '' %>">
+                            </textarea>
+                                <% if(locals.errors && errors.description1) { %> 
                                 <p class="feedback"><%= errors.description1 %>  </p>
                             <% } %> 
                         </div>
@@ -94,8 +95,8 @@
                         </div>
                         <div class='contenedor-input-create'>
                             <label for="name" class="form-label">Descripción 2:</label>
-                            <input type="text" id="description2" name="description2" placeholder="Ej: Un simple movimiento abre y cierra el Roost Stand. Peso: 6 onzas (170 g) Cerrado: 1,30 x 1,17 x 13 pulgadas (3,3 x 3,0 x 33,0 cm)" class="form-input" required value="<%= typeof productToEdit != 'undefined' ? productToEdit.description2 : '' %>">
-                        
+                            <textarea type="text" id="description2" name="description2" placeholder="Ej: Un simple movimiento abre y cierra el Roost Stand. Peso: 6 onzas (170 g) Cerrado: 1,30 x 1,17 x 13 pulgadas (3,3 x 3,0 x 33,0 cm)" class="form-input" required value="<%= typeof productToEdit != 'undefined' ? productToEdit.description2 : '' %>">
+                            </textarea>
                             <% if(locals.errors && errors.description2) { %> 
                                 <p class="feedback"><%= errors.description2 %>  </p>
                             <% } %> 
@@ -110,8 +111,9 @@
                         </div>
                         <div class='contenedor-input-create'>
                             <label for="name" class="form-label">Descripción 3:</label>
-                            <input type="text" id="description3" name="description3" placeholder="Ej: Este fantástico stand se ajusta automáticamente para adaptarse a tu computadora portátil." class="form-input" required value="<%= typeof productToEdit != 'undefined' ? productToEdit.description3 : '' %>">
-                            <% if(locals.errors && errors.description3) { %> 
+                            <textarea type="text" id="description3" name="description3" placeholder="Ej: Este fantástico stand se ajusta automáticamente para adaptarse a tu computadora portátil." class="form-input" required value="<%= typeof productToEdit != 'undefined' ? productToEdit.description3 : '' %>">
+                            </textarea>
+                                <% if(locals.errors && errors.description3) { %> 
                                 <p class="feedback"><%= errors.description3 %>  </p>
                             <% } %> 
                         
