@@ -598,4 +598,10 @@
   "apellidoUsuario": "Bernardin",
   "email": "cbernardin2r@youku.com",
   "password": "slCf732Th"
+}, {
+  "id": 101,
+  "nombreUsuario": "Paula",
+  "apellidoUsuario": "Rassiga",
+  "email": "paularassiga@gmail.com",
+  "password": "12345678"
 }]
