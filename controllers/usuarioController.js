@@ -24,7 +24,7 @@ let usuarioControllers = {
 
         User.create(userToCreate);
 
-        return res.redirect('usuario/login');
+        return res.redirect('/usuario/login');
     },
 
     login: (req, res) => {
