@@ -36,6 +36,12 @@ video {
   
 }
 
+.label{
+    padding-bottom:10px;
+    font-weight: 500;
+    color:white;
+}
+
 .h-register{
     color:black;
     margin:auto;

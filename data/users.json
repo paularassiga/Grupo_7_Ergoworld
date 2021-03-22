@@ -698,5 +698,14 @@
     "apellidoUsuario": "Bernardin",
     "email": "cbernardin2r@youku.com",
     "password": "slCf732Th"
+  },
+  {
+    "id": 101,
+    "nombreUsuario": "Paula",
+    "apellidoUsuario": "Rassiga",
+    "email": "paularassiga@gmail.com",
+    "pasword": "sauhauogas",
+    "password": "$2a$10$MEXMJvFsi4k8H38BcKE2G.IRFYz6A/sEtRXgkchTktGZ88j1i0bWG",
+    "avatar": "1616457094557_img_.jpg"
   }
 ]
