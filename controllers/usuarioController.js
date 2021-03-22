@@ -8,7 +8,7 @@ const {
 } = require("express-validator");
 const {
     report
-} = require('../routers/UsuarioRoutes.js');
+} = require('../routers/usuarioRoutes.js');
 const {
     getAll
 } = require('../data/productModel')
@@ -86,16 +86,6 @@ let usuarioControllers = {
 
         res.redirect('/user/usuario');
     },
-
-    
-
-
-
-
-
-
-
-
 }
 
 /*Exporto*/
