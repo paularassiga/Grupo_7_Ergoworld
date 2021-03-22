@@ -1,14 +1,11 @@
 const express = require('express');
 const {check} = require("express-validator");
 
- /*Requiero el módulo mainControllers para usarlo*/
-
- const usuarioControllers = require('../controllers/usuarioController.js');
-
- /*Guardo la ejecución de router*/
+  /*Guardo la ejecución de router*/
  
  let router = express.Router();
 
+ const usuarioControllers = require('../controllers/usuarioController.js');
   /*Acá van todas las rutas*/
 
  router.get('/login', usuarioControllers.login);
