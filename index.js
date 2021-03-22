@@ -19,13 +19,13 @@ app.use(methodOverride('_method')); // Pasar poder pisar el method="POST" en el 
 //Requiero el módulo que contiene las rutas (mainRoutes)
 let mainRoutes = require("./routers/mainRoutes.js");
 let productoRoutes = require("./routers/productoRoutes.js");
+let userRoutes = require("./routers/usuarioRoutes.js");
 
 //Definiendo las vistas
 
 app.use('/', mainRoutes);
 app.use('/productos', productoRoutes);
-// app.use('/login', mainRoutes);
-// app.use('/register', mainRoutes);
+app.use('/usuario', userRoutes);
 // app.use('/productCart', mainRoutes);
 // app.use('/productDetail', mainRoutes);
 

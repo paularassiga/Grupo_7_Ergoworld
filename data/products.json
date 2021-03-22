@@ -82,26 +82,5 @@
     "image2": "1615132807916_img_.jpeg",
     "image3": "1615132807922_img_.jpeg",
     "image4": "1615132807924_img_.jpeg"
-  },
-  {
-    "id": 5,
-    "name": "test",
-    "shortDescription": "test",
-    "price": "200",
-    "characteristic1": "1",
-    "characteristic2": "2",
-    "characteristic3": "3",
-    "characteristic4": "4",
-    "titleDescription1": "test",
-    "description1": "test",
-    "titleDescription2": "test",
-    "description2": "test",
-    "titleDescription3": "test",
-    "description3": "test",
-    "category": "sillas",
-    "image1": "1616262369630_img_.png",
-    "image2": "1616262369635_img_.png",
-    "image3": "1616262369637_img_.png",
-    "image4": "1616262369640_img_.png"
   }
 ]

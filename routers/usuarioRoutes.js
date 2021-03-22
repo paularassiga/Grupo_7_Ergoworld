@@ -2,7 +2,7 @@ const express = require('express');
 
  /*Requiero el módulo mainControllers para usarlo*/
 
- const mainControllers = require('../controllers/mainControllers.js');
+ const usuarioControllers = require('../controllers/usuarioController.js');
 
  /*Guardo la ejecución de router*/
  
@@ -10,9 +10,8 @@ const express = require('express');
 
   /*Acá van todas las rutas*/
 
- router.get('/', mainControllers.index);
- router.get('/productCart', mainControllers.productCart);
- router.get('/productDetail', mainControllers.productDetail);
+ router.get('/login', usuarioControllers.login);
+ router.get('/register', usuarioControllers.register);
 
   /*Exporto módulo para llevarlo al entry point*/
 
