@@ -26,7 +26,7 @@ let usuarioControllers = {
 
         return res.redirect('usuario/login');
     },
-    
+
     login: (req, res) => {
         res.render("user/login")
 
@@ -35,7 +35,29 @@ let usuarioControllers = {
     processLogin: (req, res) => {
         let errors = validationResult(req);
         if(errors.isEmpty()){
-            res.send('Todavía no funciono pero no encontré errores')
+            let userToLogin = User.findByField('email', req.body.email);
+
+            if(userToLogin){
+                let isOkThePassword = bcryptjs.compareSync(req.body.password, userToLogin.password);
+                if(isOkThePassword){
+                    return res.redirect('/')
+                }
+                return res.render('user/login',{
+                    errors:{
+                        password:{
+                            msg: 'La contraseña es incorrecta'
+                        }
+                    }
+                })
+            }
+
+            return res.render('user/login', {
+                errors:{
+                    email:{
+                        msg: 'No se encuentra este email en nuestra base de datos'
+                    }
+                }
+            });
 
         } else {
             return res.render ('user/login.ejs', {errors: errors.mapped()});
