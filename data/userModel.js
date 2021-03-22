@@ -6,8 +6,14 @@ const User = {
     getAll: () => JSON.parse(fs.readFileSync(path.join(__dirname, './users.json'),{encoding:"utf-8"})),
 
     findByField: (field, text) => {
+        // console.log("Parametro ingresados : " + field + " " + text);
+
+        console.log(this);
         let allUsers = User.getAll();
-        let userFound = allUsers.find(oneUser => oneUser(field) === text);
+        // console.log(allUsers);
+        console.log(text);
+        let userFound = allUsers.find(oneUser => oneUser[field] == text);
+        console.log(allUsers[0])
         return userFound;
     },
 
