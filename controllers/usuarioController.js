@@ -39,7 +39,7 @@ let usuarioControllers = {
         let errors = validationResult(req);
         if(errors.isEmpty()){
             let userToLogin = User.findByField('email', req.body.email);
-
+            console.log("Usuario Logueado:" + userToLogin)
             if(userToLogin){
                 let isOkThePassword = bcryptjs.compareSync(req.body.password, userToLogin.password);
                 if(isOkThePassword){
