@@ -701,11 +701,10 @@
   },
   {
     "id": 101,
-    "nombreUsuario": "Paula",
-    "apellidoUsuario": "Rassiga",
+    "nombreUsuario": "Test",
+    "apellidoUsuario": "test",
     "email": "paularassiga@gmail.com",
-    "pasword": "sauhauogas",
-    "password": "$2a$10$MEXMJvFsi4k8H38BcKE2G.IRFYz6A/sEtRXgkchTktGZ88j1i0bWG",
-    "avatar": "1616457094557_img_.jpg"
+    "pasword": "$2a$10$1NPM0h.8mdEMg6uazDw4LOW2aMiCn0iAIyBpHxQj8yLtdUyG.pGwe",
+    "avatar": "1616457547249_img_.png"
   }
 ]
