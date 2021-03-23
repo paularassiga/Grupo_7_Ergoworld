@@ -20,7 +20,7 @@ let usuarioControllers = {
     processRegister: (req,res) =>{
         let userToCreate = {
             ...req.body,
-            pasword: bcryptjs.hashSync(req.body.pasword, 10),
+            password: bcryptjs.hashSync(req.body.password, 10),
             avatar: req.file.filename
 
         }

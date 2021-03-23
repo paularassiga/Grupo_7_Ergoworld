@@ -706,5 +706,13 @@
     "email": "paularassiga@gmail.com",
     "pasword": "$2a$10$1NPM0h.8mdEMg6uazDw4LOW2aMiCn0iAIyBpHxQj8yLtdUyG.pGwe",
     "avatar": "1616457547249_img_.png"
+  },
+  {
+    "id": 102,
+    "nombreUsuario": "test",
+    "apellidoUsuario": "test",
+    "email": "test@test.com.ar",
+    "password": "$2a$10$zdsE8E.H9NPjg8gwDvJlMu344Gjt.uWCZXZnpl1/zRoH8ofYaq09C",
+    "avatar": "1616457727031_img_.png"
   }
 ]
