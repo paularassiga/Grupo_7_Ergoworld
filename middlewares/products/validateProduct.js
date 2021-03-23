@@ -5,6 +5,7 @@ const validateCrearProducto = [
     check('name').notEmpty().withMessage('Debes ingresar un nombre para el producto'),
     check('shortDescription').notEmpty().withMessage('Debes ingresar una descripcion corta'),
     check('price').notEmpty().isInt().withMessage("Debes ingresar un precio valido"),
+    check('stock').notEmpty().isInt().withMessage("Debes ingresar la cantidad de stock disponible"),
     check('characteristic1').notEmpty().withMessage('Debes ingresar una caracteritica valida'),
     check('characteristic2').notEmpty().withMessage('Debes ingresar una caracteritica valida'),
     check('characteristic3').notEmpty().withMessage('Debes ingresar una caracteritica valida'),

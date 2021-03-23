@@ -6,7 +6,8 @@
     "email": "paularassiga@gmail.com",
     "pasword": "$2a$10$1NPM0h.8mdEMg6uazDw4LOW2aMiCn0iAIyBpHxQj8yLtdUyG.pGwe",
     "avatar": "1616457547249_img_.png",
-    "user": 5
+    "user": 1
+    
   },
   {
     "id": 2,
@@ -15,7 +16,7 @@
     "email": "test@test.com.ar",
     "password": "$2a$10$zdsE8E.H9NPjg8gwDvJlMu344Gjt.uWCZXZnpl1/zRoH8ofYaq09C",
     "avatar": "1616457727031_img_.png",
-    "user": 5
+    "user": 1
   },
   {
     "id": 3,
@@ -25,14 +26,5 @@
     "password": "$2a$10$aikcIOJQChVE/o8NIFszzOCNQlreGdXyp.qaAy4SiVdIILO2JZt52",
     "avatar": "1616459469756_img_.png",
     "user": 2
-  },
-  {
-    "id": 4,
-    "nombreUsuario": "test",
-    "apellidoUsuario": "test",
-    "email": "test@test.com",
-    "password": "$2a$10$mxi5odPeVmujM3uqfDiI6uhPwNOKiwJsl5Puv7FSwWqXmypxYicce",
-    "avatar": "1616542669819_img_.jpg",
-    "user": 5
   }
 ]

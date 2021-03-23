@@ -1,0 +1,16 @@
+[{
+    "id": 1,
+    "userType": "Owner"
+  }, {
+    "id": 2,
+    "userType": "Admin"
+  }, {
+    "id": 3,
+    "userType": "Viewer"
+  }, {
+    "id": 4,
+    "userType": "Analist"
+  }, {
+    "id": 5,
+    "userType": "Customer"
+  }]

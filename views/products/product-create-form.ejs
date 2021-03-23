@@ -48,6 +48,14 @@
                 
                 </div>
                 <div class='contenedor-input-create'>
+                    <label for="name" class="form-label">Stock disponible:</label>
+                    <input type="number" id="stock" name="stock" placeholder="2000" class="form-input" required>
+                    <% if(locals.errors && errors.stock) { %> 
+                        <p class="feedback"><%= errors.stock %>  </p>
+                    <% } %> 
+                
+                </div>
+                <div class='contenedor-input-create'>
                     <label for="name" class="form-label">Características:</label>
                     <input type="text" id="characteristic1" name="characteristic1" placeholder="Ej: Garantía por 2 años" class="form-input" required>
                     <% if(locals.errors && errors.characteristic1) { %> 
@@ -144,39 +152,39 @@
                     margin: 0;">Categoría:</label>
                     <div class='contenedor-specific-options'>
                     <label class='categories'>
-                        <input type='checkbox' name='category' value='sillas' class='options'>
+                        <input type='checkbox' name='category' value=1 class='options'>
                         Sillas
                     </label>
                     <label class='categories'>
-                        <input type='checkbox' name='category' value='monitores' class='options'>
+                        <input type='checkbox' name='category' value=2 class='options'>
                         Monitores
                     </label>
                     <label class='categories'>
-                        <input type='checkbox' name='category' value='escritorios' class='options'>
+                        <input type='checkbox' name='category' value=3 class='options'>
                         Escritorios
                     </label>
                     <label class='categories'>
-                        <input type='checkbox' name='category' value='stands' class='options'>
+                        <input type='checkbox' name='category' value=4 class='options'>
                         Stands
                     </label>
                     <label class='categories'>
-                        <input type='checkbox' name='category' value='iluminacion' class='options'>
+                        <input type='checkbox' name='category' value=5 class='options'>
                         Iluminación
                     </label>
                     <label class='categories'>
-                        <input type='checkbox' name='category' value='teclados' class='options'>
+                        <input type='checkbox' name='category' value=6 class='options'>
                         Teclados
                     </label>
                     <label class='categories'>
-                        <input type='checkbox' name='category' value='paneles' class='options'>
+                        <input type='checkbox' name='category' value=7 class='options'>
                         Paneles de separación
                     </label>
                     <label class='categories'>
-                        <input type='checkbox' name='category' value='cables' class='options'>
+                        <input type='checkbox' name='category' value=8 class='options'>
                         Organizador de cables
                     </label>
                     <label class='categories'>
-                        <input type='checkbox' name='category' value='mouses' class='options'>
+                        <input type='checkbox' name='category' value=9 class='options'>
                         Mouses
                     </label>
                     <% if(locals.errors && errors.category) { %> 
