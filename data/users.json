@@ -698,33 +698,5 @@
     "apellidoUsuario": "Bernardin",
     "email": "cbernardin2r@youku.com",
     "password": "slCf732Th"
-  },
-  {
-    "id": 101,
-    "nombreUsuario": "Guillermo",
-    "apellidoUsuario": "Rodriguez",
-    "email": "guille@gmail.com",
-    "pasword": "12345678"
-  },
-  {
-    "id": 102,
-    "nombreUsuario": "Guillermo",
-    "apellidoUsuario": "Rodriguez",
-    "email": "guille1@gmail.com",
-    "password": "12345678"
-  },
-  {
-    "id": 103,
-    "nombreUsuario": "Guillermo",
-    "apellidoUsuario": "Rodriguez",
-    "email": "guille2@gmail.com",
-    "password": "12345678"
-  },
-  {
-    "id": 104,
-    "nombreUsuario": "Guillermo",
-    "apellidoUsuario": "Rodriguez",
-    "email": "guille22@gmail.com",
-    "password": "$2a$10$x9QG9jEO13wz7CrRa22ADubrdbjLCRZ7jXaROMWNIAoz6JwHqW89S"
   }
 ]

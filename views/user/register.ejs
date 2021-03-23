@@ -22,7 +22,7 @@
             <figure>
                <img class='linea' src="./images/line-black.png">
             </figure>
-            <form method='POST' action='/usuario/register' class = 'contenedor-formulario-1'>
+            <form method='POST' action='/usuario/register' enctype='multipart/form-data' class = 'contenedor-formulario-1'>
                 <div class='contenedor-input-register'>
                     <input required class='text-input-register' type='text' id='nombreUsuario' placeholder="Nombre" name='nombreUsuario' minlength="3">
                 </div>
@@ -34,6 +34,14 @@
                 </div>
                 <div class='contenedor-input-register'>
                     <input required class='text-input-register' type='password' id='password' placeholder="Contraseña" name='password'>
+<<<<<<< HEAD
+=======
+                </div>
+                <div class='contenedor-input-register'>
+                    <label class='label'>Elige tu foto de perfil</label>
+                    <input type="file" id="avatar" name="avatar" class="form-input" style="
+                    margin-top: 10px;" required>
+>>>>>>> d5ce8e15ad403a7ba15cf5ce0c1009da38e724cd
                 </div>
                 <div class='contenedor-button'>
                     <button type='reset' id='boton-reset-register'><a class='texto-enviar' id='boton-reset' href="/">Borrar</a></button>
