@@ -44,12 +44,14 @@ let usuarioControllers = {
     },
 
     processLogin: (req, res) => {
+        let userToLogin;
         let errors = validationResult(req);
         if(errors.isEmpty()){
-            let userToLogin = User.findByField('email', req.body.email);
-            console.log("Usuario Logueado:" + userToLogin)
+             userToLogin = User.findByField('email', req.body.email);
+            console.log("Usuario Logueado:" )
+            console.log(userToLogin)
             if(userToLogin){
-                let isOkThePassword = bcryptjs.compareSync(req.body.password, userToLogin.password);
+                let isOkThePassword = bcryptjs.compareSync(req.body.password, userToLogin['password']);
                 if(isOkThePassword){
                     return res.redirect('/')
                 }

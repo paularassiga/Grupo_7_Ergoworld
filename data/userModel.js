@@ -1,9 +1,12 @@
 const fs = require("fs");
 const path = require("path");
+const bcryptjs = require('bcryptjs');
 
 const User = {
 
-    getAll: () => JSON.parse(fs.readFileSync(path.join(__dirname, './users.json'),{encoding:"utf-8"})),
+    getAll: () => JSON.parse(fs.readFileSync(path.join(__dirname, './users.json'), {
+        encoding: "utf-8"
+    })),
 
     findByField: (field, text) => {
         // console.log("Parametro ingresados : " + field + " " + text);
@@ -20,7 +23,7 @@ const User = {
     generateId: () => {
         let allUsers = User.getAll();
         let lastUser = allUsers.pop();
-        if(lastUser) {
+        if (lastUser) {
             return lastUser.id + 1;
         }
         return 1
@@ -28,17 +31,32 @@ const User = {
 
     create: (userData) => {
         let allUsers = User.getAll();
-        let newUser = {
-            id:User.generateId(),
-            ...userData
-        }
 
-        allUsers.push(newUser);
-        fs.writeFileSync(path.join(__dirname, './users.json'), JSON.stringify(allUsers, null, 2));
-        return newUser;
+        bcryptjs.hash(userData['password'], 10, (err, palabraSecretaEncriptada) => {
+            if (err) {
+                console.log("Error hasheando:", err);
+            } else {
+                console.log("Y hasheada es: " + palabraSecretaEncriptada);
+                userData['password'] = palabraSecretaEncriptada;
+                let newUser = {
+                    id: User.generateId(),
+                    ...userData
+                }
+
+                allUsers.push(newUser);
+                fs.writeFileSync(path.join(__dirname, './users.json'), JSON.stringify(allUsers, null, 2));
+                return newUser;
+            }
+        });
+
+
+
+
+
+
     },
 
-    delete: function(id) {
+    delete: function (id) {
         let allUsers = User.getAll();
         let finalUsers = allUsers.filter(oneUser => oneUser.id !== id);
         fs.writeFileSync(path.join(__dirname, './users.json'), JSON.stringify(finalUsers, null, ''));
