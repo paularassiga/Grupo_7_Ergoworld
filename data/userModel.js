@@ -1,6 +1,8 @@
 const fs = require("fs");
 const path = require("path");
 
+
+
 const User = {
 
     getAll: () => JSON.parse(fs.readFileSync(path.join(__dirname, './users.json'),{encoding:"utf-8"})),
@@ -20,8 +22,9 @@ const User = {
         return 1
     },
 
-    create: (userData) => {
-        let allUsers = User.getAll();
+    create: function (userData) {
+        let allUsers = this.getAll();
+    
         let newUser = {
             id:User.generateId(),
             ...userData
@@ -38,6 +41,6 @@ const User = {
         fs.writeFileSync(path.join(__dirname, './users.json'), JSON.stringify(finalUsers, null, ''));
         return true;
     }
-}
+};
 
 module.exports = User;
