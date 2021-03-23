@@ -7,6 +7,7 @@ const User = require('../data/userModel')
 
 const bcryptjs = require('bcryptjs');
 
+
 /*Funciones*/
 
 let usuarioControllers = {
@@ -18,6 +19,12 @@ let usuarioControllers = {
     },
 
     processRegister: (req,res) =>{
+        const errors = validationResult(req);
+        
+        if(!errors.isEmpty()){
+            return res.render('user/register', {errors:errors.mapped(), oldData: req.body})
+        }else{
+
         let userToCreate = {
             ...req.body,
             password: bcryptjs.hashSync(req.body.password, 10),
@@ -28,6 +35,7 @@ let usuarioControllers = {
         User.create(userToCreate);
 
         return res.redirect('/usuario/login');
+    }
     },
 
     login: (req, res) => {
