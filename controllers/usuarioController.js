@@ -23,6 +23,7 @@ let usuarioControllers = {
         
         if(!errors.isEmpty()){
             return res.render('user/register', {errors:errors.mapped(), oldData: req.body})
+<<<<<<< HEAD
         };
         
         const emailExist = User.findByField('email', req.body.email);
@@ -49,6 +50,22 @@ let usuarioControllers = {
     
             return res.redirect('/usuario/login');
         
+=======
+        }else{
+
+        let userToCreate = {
+            ...req.body,
+            password: bcryptjs.hashSync(req.body.password, 10),
+            avatar: req.file.filename,
+            user:5
+
+        }
+
+        User.create(userToCreate);
+
+        return res.redirect('/usuario/login');
+    }
+>>>>>>> db47c26d7165747391bd1839eb0d63a6d739d7d0
     },
 
     login: (req, res) => {

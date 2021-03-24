@@ -1,0 +1,28 @@
+[{
+    "id": 1,
+    "productCategory": "Sillas"
+  }, {
+    "id": 2,
+    "productCategory": "Monitores"
+  }, {
+    "id": 3,
+    "productCategory": "Escritorios"
+  }, {
+    "id": 4,
+    "productCategory": "Stands"
+  }, {
+    "id": 5,
+    "productCategory": "Iluminación"
+  }, {
+    "id": 6,
+    "productCategory": "Teclados"
+  }, {
+    "id": 7,
+    "productCategory": "Paneles de separación"
+  }, {
+    "id": 8,
+    "productCategory": "Organizador de cables"
+  }, {
+    "id": 9,
+    "productCategory": "Mouses"
+  }]
