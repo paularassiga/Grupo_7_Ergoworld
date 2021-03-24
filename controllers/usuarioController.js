@@ -7,6 +7,7 @@ const User = require('../data/userModel')
 
 const bcryptjs = require('bcryptjs');
 
+
 /*Funciones*/
 
 let usuarioControllers = {
@@ -18,13 +19,36 @@ let usuarioControllers = {
     },
 
     processRegister: (req,res) =>{
-        let userToCreate = {
-            ...req.body,
-        }
+        const errors = validationResult(req);
+        
+        if(!errors.isEmpty()){
+            return res.render('user/register', {errors:errors.mapped(), oldData: req.body})
+        };
+        
+        const emailExist = User.findByField('email', req.body.email);
 
-        User.create(userToCreate);
+        if (emailExist) {
+			return res.render('user/register', {
+				errors: {
+					email: {
+						msg: 'Este email ya está registrado'
+					}
+				},
+				oldData: req.body
+			});
+		};
 
-        return res.redirect('usuario/login');
+            const userToCreate = {
+                ...req.body,
+                password: bcryptjs.hashSync(req.body.password, 10),
+                avatar: req.file.filename
+    
+            };
+    
+            User.create(userToCreate);
+    
+            return res.redirect('/usuario/login');
+        
     },
 
     login: (req, res) => {
@@ -33,12 +57,14 @@ let usuarioControllers = {
     },
 
     processLogin: (req, res) => {
+        let userToLogin;
         let errors = validationResult(req);
         if(errors.isEmpty()){
-            let userToLogin = User.findByField('email', req.body.email);
-
+             userToLogin = User.findByField('email', req.body.email);
+            console.log("Usuario Logueado:" )
+            console.log(userToLogin)
             if(userToLogin){
-                let isOkThePassword = bcryptjs.compareSync(req.body.password, userToLogin.password);
+                let isOkThePassword = bcryptjs.compareSync(req.body.password, userToLogin['password']);
                 if(isOkThePassword){
                     return res.redirect('/')
                 }

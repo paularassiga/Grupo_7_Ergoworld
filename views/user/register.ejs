@@ -22,18 +22,41 @@
             <figure>
                <img class='linea' src="./images/line-black.png">
             </figure>
-            <form method='POST' action='/usuario/register' class = 'contenedor-formulario-1'>
+            <form method='POST' action='/usuario/register' enctype='multipart/form-data' class = 'contenedor-formulario-1'>
                 <div class='contenedor-input-register'>
-                    <input required class='text-input-register' type='text' id='nombreUsuario' placeholder="Nombre" name='nombreUsuario' minlength="3">
+                    <input required class='text-input-register' type='text' id='nombreUsuario' placeholder="Nombre" name='nombreUsuario'  value='<%=locals.oldData? oldData.nombreUsuario : null %>'>
+                    <% if(locals.errors && errors.nombreUsuario) { %> 
+                        <p style='color:red' class="feedback"><%= errors.nombreUsuario.msg %>  </p>
+                    <% } %>
                 </div>
                 <div class='contenedor-input-register'>
-                    <input required class='text-input-register' type='text' id='apellidoUsuario' placeholder="Apellido" name='apellidoUsuario'minlength="3">
+                    <input required class='text-input-register' type='text' id='apellidoUsuario' placeholder="Apellido" name='apellidoUsuario'minlength="3" value='<%=locals.oldData? oldData.apellidoUsuario : null %>'>
+                    <% if(locals.errors && errors.apellidoUsuario) { %> 
+                        <p style='color:red' class="feedback"><%= errors.apellidoUsuario.msg %>  </p>
+                    <% } %>
                 </div>
                 <div class='contenedor-input-register'>
-                    <input required class='text-input-register' type='email' id='email' placeholder="Email" name='email'>
+                    <input required class='text-input-register' type='email' id='email' placeholder="Email" name='email' value='<%=locals.oldData? oldData.email : null %>'>
+                    <% if(locals.errors && errors.email) { %> 
+                        <p style='color:red' class="feedback"><%= errors.email.msg %>  </p>
+                    <% } %>
                 </div>
                 <div class='contenedor-input-register'>
-                    <input required class='text-input-register' type='password' id='password' placeholder="Contraseña" name='pasword'>
+                    <input required class='text-input-register' type='password' id='password' placeholder="Contraseña" name='password'>
+<<<<<<< HEAD
+                    <% if(locals.errors && errors.password) { %> 
+                        <p style='color:red' class="feedback"><%= errors.password.msg %>  </p>
+                    <% } %>
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> aaaa1706aaad0dcbe0ade91282be6345697adfd3
+                </div>
+                <div class='contenedor-input-register'>
+                    <label class='label'>Elige tu foto de perfil</label>
+                    <input type="file" id="avatar" name="avatar" class="form-input" style="
+                    margin-top: 10px;" required>
+>>>>>>> d5ce8e15ad403a7ba15cf5ce0c1009da38e724cd
                 </div>
                 <div class='contenedor-button'>
                     <button type='reset' id='boton-reset-register'><a class='texto-enviar' id='boton-reset' href="/">Borrar</a></button>
