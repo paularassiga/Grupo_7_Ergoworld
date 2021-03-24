@@ -34,5 +34,13 @@
     "password": "$2a$10$mxi5odPeVmujM3uqfDiI6uhPwNOKiwJsl5Puv7FSwWqXmypxYicce",
     "avatar": "1616542669819_img_.jpg",
     "user": 5
+  },
+  {
+    "id": 5,
+    "nombreUsuario": "Guillermo",
+    "apellidoUsuario": "Rodriguez",
+    "email": "guille@gmail.com",
+    "password": "$2a$10$aE8DKuD2YtiI5Iw1C9sJ9uc3ffyqUJG3BtHpIXhMwsKm1XKq0//j6",
+    "avatar": "1616621665262_img_.jpg"
   }
 ]
