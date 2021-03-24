@@ -3,20 +3,19 @@ const fs = require("fs");
 const products = require("../data/productModel.js");
 const {validationResult} = require("express-validator");
 const {report} = require('../routers/productoRoutes.js');
-const {getAll} = require('../data/productModel')
+const Product = require('../data/productModel')
 
 /*Funciones*/
 
 let productoControllers = {
   index: (req, res) => {
-    let productos = getAll();  
+    let productos = Product.getAll();  
 
      res.render('products/products', {'productos':productos});
   },
   detail: (req, res) => {
-    let productos = getAll();  
 
-     let detalleProducto = productos.find( (productos) => productos.id == req.params.id);
+     let detalleProducto = Product.findByPk(req.params.id);
 
      res.render('products/productDetail', {'detalleProducto':detalleProducto});
   },
@@ -30,22 +29,17 @@ let productoControllers = {
     let errors = validationResult(req);
 
     if (errors.isEmpty()) {
-      let productos = getAll();     
-      const nuevoId = productos.length + 1;
-
-      let nuevoProducto = {
-      id: nuevoId,
-      ...req.body,
-      image1: req.files[0].filename,
-      image2: req.files[1].filename,
-      image3: req.files[2].filename,
-      image4: req.files[3].filename
-      };
-
-      productos.push(nuevoProducto);
       
-      let stringProducto = JSON.stringify(productos, null, 2);
-      fs.writeFileSync(path.join(__dirname, '../data/products.json'), stringProducto);
+      let producToCreate = {
+        ...req.body,
+        image1: req.files[0].filename,
+        image2: req.files[1].filename,
+        image3: req.files[2].filename,
+        image4: req.files[3].filename
+    };
+
+      Product.create(producToCreate);
+   
       res.render('products/product-create-form', 
       {mensage: "El producto ha sido creado correctamente"});             
       } else {
@@ -57,17 +51,17 @@ let productoControllers = {
     }
   },
   // Update - Form to edit
-  edit: (req, res) => {
-    let products = getAll();
-    const productId = req.params.id;
-    const productToEdit = products.find(e => e.id == productId);
+  edit: (req, res) => { 
+
+    const productToEdit = Product.findByPk(req.params.id);
 
     res.render('products/product-edit-form', {productToEdit});
 
   },
   // Update - Method to update
   update: (req, res) => {
-		let products = getAll();
+    
+		let products = Product.getAll();
     const productId = req.params.id;
     const indexProduct = products.findIndex(e => e.id == productId);
     let detalleProducto = products.find( (productos) => productos.id == req.params.id);
@@ -89,16 +83,12 @@ let productoControllers = {
 	},
 
   delete: (req, res)=> {
-    let productos = getAll();
-
-     productosActualizados = productos.filter((x) => x.id != req.params.id)
-
- 		productosActualizadosJSON = JSON.stringify(productosActualizados, null, 2);
-
- 		fs.writeFileSync(path.join(__dirname, '../data/products.json'), productosActualizadosJSON);
+    
+    Product.delete(req.params.id)
 
  		res.redirect('/productos/borrado-exitoso');
-    },
+    
+  },
     
     borradoExitoso:(req,res) => {
 

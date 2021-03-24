@@ -78,8 +78,7 @@
                         </div>
                         <div class='contenedor-input-create'>
                             <label for="description1" class="form-label">Descripción 1:</label>
-                            <textarea type="text" id="description1" name="description1" placeholder="Ej: Ajustar la altura de la pantalla de su computadora portátil es fundamental para lograr la máxima comodidad y productividad." class="form-input" required value="<%= typeof productToEdit != 'undefined' ? productToEdit.description1 : '' %>">
-                            </textarea>
+                            <textarea type="text" id="description1" name="description1" placeholder="Ej: Ajustar la altura de la pantalla de su computadora portátil es fundamental para lograr la máxima comodidad y productividad." class="form-input" required><%= typeof productToEdit != 'undefined' ? productToEdit.description1 : null %></textarea>
                                 <% if(locals.errors && errors.description1) { %> 
                                 <p class="feedback"><%= errors.description1 %>  </p>
                             <% } %> 
@@ -95,8 +94,7 @@
                         </div>
                         <div class='contenedor-input-create'>
                             <label for="name" class="form-label">Descripción 2:</label>
-                            <textarea type="text" id="description2" name="description2" placeholder="Ej: Un simple movimiento abre y cierra el Roost Stand. Peso: 6 onzas (170 g) Cerrado: 1,30 x 1,17 x 13 pulgadas (3,3 x 3,0 x 33,0 cm)" class="form-input" required value="<%= typeof productToEdit != 'undefined' ? productToEdit.description2 : '' %>">
-                            </textarea>
+                            <textarea type="text" id="description2" name="description2" placeholder="Ej: Un simple movimiento abre y cierra el Roost Stand. Peso: 6 onzas (170 g) Cerrado: 1,30 x 1,17 x 13 pulgadas (3,3 x 3,0 x 33,0 cm)" class="form-input" required><%= typeof productToEdit != 'undefined' ? productToEdit.description2 : null %></textarea>
                             <% if(locals.errors && errors.description2) { %> 
                                 <p class="feedback"><%= errors.description2 %>  </p>
                             <% } %> 
@@ -111,8 +109,7 @@
                         </div>
                         <div class='contenedor-input-create'>
                             <label for="name" class="form-label">Descripción 3:</label>
-                            <textarea type="text" id="description3" name="description3" placeholder="Ej: Este fantástico stand se ajusta automáticamente para adaptarse a tu computadora portátil." class="form-input" required value="<%= typeof productToEdit != 'undefined' ? productToEdit.description3 : '' %>">
-                            </textarea>
+                            <textarea type="text" id="description3" name="description3" placeholder="Ej: Este fantástico stand se ajusta automáticamente para adaptarse a tu computadora portátil." class="form-input" required><%= typeof productToEdit != 'undefined' ? productToEdit.description3 : null %></textarea>
                                 <% if(locals.errors && errors.description3) { %> 
                                 <p class="feedback"><%= errors.description3 %>  </p>
                             <% } %> 
@@ -135,39 +132,39 @@
                             margin: 0;">Categoría:</label>
                             <div class='contenedor-specific-options'>
                             <label class='categories'>
-                                <input type='checkbox' name='category' value='sillas' class='options' <%= productToEdit.category.includes('sillas') ? 'checked' : '' %>>
+                                <input type='checkbox' name='category' value=1 class='options' <%= productToEdit.category == 1 ? 'checked' : '' %>>
                                 Sillas
                             </label>
                             <label class='categories'>
-                                <input type='checkbox' name='category' value='monitores' class='options' <%= productToEdit.category.includes('monitores') ? 'checked' : '' %>>
+                                <input type='checkbox' name='category' value=2 class='options' <%= productToEdit.category == 2 ? 'checked' : '' %>>
                                 Monitores
                             </label>
                             <label class='categories'>
-                                <input type='checkbox' name='category' value='escritorios' class='options' <%= productToEdit.category.includes('escritorios') ? 'checked' : '' %>>
+                                <input type='checkbox' name='category' value=3 class='options' <%= productToEdit.category == 3 ? 'checked' : '' %>>
                                 Escritorios
                             </label>
                             <label class='categories'>
-                                <input type='checkbox' name='category' value='stands' class='options' <%= productToEdit.category.includes('stands') ? 'checked' : '' %>>
+                                <input type='checkbox' name='category' value=4 class='options' <%= productToEdit.category == 4? 'checked' : '' %>>
                                 Stands
                             </label>
                             <label class='categories'>
-                                <input type='checkbox' name='category' value='iluminacion' class='options' <%= productToEdit.category.includes('iluminacion') ? 'checked' : '' %>>
+                                <input type='checkbox' name='category' value=5 class='options' <%= productToEdit.category == 5 ? 'checked' : '' %>>
                                 Iluminación
                             </label>
                             <label class='categories'>
-                                <input type='checkbox' name='category' value='teclados' class='options' <%= productToEdit.category.includes('teclados') ? 'checked' : '' %>>
+                                <input type='checkbox' name='category' value=6 class='options' <%= productToEdit.category == 6 ? 'checked' : '' %>>
                                 Teclados
                             </label>
                             <label class='categories'>
-                                <input type='checkbox' name='category' value='paneles' class='options' <%= productToEdit.category.includes('paneles') ? 'checked' : '' %>>
+                                <input type='checkbox' name='category' value=7 class='options' <%= productToEdit.category == 7 ? 'checked' : '' %>>
                                 Paneles de separación
                             </label>
                             <label class='categories'>
-                                <input type='checkbox' name='category' value='cables' class='options' <%= productToEdit.category.includes('cables') ? 'checked' : '' %>>
+                                <input type='checkbox' name='category' value=8 class='options' <%= productToEdit.category== 8 ? 'checked' : '' %>>
                                 Organizador de cables
                             </label>
                             <label class='categories'>
-                                <input type='checkbox' name='category' value='mouses' class='options'>
+                                <input type='checkbox' name='category' value=9 class='options' <%= productToEdit.category== 9 ? 'checked' : '' %>>
                                 Mouses
                             </label>
                             <% if(locals.errors && errors.category) { %> 
