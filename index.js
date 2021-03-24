@@ -27,7 +27,7 @@ let productoRoutes = require("./routers/productoRoutes.js");
 let userRoutes = require("./routers/usuarioRoutes.js");
 
 //Definiendo las vistas
-// app.use(authMiddleware);
+app.use(authMiddleware);
 app.use('/', mainRoutes);
 app.use('/productos', productoRoutes);
 app.use('/usuario', userRoutes);

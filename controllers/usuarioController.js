@@ -1,7 +1,10 @@
 /* Acá van todos los controladores/funciones que NO estén relacionados a los Usuarios de Ergoworld, por ahora, sólo HOME*/
+const express = require('express');
+const cookieParser = require('cookie-parser');
 
-
-const {validationResult} = require("express-validator");
+const {
+    validationResult
+} = require("express-validator");
 
 const User = require('../data/userModel')
 
@@ -18,37 +21,40 @@ let usuarioControllers = {
 
     },
 
-    processRegister: (req,res) =>{
+    processRegister: (req, res) => {
         const errors = validationResult(req);
-        
-        if(!errors.isEmpty()){
-            return res.render('user/register', {errors:errors.mapped(), oldData: req.body})
+
+        if (!errors.isEmpty()) {
+            return res.render('user/register', {
+                errors: errors.mapped(),
+                oldData: req.body
+            })
         };
-        
+
         const emailExist = User.findByField('email', req.body.email);
 
         if (emailExist) {
-			return res.render('user/register', {
-				errors: {
-					email: {
-						msg: 'Este email ya está registrado'
-					}
-				},
-				oldData: req.body
-			});
-		};
+            return res.render('user/register', {
+                errors: {
+                    email: {
+                        msg: 'Este email ya está registrado'
+                    }
+                },
+                oldData: req.body
+            });
+        };
 
-            const userToCreate = {
-                ...req.body,
-                password: bcryptjs.hashSync(req.body.password, 10),
-                avatar: req.file.filename
-    
-            };
-    
-            User.create(userToCreate);
-    
-            return res.redirect('/usuario/login');
-        
+        const userToCreate = {
+            ...req.body,
+            
+            avatar: req.file.filename
+
+        };
+
+        User.create(userToCreate);
+
+        return res.redirect('/usuario/login');
+
     },
 
     login: (req, res) => {
@@ -59,18 +65,31 @@ let usuarioControllers = {
     processLogin: (req, res) => {
         let userToLogin;
         let errors = validationResult(req);
-        if(errors.isEmpty()){
-             userToLogin = User.findByField('email', req.body.email);
-            console.log("Usuario Logueado:" )
+        if (errors.isEmpty()) {
+            userToLogin = User.findByField('email', req.body.email);
+            console.log("Usuario Logueado:")
             console.log(userToLogin)
-            if(userToLogin){
+            if (userToLogin) {
                 let isOkThePassword = bcryptjs.compareSync(req.body.password, userToLogin['password']);
-                if(isOkThePassword){
+                console.log("El password ingresado es " + isOkThePassword)
+                if (isOkThePassword) {
+
+
+                    req.session.usuario = userToLogin['email'];
+                    console.log("Usuario guardado en session " + req.session.usuario)
+                    if (req.body.mantenerSesion == 'on') {
+                        res.cookie('usuario', userToLogin['email'], {
+                            maxAge: 1 * 24 * 60 * 60
+                        })
+                        console.log("Usuario guardado en cookie " + req.cookies.usuario)
+
+                    }
+
                     return res.redirect('/')
                 }
-                return res.render('user/login',{
-                    errors:{
-                        password:{
+                return res.render('user/login', {
+                    errors: {
+                        password: {
                             msg: 'La contraseña es incorrecta'
                         }
                     }
@@ -78,17 +97,19 @@ let usuarioControllers = {
             }
 
             return res.render('user/login', {
-                errors:{
-                    email:{
+                errors: {
+                    email: {
                         msg: 'No se encuentra este email en nuestra base de datos'
                     }
                 }
             });
 
         } else {
-            return res.render ('user/login.ejs', {errors: errors.mapped()});
+            return res.render('user/login.ejs', {
+                errors: errors.mapped()
+            });
         }
-       
+
     },
 }
 

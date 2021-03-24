@@ -24,7 +24,7 @@ const User = {
     },
 
     create: function (userData) {
-        let allUsers = this.getAll();    
+        let allUsers = this.getAll();
 
         bcryptjs.hash(userData['password'], 10, (err, palabraSecretaEncriptada) => {
             if (err) {
