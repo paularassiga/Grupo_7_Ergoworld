@@ -3,7 +3,7 @@ const path = require('path');
 const methodOverride =  require('method-override'); // poder usar los métodos PUT y DELETE
 const cookieParser = require('cookie-parser')
 const session = require('express-session')
-
+const authMiddleware = require("./middlewares/users/authMidleware")
 
 const app = express();
 
@@ -27,7 +27,7 @@ let productoRoutes = require("./routers/productoRoutes.js");
 let userRoutes = require("./routers/usuarioRoutes.js");
 
 //Definiendo las vistas
-
+// app.use(authMiddleware);
 app.use('/', mainRoutes);
 app.use('/productos', productoRoutes);
 app.use('/usuario', userRoutes);
