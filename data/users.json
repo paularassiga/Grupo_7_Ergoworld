@@ -3,7 +3,7 @@
     "id": 1,
     "nombreUsuario": "Test",
     "apellidoUsuario": "test",
-    "email": "paularassiga@gmail.com",
+    "email": "paularassiga@hagflsihd.com",
     "pasword": "$2a$10$1NPM0h.8mdEMg6uazDw4LOW2aMiCn0iAIyBpHxQj8yLtdUyG.pGwe",
     "avatar": "1616457547249_img_.png",
     "user": 5
@@ -50,5 +50,13 @@
     "email": "guille11@gmail.com",
     "password": "$2a$10$dh7V39NJrbjs8DYvtyvLdOVLDCai4A0UJB4WiM2uomPi1Iofutoqq",
     "avatar": "1616627257142_img_.jpg"
+  },
+  {
+    "id": 7,
+    "nombreUsuario": "Paula",
+    "apellidoUsuario": "Rassiga",
+    "email": "paularassiga@gmail.com",
+    "password": "$2a$10$MKu81Jw7tR7JNLGGIFfT9udozpQJ8/yLRrv9fem.jSsFA9rnjQoia",
+    "avatar": "1616630787038_img_.jpg"
   }
 ]
