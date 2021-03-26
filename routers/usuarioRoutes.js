@@ -17,6 +17,8 @@ const validateRegister= require('../middlewares/users/validateRegister');
  router.post('/login', [
     check('email').isEmail().withMessage('Introduzca un email válido'),
     check('password').isLength({min: 8}).withMessage('La contraseña debe tener como mínimo 8 caracteres')], usuarioControllers.processLogin);
+
+ router.get('/perfil', usuarioControllers.profile);
  
 router.get('/register', usuarioControllers.register);
 router.post('/register', uploadFile.single('avatar'), validateRegister, usuarioControllers.processRegister);

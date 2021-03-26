@@ -50,5 +50,13 @@
     "email": "guille11@gmail.com",
     "password": "$2a$10$dh7V39NJrbjs8DYvtyvLdOVLDCai4A0UJB4WiM2uomPi1Iofutoqq",
     "avatar": "1616627257142_img_.jpg"
+  },
+  {
+    "id": 7,
+    "nombreUsuario": "test",
+    "apellidoUsuario": "test",
+    "email": "test1@test.com",
+    "password": "$2a$10$TZVcF57YqX7wmNaphAxQiuLziWM7Y7rz6rzTR9i7.wiTO6dY6VZdi",
+    "avatar": "1616698812174_img_.png"
   }
 ]
