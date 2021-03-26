@@ -21,6 +21,12 @@ let usuarioControllers = {
 
     },
 
+    profile: (req, res) => {
+
+        res.render("user/profile")
+
+    },
+
     processRegister: (req, res) => {
         const errors = validationResult(req);
 
@@ -63,54 +69,26 @@ let usuarioControllers = {
     },
 
     processLogin: (req, res) => {
-        let userToLogin;
-        let errors = validationResult(req);
-        if (errors.isEmpty()) {
-            userToLogin = User.findByField('email', req.body.email);
-            console.log("Usuario Logueado:")
-            console.log(userToLogin)
-            if (userToLogin) {
-                let isOkThePassword = bcryptjs.compareSync(req.body.password, userToLogin['password']);
-                console.log("El password ingresado es " + isOkThePassword)
-                if (isOkThePassword) {
+        const userToLogin = User.findByField('email', req.body.email);
 
+        if(userToLogin) {
+            const isOkThePassword = bcryptjs.compareSync(req.body.password, userToLogin.password);
 
-                    req.session.usuario = userToLogin['email'];
-                    console.log("Usuario guardado en session " + req.session.usuario)
-                    if (req.body.mantenerSesion == 'on') {
-                        res.cookie('usuario', userToLogin['email'], {
-                            maxAge: 1 * 24 * 60 * 60
-                        })
-                        console.log("Usuario guardado en cookie " + req.cookies.usuario)
+            if (isOkThePassword) {
+				delete userToLogin.password;
+				req.session.userLogged = userToLogin;
 
-                    }
-
-                    return res.redirect('/')
-                }
-                return res.render('user/login', {
-                    errors: {
-                        password: {
-                            msg: 'La contraseña es incorrecta'
-                        }
-                    }
-                })
-            }
-
-            return res.render('user/login', {
-                errors: {
-                    email: {
-                        msg: 'No se encuentra este email en nuestra base de datos'
-                    }
-                }
-            });
-
-        } else {
-            return res.render('user/login.ejs', {
-                errors: errors.mapped()
-            });
+                if (req.body.mantenerSesion == 'on') {
+                    res.cookie('userEmail', userToLogin.email, {
+                        maxAge: 1 * 24 * 60 * 60
+                    })
+            }   
         }
 
-    },
+        return res.redirect('/usuario/perfil');
+    }
+},
+        
 }
 
 /*Exporto*/

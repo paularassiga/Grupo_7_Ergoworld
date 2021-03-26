@@ -1,4 +1,27 @@
-const authMiddleware = function (req, res, next) {
+const User = require('../../data/userModel');
+
+function userLoggedMiddleware(req, res, next) {
+	res.locals.isLogged = false;
+
+	let emailInCookie = req.cookies.userEmail;
+	let userFromCookie = User.findByField('email', emailInCookie);
+
+	if (userFromCookie) {
+		req.session.userLogged = userFromCookie;
+	}
+
+	if (req.session.userLogged) {
+		res.locals.isLogged = true;
+		res.locals.userLogged = req.session.userLogged;
+	}
+
+	next();
+};
+
+module.exports = userLoggedMiddleware;
+
+
+/* const authMiddleware = function (req, res, next) {
     console.log(req.url);
     if (req.cookies.usuario != undefined ||
         req.session.usuario != undefined ||
@@ -16,4 +39,4 @@ const authMiddleware = function (req, res, next) {
 }
 
 
-module.exports = authMiddleware
+module.exports = authMiddleware */
