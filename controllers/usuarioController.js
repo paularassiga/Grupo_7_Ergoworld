@@ -80,14 +80,22 @@ let usuarioControllers = {
 
                 if (req.body.mantenerSesion == 'on') {
                     res.cookie('userEmail', userToLogin.email, {
-                        maxAge: 1 * 24 * 60 * 60
+                        maxAge:  365 * 24 * 60 * 60 * 1000 // one year
                     })
             }   
         }
 
         return res.redirect('/usuario/perfil');
     }
+
+    return res.redirect('/usuario/perfil');
 },
+
+    logout: (req, res) => {
+        res.clearCookie('userEmail');
+		req.session.destroy();
+		return res.redirect('/');
+    },
         
 }
 

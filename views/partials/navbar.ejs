@@ -29,10 +29,19 @@
         </li>
         <section class=iconTextContainer>
             <li>
-                <div class="iconoContainer" id='contenedor-nav'>
-                    <a href="/usuario/login"><i class="fas fa-user"></i></a>
-                    <a class='a-header' href="/usuario/login"><p class="iconTextOnlyDesktop">Mi Cuenta</p></a>
-                </div>
+                <% if (locals.isLogged) { %>
+
+                    <div class="iconoContainer" id='contenedor-nav'>
+                        <p>Hi <%= locals.userLogged.nombreUsuario %> </p>
+                        <a class='a-header' href="/usuario/logout"><p class="iconTextOnlyDesktop">Cerrar sesión</p></a>
+                    </div>
+				<% } else { %>
+                    <div class="iconoContainer" id='contenedor-nav'>
+                        <a href="/usuario/login"><i class="fas fa-user"></i></a>
+                        <a class='a-header' href="/usuario/login"><p class="iconTextOnlyDesktop">Mi Cuenta</p></a>
+                    </div>
+				<% } %>           
+               
             </li>
             <li>
                 <div class="iconoContainer" id='contenedor-nav'>

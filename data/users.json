@@ -58,5 +58,13 @@
     "email": "paularassiga@gmail.com",
     "password": "$2a$10$MKu81Jw7tR7JNLGGIFfT9udozpQJ8/yLRrv9fem.jSsFA9rnjQoia",
     "avatar": "1616630787038_img_.jpg"
+  },
+  {
+    "id": 8,
+    "nombreUsuario": "test",
+    "apellidoUsuario": "testt",
+    "email": "test1@test.com",
+    "password": "$2a$10$ZSxfV1uiK31/HSYAs4O6yOEdJ7aVUW55Kse1p9etGBEcVdf8UJAwe",
+    "avatar": "1617297658248_img_.png"
   }
 ]
