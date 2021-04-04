@@ -64,31 +64,63 @@ let usuarioControllers = {
     },
 
     login: (req, res) => {
-        res.render("user/login")
+        res.render('user/login')
 
     },
 
     processLogin: (req, res) => {
-        const userToLogin = User.findByField('email', req.body.email);
 
-        if(userToLogin) {
+        const errors = validationResult(req);
+
+        if (!errors.isEmpty()) {
+            return res.render('user/login', {
+                errors: errors.mapped(),
+                oldData: req.body
+            })
+        };
+
+        const userToLogin = User.findByField('email', req.body.email);       
+
+        if(userToLogin) {         
+
             const isOkThePassword = bcryptjs.compareSync(req.body.password, userToLogin.password);
 
-            if (isOkThePassword) {
-				delete userToLogin.password;
+            if(isOkThePassword){
+
+                delete userToLogin.password;
 				req.session.userLogged = userToLogin;
 
                 if (req.body.mantenerSesion == 'on') {
                     res.cookie('userEmail', userToLogin.email, {
                         maxAge:  365 * 24 * 60 * 60 * 1000 // one year
                     })
-            }   
-        }
+            };
 
-        return res.redirect('/usuario/perfil');
-    }
+            return res.redirect('/usuario/perfil');
 
-    return res.redirect('/usuario/perfil');
+
+            } else {
+
+                return res.render('user/login', {
+                    errors: {
+                        password: {
+                            msg: 'Datos de acceso invalidos'
+                        }
+                    }, 
+                    oldData: req.body
+                });
+
+            }        
+			
+    } 
+        return res.render('user/login', {
+            errors: {
+                password: {
+                    msg: 'Datos de acceso invalidos'
+                }
+            }, 
+            oldData: req.body
+        });
 },
 
     logout: (req, res) => {

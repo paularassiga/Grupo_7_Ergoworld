@@ -24,7 +24,7 @@
               </video>
             <form action='/usuario/login' method='POST' class = 'contenedor-formulario-1'>
                 <div class='contenedor-input-login'>
-                    <input class='text-input-login' type='email' id='email' placeholder="Email" name='email' required>
+                    <input class='text-input-login' type='email' id='email' placeholder="Email" name='email' value='<%=locals.oldData? oldData.email : null %>' required>
                     <% if(locals.errors && errors.email) { %> 
                         <p style='color:red' class="feedback"><%= errors.email.msg %>  </p>
                     <% } %> 

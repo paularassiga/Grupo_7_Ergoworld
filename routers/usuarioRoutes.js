@@ -4,6 +4,7 @@ const path = require('path');
 
 const uploadFile = require('../middlewares/users/multer');
 const validateRegister= require('../middlewares/users/validateRegister');
+const validateLogin = require('../middlewares/users/validateLogin');
 const userLoggenIn = require('../middlewares/users/userLoggedIn');
 const userNoLoggenIn = require('../middlewares/users/userNoLoggedIn');
 
@@ -16,9 +17,7 @@ const userNoLoggenIn = require('../middlewares/users/userNoLoggedIn');
   /*Acá van todas las rutas*/
 
  router.get('/login', userLoggenIn, usuarioControllers.login);
- router.post('/login', [
-    check('email').isEmail().withMessage('Introduzca un email válido'),
-    check('password').isLength({min: 8}).withMessage('La contraseña debe tener como mínimo 8 caracteres')], usuarioControllers.processLogin);
+ router.post('/login', validateLogin, usuarioControllers.processLogin);
 
  router.get('/perfil', userNoLoggenIn, usuarioControllers.profile);
  
