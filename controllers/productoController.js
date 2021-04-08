@@ -1,17 +1,25 @@
 const path = require('path'); /*Para usar path.join*/
 const fs = require("fs");
-const products = require("../data/productModel.js");
 const {validationResult} = require("express-validator");
-const {report} = require('../routers/productoRoutes.js');
+//const {report} = require('../routers/productoRoutes.js');
 const Product = require('../data/productModel')
+
+const db = require('../database/models');
+const sequelize = db.sequelize;
+const { Op } = require("sequelize");
 
 /*Funciones*/
 
 let productoControllers = {
   index: (req, res) => {
-    let productos = Product.getAll();  
+  /*   let productos = Product.getAll();
+     res.render('products/products', {'productos':productos}); */
 
-     res.render('products/products', {'productos':productos});
+     db.Product.findAll()
+      .then(productos => {
+          res.render('products/products', {productos})
+      })
+
   },
   detail: (req, res) => {
 
