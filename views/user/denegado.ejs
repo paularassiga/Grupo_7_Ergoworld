@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- Head -->
+    <%- include('../partials/head', 
+    {title: 'Ingresá a tu cuenta', 
+    css: ['/css/login.css']}) %>
+<body>
+
+    <!--Barra de navagacion -->
+
+    <%- include('../partials/navbar') %>
+
+
+    <!-- Cuerpo de la pagina -->
+    <main>
+        <section class='contenedor-formulario'>
+            <h2 class='h-login'>Debes iniciar sesión antes de ingresar</h2>
+            <figure>
+               <img class='linea' src="./images/line-black.png">
+            </figure>
+            <video playsinline autoplay muted loop poster="./images/poster.jpg" id="bgvid">
+                <source src="./images/Typing.mp4" type="video/webm">
+                <source src="./images/Typing.mp4" type="video/mp4">
+              </video>
+            <section>
+                <a class='text-inciarsesion' href='/usuario/login'>Iniciar sesión</a>
+            </section>
+            <section>
+                <a class='text-inciarsesion' href='/usuario/register'>Crear cuenta</a>
+            </section>
+            <section>
+                <a class='text-inciarsesion' href='#'>¿Olvidaste tu contraseña?</a>
+            </section>
+            <section>
+                <a class='text-inciarsesion' id='last' href='/'>Regresar a la tienda</a>
+            </section>
+        </section>
+    </main>
+    <%- include('../partials/footer') %> 
+
+</body>
+</html>

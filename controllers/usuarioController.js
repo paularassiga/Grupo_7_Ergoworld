@@ -27,6 +27,10 @@ let usuarioControllers = {
 
     },
 
+    denied: (req,res) => {
+        res.render("user/denegado")
+    },
+
     processRegister: (req, res) => {
         const errors = validationResult(req);
 

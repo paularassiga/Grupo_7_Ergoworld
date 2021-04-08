@@ -16,6 +16,8 @@ nav ul {
     align-items: center;
 
 }
+
+
 .container-logo{
     width:30%;
 }
@@ -85,6 +87,18 @@ input {
     color: #2897ff;
 }
 
+#avatar-header{
+    display:block;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    margin-right: 10px;
+}
+
+.text-profile{
+    display:none;
+}
+
 @media(min-width:583px){
    
     .a-header{
@@ -95,6 +109,26 @@ input {
 
     }
 
+    #avatar-header{
+        display:block;
+        border-radius: 50%;
+        height: 50px;
+        width: 50px;
+    }
+
+    .a-header-cerrar{
+        margin-left: 10px;
+        text-decoration: none;
+        color:white;
+    }
+
+    .iconoContainer-user{
+        display:flex;
+        flex-direction: row;
+        align-items: center;
+        
+    }
+
     .logoErgoworldDestokp {
         display: none;
     }
@@ -103,6 +137,8 @@ input {
         display:flex;
         flex-direction: row;
         flex-wrap: wrap;
+        align-items: center;
+        width:30%;
     }
 
     nav {
@@ -197,7 +233,7 @@ input {
     }
 }
 
-@media(min-width:1123px) {
+@media(min-width:1400px) {
     .logoErgoworldDestokp {
         display: inline;
         width:30%;
@@ -211,6 +247,11 @@ input {
 
     nav {
         padding:0.625rem;
+    }
+
+    .text-profile{
+        display:flex;
+        margin-left:10px;
     }
 
     .onlyMovilIcon {

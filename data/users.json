@@ -66,5 +66,14 @@
     "email": "test1@test.com",
     "password": "$2a$10$ZSxfV1uiK31/HSYAs4O6yOEdJ7aVUW55Kse1p9etGBEcVdf8UJAwe",
     "avatar": "1617297658248_img_.png"
+  },
+  {
+    "id": 9,
+    "nombreUsuario": "Pau",
+    "apellidoUsuario": "Rass",
+    "email": "paularassiga@hola.com",
+    "password": "$2a$10$vrGsAeAMLLMVA4dsz2HJw.VErkQITbrzcs0BdAXUbdmAv3F34Nfmm",
+    "avatar": "1617902401504_img_.jpg",
+    "user" : 1
   }
 ]

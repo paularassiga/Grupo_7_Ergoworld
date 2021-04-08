@@ -26,8 +26,21 @@ h1{
     margin-bottom: 20px;
 }
 
-#avatar{ 
+#avatar-perfil{ 
     border-radius: 50%;
+    height: 150px;
+    width: 150px;
+}
+
+.boton-editar{
+    padding:0px 0px 38px;
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin:10px auto;
+    width:90%;
+    max-width: 320px;
 }
 
 .a-edit{
@@ -35,7 +48,11 @@ h1{
     color: #518cd8;
     background-color: white;
     padding:5px;
-    font-weight: 600;
+    font-weight: 500;
+}
+
+#cerrar{
+    font-weight: 400;
 }
 
 .main-section{
@@ -49,7 +66,7 @@ h1{
 }
 
 .section-info{
-    margin:50px;
+    margin:50px 50px 25px 50px;
     display: flex;
     flex-direction: column;
     align-items: center;

@@ -6,6 +6,7 @@ const router = express.Router();
  // Middlewares
  const uploadFile = require('../middlewares/products/multer');
  const validateCrearProducto = require('../middlewares/products/validateProduct');
+ const userNoLoggenIn = require('../middlewares/users/userNoLoggedIn');
 
   /*Acá van todas las rutas*/
 
@@ -14,15 +15,15 @@ const router = express.Router();
  router.get('/detalle/:id', productoControllers.detail);
 
    /*CREAR PRODUCTO*/
- router.get('/crear', productoControllers.create);
+ router.get('/crear', userNoLoggenIn, productoControllers.create);
  router.post('/crear', uploadFile.any(), validateCrearProducto,  productoControllers.store);
 
    /*EDITAR PRODUCTO*/
- router.get('/editar/:id',  productoControllers.edit); 
+ router.get('/editar/:id', userNoLoggenIn,  productoControllers.edit); 
  router.put('/editar/:id', uploadFile.any(),  productoControllers.update); 
 
   /*BORRAR PRODUCTO*/
-  router.delete('/borrar/:id',  productoControllers.delete); 
+  router.delete('/borrar/:id', userNoLoggenIn,  productoControllers.delete); 
   router.get('/borrado-exitoso', productoControllers.borradoExitoso);
 
   module.exports = router;

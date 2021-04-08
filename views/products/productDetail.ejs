@@ -52,18 +52,24 @@ css: ['/css/productDetails.css']}) %>
 
                 </div>
                 <div class='container-bottons'>
-                <button class="editarProducto">
-                    <a href='/productos/editar/<%= detalleProducto.id%>'>
-                    <i class="fas fa-edit"></i>
-                    Editar Producto
-                </a>
-                </button>
-                <form action="/productos/borrar/<%= detalleProducto.id%>?_method=DELETE" method="POST" style="display: inline-flex">
-                    <button type="submit" class="delete-button">
-                        <i class="fas fa-trash-alt"></i>
-                        Eliminar Producto
-                    </button>
-                </form>
+                    <% if (locals.isLogged && locals.userLogged.user != 3) { %>
+                        <section>
+                            <button class="editarProducto">
+                                <a href='/productos/editar/<%= detalleProducto.id%>'>
+                                <i class="fas fa-edit"></i>
+                                Editar Producto
+                            </a>
+                            </button>
+                            <form action="/productos/borrar/<%= detalleProducto.id%>?_method=DELETE" method="POST" style="display: inline-flex">
+                                <button type="submit" class="delete-button">
+                                    <i class="fas fa-trash-alt"></i>
+                                    Eliminar Producto
+                                </button>
+                            </form>
+                            </section>
+                    <% } else { %>
+                        <div></div>
+                    <% } %>
                 <button class="agregarAlCarritoBoton">
                     <i class="fas fa-cart-plus"></i>
                     Agregar Al Carrito
@@ -93,16 +99,24 @@ css: ['/css/productDetails.css']}) %>
                 <p class="cantidad">1</p>
                 <button class="menosBotton"><i class="fas fa-minus"></i></button>
             </div>
-            <button class="editarProducto">
-                <i class="fas fa-edit"></i>
-                Editar Producto
-            </button>
-            <form action="/products/delete/:id?_method=DELETE" method="POST" style="display: inline-flex">
-                
-                <button type="submit" class="delete-button">
-                    <i class="fas fa-trash-alt"></i>
-                    Eliminar Producto
-                </button>
+            <% if (locals.isLogged && locals.userLogged.user != 3) { %>
+                <section>
+                    <button class="editarProducto">
+                        <a href='/productos/editar/<%= detalleProducto.id%>'>
+                        <i class="fas fa-edit"></i>
+                        Editar Producto
+                    </a>
+                    </button>
+                    <form action="/productos/borrar/<%= detalleProducto.id%>?_method=DELETE" method="POST" style="display: inline-flex">
+                        <button type="submit" class="delete-button">
+                            <i class="fas fa-trash-alt"></i>
+                            Eliminar Producto
+                        </button>
+                    </form>
+                    </section>
+            <% } else { %>
+                <div></div>
+            <% } %>     
             </form>
             <button class="agregarAlCarritoBoton">
                 <i class="fas fa-cart-plus"></i>
