@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- Head -->
+    <%- include('../partials/head', 
+    {title: 'Ingresá a tu cuenta', 
+    css: ['/css/login.css']}) %>
+<body>
+
+    <!--Barra de navagacion -->
+
+    <%- include('../partials/navbar') %>
+
+
+    <!-- Cuerpo de la pagina -->
+    <main>
+        <section class='contenedor-formulario'>
+            <h2 class='h-login'>Debes iniciar sesión antes de ingresar</h2>
+            <figure>
+               <img class='linea' src="./images/line-black.png">
+            </figure>
+            <video playsinline autoplay muted loop poster="./images/poster.jpg" id="bgvid">
+                <source src="./images/Typing.mp4" type="video/webm">
+                <source src="./images/Typing.mp4" type="video/mp4">
+              </video>
+            <form action='/usuario/login' method='POST' class = 'contenedor-formulario-1'>
+                <div class='contenedor-input-login'>
+                    <input class='text-input-login' type='email' id='email' placeholder="Email" name='email' value='<%=locals.oldData? oldData.email : null %>' required>
+                    <% if(locals.errors && errors.email) { %> 
+                        <p style='color:red' class="feedback"><%= errors.email.msg %>  </p>
+                    <% } %> 
+                </div>
+                <div class='contenedor-input-login'>
+                    <input class='text-input-login' type='password' id='password' placeholder="Contraseña" name='password' required>
+                    <% if(locals.errors && errors.password) { %> 
+                        <p style='color:red' class="feedback"><%= errors.password.msg %>  </p>
+                    <% } %>
+                </div>
+                <div class='contenedor-mantener-sesion'>
+                    <label class='mantener-sesion'>
+                        <input id='text-sesion' type='checkbox' name='mantenerSesion'>Mantener sesión iniciada</input>
+                    </label>
+                </div>
+                <div class='contenedor-button'>
+                 <button type='submit' value='login' id='boton-enviar-login'>Enviar</button>
+                </div>
+            </form>
+            <section>
+                <a class='text-inciarsesion' href='/usuario/register'>Crear cuenta</a>
+            </section>
+            <section>
+                <a class='text-inciarsesion' href='#'>¿Olvidaste tu contraseña?</a>
+            </section>
+            <section>
+                <a class='text-inciarsesion' id='last' href='/'>Regresar a la tienda</a>
+            </section>
+        </section>
+    </main>
+    <%- include('../partials/footer') %> 
+
+</body>
+</html>

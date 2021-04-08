@@ -31,9 +31,9 @@
             <li>
                 <% if (locals.isLogged) { %>
 
-                    <div class="iconoContainer" id='contenedor-nav'>
-                        <p>Hi <%= locals.userLogged.nombreUsuario %> </p>
-                        <a class='a-header' href="/usuario/logout"><p class="iconTextOnlyDesktop">Cerrar sesión</p></a>
+                    <div class="iconoContainer-user" id='contenedor-nav'>
+                        <a href='/usuario/perfil'><img id='avatar-header' src="/images/avatars/<%=locals.userLogged.avatar %>" alt="avatar"></a>
+                        <p class='text-profile'>Hola <%= locals.userLogged.nombreUsuario %> </p>
                     </div>
 				<% } else { %>
                     <div class="iconoContainer" id='contenedor-nav'>

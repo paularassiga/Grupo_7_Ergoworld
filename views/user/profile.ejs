@@ -15,30 +15,33 @@
     <main>
         <section class='main-section'>
             <figure  class="imagen">
-                <img id='avatar' src="/images/avatars/1616630757630_img_.png" alt="avatar">
+                <img id='avatar-perfil' src="/images/avatars/<%=locals.userLogged.avatar %>" alt="avatar">
             </figure>
-            <h1>Hola <%= locals.userLogged.nombreUsuario %></h1>
-            <a class='a-edit' href='/usuarios/perfil/editar'>Editar perfil</a>
+            <h1 style="
+            color: white;
+        " >Hola <%= locals.userLogged.nombreUsuario %></h1>
+            
         </section>
         <section class='section-info'>
             <h2>Información personal</h2>
             <section class='section-specific'>
                 <h3>Nombre</h3>
-                <p>{users.nombre}</p>
+                <p><%=locals.userLogged.nombreUsuario %></p>
             </section>
             <section class='section-specific'>
                 <h3>Apellido</h3>
-                <p>{users.apellido}</p>
+                <p><%=locals.userLogged.apellidoUsuario %></p>
             </section>
             <section class='section-specific'>
                 <h3>Email</h3>
-                <p>{users.email}</p>
-            </section>
-            <section class='section-specific'>
-                <h3>Contraseña</h3>
-                <p>{users.password}</p>
+                <p><%=locals.userLogged.email %></p>
             </section>
         </section> 
+        <section class='boton-editar'>
+            <a class='a-edit' href='/usuarios/perfil/editar'>Editar perfil</a>
+            <a class='a-edit' href="/usuario/logout"><p id='cerrar'>Cerrar sesión</p></a>
+        </section>
+        
     </main>
     <%- include('../partials/footer') %> 
 

@@ -20,6 +20,8 @@ const userNoLoggenIn = require('../middlewares/users/userNoLoggedIn');
  router.post('/login', validateLogin, usuarioControllers.processLogin);
 
  router.get('/perfil', userNoLoggenIn, usuarioControllers.profile);
+
+ router.get('/denegado', userLoggenIn, usuarioControllers.denied);
  
 router.get('/register', userLoggenIn, usuarioControllers.register);
 router.post('/register', uploadFile.single('avatar'), validateRegister, usuarioControllers.processRegister);

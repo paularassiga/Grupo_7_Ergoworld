@@ -2,7 +2,7 @@
 
 function userLoggenIn(req, res, next) {
 	if (!req.session.userLogged) {
-		return res.redirect('/');
+		return res.redirect('/usuario/denegado');
 	}
 	next();
 }
