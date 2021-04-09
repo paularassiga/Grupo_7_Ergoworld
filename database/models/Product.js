@@ -89,15 +89,13 @@ module.exports = (sequelize, dataTypes) => {
     }
     const Product = sequelize.define(alias, cols, config); 
 
-  /*   Actor.associate = function (models) {
-        Actor.belongsToMany(models.Movie, { // models.Movie -> Movies es el valor de alias en movie.js
-            as: "movies",
-            through: 'actor_movie',
-            foreignKey: 'actor_id',
-            otherKey: 'movie_id',
+    Product.associate = function (models) {
+        Product.belongsTo(models.Categoria, { 
+            as: "categoria",
+            foreignKey: 'category_id',
             timestamps: false
-        })
-    } */
+        });
+    };
 
     return Product
 };

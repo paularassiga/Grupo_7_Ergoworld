@@ -46,7 +46,7 @@
                         <p class="feedback"><%= errors.price %>  </p>
                     <% } %> 
                 
-                </div>
+                    </div>
                 <div class='contenedor-input-create'>
                     <label for="name" class="form-label">Stock disponible:</label>
                     <input type="number" id="stock" name="stock" placeholder="2000" class="form-input" required>
@@ -129,19 +129,19 @@
                 </div>
                 <div class='contenedor-input-create'>
                     <label for="name" class="form-label">Imágenes:</label>
-                    <input type="file" id="image1" name="image1" class="form-input" required>
+                    <input type="file" id="image1" name="image_1" class="form-input" required>
                     <% if(locals.errors && errors.image1) { %> 
                         <p class="feedback"><%= errors.image1 %>  </p>
                     <% } %> 
-                    <input type="file" id="image2" name="image2" class="form-input" required>
+                    <input type="file" id="image2" name="image_2" class="form-input" required>
                     <% if(locals.errors && errors.image2) { %> 
                         <p class="feedback"><%= errors.image2 %>  </p>
                     <% } %> 
-                    <input type="file" id="image3" name="image3" class="form-input" required>
+                    <input type="file" id="image3" name="image_3" class="form-input" required>
                     <% if(locals.errors && errors.image3) { %> 
                         <p class="feedback"><%= errors.image3 %>  </p>
                     <% } %> 
-                    <input type="file" id="image4" name="image4" class="form-input" required>
+                    <input type="file" id="image4" name="image_4" class="form-input" required>
                     <% if(locals.errors && errors.image4) { %> 
                         <p class="feedback"><%= errors.image4 %>  </p>
                     <% } %> 

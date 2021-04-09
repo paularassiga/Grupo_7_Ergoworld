@@ -12,7 +12,9 @@ const { Op } = require("sequelize");
 
 let productoControllers = {
   index: (req, res) => {
-     db.Product.findAll()
+     db.Product.findAll({
+      include: [ {association: 'categoria'} ]
+  })
       .then(productos => {
           res.render('products/products', {productos})
       });
@@ -22,16 +24,10 @@ let productoControllers = {
       .then(detalleProducto => {
           res.render('products/productDetail', {detalleProducto});
       });
-
-     /* let detalleProducto = Product.findByPk(req.params.id);
-
-     res.render('products/productDetail', {'detalleProducto':detalleProducto}); */
   },
-
   create: (req, res) => {
     res.render('products/product-create-form');
   },
-
   store: (req, res) => {
     
     let errors = validationResult(req);
