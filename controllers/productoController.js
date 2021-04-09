@@ -12,20 +12,20 @@ const { Op } = require("sequelize");
 
 let productoControllers = {
   index: (req, res) => {
-  /*   let productos = Product.getAll();
-     res.render('products/products', {'productos':productos}); */
-
      db.Product.findAll()
       .then(productos => {
           res.render('products/products', {productos})
-      })
-
+      });
   },
   detail: (req, res) => {
+    db.Product.findByPk(req.params.id)
+      .then(detalleProducto => {
+          res.render('products/productDetail', {detalleProducto});
+      });
 
-     let detalleProducto = Product.findByPk(req.params.id);
+     /* let detalleProducto = Product.findByPk(req.params.id);
 
-     res.render('products/productDetail', {'detalleProducto':detalleProducto});
+     res.render('products/productDetail', {'detalleProducto':detalleProducto}); */
   },
 
   create: (req, res) => {
