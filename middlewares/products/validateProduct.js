@@ -20,7 +20,7 @@ const validateCrearProducto = [
     // check('image2').notEmpty().withMessage("Debes subir una imagen"),
     // check('image3').notEmpty().withMessage("Debes subir una imagen"),
     // check('image4').notEmpty().withMessage("Debes subir una imagen"),
-    check('category').notEmpty().withMessage("Debes Elegir al menos una categoria"),
+    check('category_id').notEmpty().withMessage("Debes Elegir al menos una categoria"),
   
   ];
 

@@ -4,8 +4,8 @@ module.exports = (sequelize, dataTypes) => {
         id: {
             type: dataTypes.INTEGER,
             primaryKey: true,
-            allowNull: false,
-            autoIncrement: true
+            autoIncrement: true,
+            allowNull: false
         },
         // created_at: dataTypes.TIMESTAMP,
         // updated_at: dataTypes.TIMESTAMP,
@@ -53,6 +53,10 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.STRING,
             allowNull: false
         },
+        titleDescription2: {
+            type: dataTypes.STRING,
+            allowNull: false
+        },
         description2: {
             type: dataTypes.STRING,
             allowNull: false
@@ -63,6 +67,10 @@ module.exports = (sequelize, dataTypes) => {
         },
         description3: {
             type: dataTypes.STRING,
+            allowNull: false
+        },
+        category_id: {
+            type: dataTypes.INTEGER,
             allowNull: false
         },
         image_1: {

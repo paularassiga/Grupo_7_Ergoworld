@@ -41,20 +41,20 @@ let productoControllers = {
         image_3: req.files[2].filename,
         image_4: req.files[3].filename
     };
+    console.log(req.body)
 
-    console.log(req.files);
-
-      Product.create(producToCreate);
-   
-      res.render('products/product-create-form', 
-      {mensage: "El producto ha sido creado correctamente"});             
-      } else {
+      // Product.create(producToCreate);
+      db.Product.create(producToCreate)
+        .then(() => {
+            res.redirect('/productos');
+        });           
+      } /* else {
       res.render('products/product-create-form', {
         oldData: req.body,
         errors: errors.mapped()
       });
 
-    }
+    } */
   },
   // Update - Form to edit
   edit: (req, res) => { 
