@@ -86,5 +86,27 @@
     "image2": "1615132807916_img_.jpeg",
     "image3": "1615132807922_img_.jpeg",
     "image4": "1615132807924_img_.jpeg"
+  },
+  {
+    "id": 5,
+    "name": "test 3",
+    "shortDescription": "test",
+    "price": "100",
+    "stock": "100",
+    "characteristic1": "1",
+    "characteristic2": "2",
+    "characteristic3": "3",
+    "characteristic4": "4",
+    "titleDescription1": "1",
+    "description1": "2",
+    "titleDescription2": "3",
+    "description2": "4",
+    "titleDescription3": "Se adapta a casi todas las computadoras portátiles",
+    "description3": "2",
+    "category": "1",
+    "image1": "1617992721734_img_.png",
+    "image2": "1617992721740_img_.png",
+    "image3": "1617992721744_img_.png",
+    "image4": "1617992721747_img_.png"
   }
 ]

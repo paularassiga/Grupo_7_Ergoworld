@@ -36,11 +36,13 @@ let productoControllers = {
       
       let producToCreate = {
         ...req.body,
-        image1: req.files[0].filename,
-        image2: req.files[1].filename,
-        image3: req.files[2].filename,
-        image4: req.files[3].filename
+        image_1: req.files[0].filename,
+        image_2: req.files[1].filename,
+        image_3: req.files[2].filename,
+        image_4: req.files[3].filename
     };
+
+    console.log(req.files);
 
       Product.create(producToCreate);
    
