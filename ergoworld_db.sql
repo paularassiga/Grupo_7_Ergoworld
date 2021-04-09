@@ -18,6 +18,30 @@ USE `ergoworld_db`;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
+-- Table structure for table `categoria_producto`
+--
+
+DROP TABLE IF EXISTS `categoria_producto`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `categoria_producto` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `category_id` int(10) unsigned NOT NULL,
+  `product_id` int(10) unsigned NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `categoria_producto`
+--
+
+LOCK TABLES `categoria_producto` WRITE;
+/*!40000 ALTER TABLE `categoria_producto` DISABLE KEYS */;
+/*!40000 ALTER TABLE `categoria_producto` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `categorias`
 --
 
@@ -58,7 +82,8 @@ CREATE TABLE `detalle_ventas` (
   `product_id` int(11) NOT NULL,
   `payment_method_id` int(11) NOT NULL,
   PRIMARY KEY (`id`),
-  FOREIGN KEY (`product_id`) REFERENCES productos(id)
+  KEY `product_id` (`product_id`),
+  CONSTRAINT `detalle_ventas_ibfk_1` FOREIGN KEY (`product_id`) REFERENCES `productos` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -126,7 +151,8 @@ CREATE TABLE `productos` (
   `image_3` varchar(100) NOT NULL,
   `image_4` varchar(100) NOT NULL,
   PRIMARY KEY (`id`),
-  FOREIGN KEY (`category_id`) REFERENCES categorias(id)
+  KEY `category_id` (`category_id`),
+  CONSTRAINT `productos_ibfk_1` FOREIGN KEY (`category_id`) REFERENCES `categorias` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -203,7 +229,8 @@ CREATE TABLE `usuarios` (
   `password` varchar(255) NOT NULL,
   `avatar` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`),
-  FOREIGN KEY (`rol_id`) REFERENCES `ROLES` (`id`)
+  KEY `rol_id` (`rol_id`),
+  CONSTRAINT `usuarios_ibfk_1` FOREIGN KEY (`rol_id`) REFERENCES `ROLES` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -225,7 +252,7 @@ DROP TABLE IF EXISTS `ventas`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `ventas` (
-  `id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `total` decimal(10,0) NOT NULL,
   `address` varchar(29) DEFAULT NULL,
   `country` varchar(29) DEFAULT NULL,
@@ -234,10 +261,13 @@ CREATE TABLE `ventas` (
   `detail_id` int(11) NOT NULL,
   `status_id` int(11) NOT NULL,
   PRIMARY KEY (`id`),
-  FOREIGN KEY (`user_id`) REFERENCES `USUARIOS` (`id`),
-	FOREIGN KEY (`detail_id`) REFERENCES `detalle_ventas` (`id`),
-    FOREIGN KEY (`status_id`) REFERENCES `status` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  KEY `user_id` (`user_id`),
+  KEY `detail_id` (`detail_id`),
+  KEY `status_id` (`status_id`),
+  CONSTRAINT `ventas_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `USUARIOS` (`id`),
+  CONSTRAINT `ventas_ibfk_2` FOREIGN KEY (`detail_id`) REFERENCES `detalle_ventas` (`id`),
+  CONSTRAINT `ventas_ibfk_3` FOREIGN KEY (`status_id`) REFERENCES `status` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -259,4 +289,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-04-07 10:06:39
+-- Dump completed on 2021-04-09 16:16:02
