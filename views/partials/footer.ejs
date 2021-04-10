@@ -39,9 +39,12 @@
                 <div class='boton-footer'>
                     <a class='contenido-boton-footer' href='/'>SHOP NOW <i class="fas fa-chevron-right"></i></i></a>
                 </div>
+                <% if (!locals.isLogged) { %>
+
                 <div class='boton-footer'>
                     <a class='contenido-boton-footer' href='/usuario/register'>REGISTRATE <i id='arrow' class="fas fa-chevron-right"></i></i></a>
                 </div>
+                <% } %>
             </section>
             <section class='right-boton'>
                 <div class='boton-footer'>

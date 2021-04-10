@@ -74,6 +74,14 @@
     "email": "paularassiga@hola.com",
     "password": "$2a$10$vrGsAeAMLLMVA4dsz2HJw.VErkQITbrzcs0BdAXUbdmAv3F34Nfmm",
     "avatar": "1617902401504_img_.jpg",
-    "user" : 1
+    "user": 1
+  },
+  {
+    "id": 10,
+    "nombreUsuario": "Guillermo",
+    "apellidoUsuario": "Rodriguez",
+    "email": "guille4542@gmail.com",
+    "password": "$2a$10$xF7ByjokoQe/SVYVIniMguLMy6kAFU4cbJw1aSBLte9zPGVIwjgky",
+    "avatar": "1618082199758_img_.jpg"
   }
 ]
