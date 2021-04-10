@@ -32,7 +32,7 @@
                             <label for="shortDescription" class="form-label">Resumen del producto:</label>
                             <textarea class= 'form-input-text' rows="6" cols="48" id="shortDescription" name="shortDescription" placeholder="Ej: Eleva la pantalla entre 15 y 25 centímetros por encima de la mesa. Fácil de usar y extremadamente portátil. Se adapta a casi todas las computadoras portátiles. Se abre y cierra con un sól movimiento." class="form-input"><%= typeof productToEdit != 'undefined' ? productToEdit.shortDescription : '' %></textarea 
                             <% if(locals.errors && errors.shortDescription) { %> 
-                                <p class="feedback"><%= errors.shortDescription%>  </p>
+                                <p class="feedback"><%= errors.shortDescription%></p>
                             <% } %> 
                         </div>
                         <div class='contenedor-input-create'>
@@ -41,8 +41,14 @@
                         
                             <% if(locals.errors && errors.price) { %> 
                                 <p class="feedback"><%= errors.price %>  </p>
-                            <% } %> 
-                        
+                            <% } %>                         
+                        </div>
+                        <div class='contenedor-input-create'>
+                            <label for="name" class="form-label">Stock disponible:</label>
+                            <input type="number" id="stock" name="stock" placeholder="2000" class="form-input" required>
+                            <% if(locals.errors && errors.stock) { %> 
+                                <p class="feedback"><%= errors.stock %>  </p>
+                            <% } %>                         
                         </div>
                         <div class='contenedor-input-create'>
                             <label for="name" class="form-label">Características:</label>
@@ -117,54 +123,54 @@
                         </div>
                         <div class='contenedor-input-create'>
                             <label for="name" class="form-label">Imágenes:</label>
-                            <input type="file" id="image1" name="image1" class="form-input">
+                            <input type="file" id="image1" name="image_1" class="form-input">
                             
-                            <input type="file" id="image2" name="image2" class="form-input">
+                            <input type="file" id="image2" name="image_2" class="form-input">
                             
-                            <input type="file" id="image3" name="image3" class="form-input">
+                            <input type="file" id="image3" name="image_3" class="form-input">
                             
-                            <input type="file" id="image4" name="image4" class="form-input">
+                            <input type="file" id="image4" name="image_4" class="form-input">
                             
                         </div>
-                        <div class= 'contenedor-options'>
+                        <div class='contenedor-options'>
                         <div class='contenedor-input-create' id='checkbox-options'>
                             <label for="name" class="form-label" id='h-category' style="
                             margin: 0;">Categoría:</label>
                             <div class='contenedor-specific-options'>
                             <label class='categories'>
-                                <input type='checkbox' name='category' value=1 class='options' <%= productToEdit.category == 1 ? 'checked' : '' %>>
+                                <input type='checkbox' name='category_id' value=1 class='options' <%= productToEdit.category == 1 ? 'checked' : '' %>>
                                 Sillas
                             </label>
                             <label class='categories'>
-                                <input type='checkbox' name='category' value=2 class='options' <%= productToEdit.category == 2 ? 'checked' : '' %>>
+                                <input type='checkbox' name='category_id' value=2 class='options' <%= productToEdit.category == 2 ? 'checked' : '' %>>
                                 Monitores
                             </label>
                             <label class='categories'>
-                                <input type='checkbox' name='category' value=3 class='options' <%= productToEdit.category == 3 ? 'checked' : '' %>>
+                                <input type='checkbox' name='category_id' value=3 class='options' <%= productToEdit.category == 3 ? 'checked' : '' %>>
                                 Escritorios
                             </label>
                             <label class='categories'>
-                                <input type='checkbox' name='category' value=4 class='options' <%= productToEdit.category == 4? 'checked' : '' %>>
+                                <input type='checkbox' name='category_id' value=4 class='options' <%= productToEdit.category == 4? 'checked' : '' %>>
                                 Stands
                             </label>
                             <label class='categories'>
-                                <input type='checkbox' name='category' value=5 class='options' <%= productToEdit.category == 5 ? 'checked' : '' %>>
+                                <input type='checkbox' name='category_id' value=5 class='options' <%= productToEdit.category == 5 ? 'checked' : '' %>>
                                 Iluminación
                             </label>
                             <label class='categories'>
-                                <input type='checkbox' name='category' value=6 class='options' <%= productToEdit.category == 6 ? 'checked' : '' %>>
+                                <input type='checkbox' name='category_id' value=6 class='options' <%= productToEdit.category == 6 ? 'checked' : '' %>>
                                 Teclados
                             </label>
                             <label class='categories'>
-                                <input type='checkbox' name='category' value=7 class='options' <%= productToEdit.category == 7 ? 'checked' : '' %>>
+                                <input type='checkbox' name='category_id' value=7 class='options' <%= productToEdit.category == 7 ? 'checked' : '' %>>
                                 Paneles de separación
                             </label>
                             <label class='categories'>
-                                <input type='checkbox' name='category' value=8 class='options' <%= productToEdit.category== 8 ? 'checked' : '' %>>
+                                <input type='checkbox' name='category_id' value=8 class='options' <%= productToEdit.category== 8 ? 'checked' : '' %>>
                                 Organizador de cables
                             </label>
                             <label class='categories'>
-                                <input type='checkbox' name='category' value=9 class='options' <%= productToEdit.category== 9 ? 'checked' : '' %>>
+                                <input type='checkbox' name='category_id' value=9 class='options' <%= productToEdit.category== 9 ? 'checked' : '' %>>
                                 Mouses
                             </label>
                             <% if(locals.errors && errors.category) { %> 

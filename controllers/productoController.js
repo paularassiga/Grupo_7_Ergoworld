@@ -41,51 +41,56 @@ let productoControllers = {
         image_3: req.files[2].filename,
         image_4: req.files[3].filename
     };
-    console.log(req.body)
-
-      // Product.create(producToCreate);
       db.Product.create(producToCreate)
         .then(() => {
             res.redirect('/productos');
         });           
-      } /* else {
+      }  else {
       res.render('products/product-create-form', {
         oldData: req.body,
         errors: errors.mapped()
       });
 
-    } */
+    }
   },
   // Update - Form to edit
   edit: (req, res) => { 
 
-    const productToEdit = Product.findByPk(req.params.id);
-
-    res.render('products/product-edit-form', {productToEdit});
+    db.Product.findByPk(req.params.id)
+    .then(productToEdit => {
+        res.render('products/product-edit-form', {productToEdit});
+    });
 
   },
   // Update - Method to update
   update: (req, res) => {
     
-		let products = Product.getAll();
+		//  let products = Product.getAll();
     const productId = req.params.id;
-    const indexProduct = products.findIndex(e => e.id == productId);
-    let detalleProducto = products.find( (productos) => productos.id == req.params.id);
-    //Modifico el producto
-    products[indexProduct] = {
-      id: products[indexProduct].id,
-      ...req.body,
-      //Valido con un if ternario si el usuario subio una imagen, en caso contrario se mantiene la imagen orignal :)
-      image1: req.files[0] ? req.files[0].filename : products[indexProduct].image1,
-      image2: req.files[1] ? req.files[1].filename : products[indexProduct].image2,
-      image3: req.files[2] ? req.files[2].filename : products[indexProduct].image3,
-      image4: req.files[3] ? req.files[3].filename : products[indexProduct].image4,
-    };    
-    
-    const stringProducto = JSON.stringify(products, null, 2);
-    fs.writeFileSync(path.join(__dirname, '../data/products.json'), stringProducto);
-
-     res.render('products/productDetail', {'detalleProducto':detalleProducto, 'message': "Producto editado con éxito, actualiza para ver los cambios."});
+  
+    db.Product.update(
+            {
+              ...req.body,
+              image_1: req.files.filter((e)  => {
+                return e.fieldname == "image_1"
+                 }).map(e => e.filename).toString() || undefined,
+              image_2: req.files.filter((e)  => {
+                return e.fieldname == "image_2"
+                 }).map(e => e.filename).toString() || undefined,
+              image_3: req.files.filter((e)  => {
+                return e.fieldname == "image_3"
+                 }).map(e => e.filename).toString() || undefined,
+              image_4: req.files.filter((e)  => {
+                return e.fieldname == "image_4"
+                 }).map(e => e.filename).toString() || undefined,
+            },
+            {
+                where: {id: productId}
+            })
+        .then(()=> {
+            return res.redirect('/productos/detalle/' + productId)})            
+        .catch(error => res.send(error))
+  
 	},
 
   delete: (req, res)=> {
