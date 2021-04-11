@@ -2,11 +2,23 @@
 const express = require('express');
 const cookieParser = require('cookie-parser');
 
+const path = require('path');
+const db = require('../database/models');
+// const sequelize = db.sequelize;
+const {
+    Op
+} = require("sequelize");
+const moment = require('moment');
+const fetch = require('node-fetch');
+
+
+
+
 const {
     validationResult
 } = require("express-validator");
 
-const User = require('../data/userModel')
+const Usuario = require('../database/models/Usuario')
 
 const bcryptjs = require('bcryptjs');
 
@@ -27,11 +39,11 @@ let usuarioControllers = {
 
     },
 
-    denied: (req,res) => {
+    denied: (req, res) => {
         res.render("user/denegado")
     },
 
-    processRegister: (req, res) => {
+    processRegister: async (req, res) => {
         const errors = validationResult(req);
 
         if (!errors.isEmpty()) {
@@ -40,8 +52,27 @@ let usuarioControllers = {
                 oldData: req.body
             })
         };
+        let emailExist;
+        // const emailExist = User.findByField('email', req.body.email);
+        try {
+            emailExist = await db.Usuario.findOne({
+                where: {
+                    email: req.body.email
+                }
+            })
+        } catch (error) {
+            console.log("Error al corroborar el email ", error)
+        }
 
-        const emailExist = User.findByField('email', req.body.email);
+        console.log(req.body.email);
+        console.log(emailExist);
+
+
+
+
+
+
+
 
         if (emailExist) {
             return res.render('user/register', {
@@ -53,17 +84,30 @@ let usuarioControllers = {
                 oldData: req.body
             });
         };
+        let userData = req.body;
+        console.log("User  Data", userData)
+        await bcryptjs.hash(userData['password'], 10, async (err, palabraSecretaEncriptada) => {
+            userData['password'] = palabraSecretaEncriptada;
+            console.log("Nuevo Password", userData)
 
-        const userToCreate = {
-            ...req.body,
-            
-            avatar: req.file.filename
+            const userToCreate = {
+                ...userData,
 
-        };
+                avatar: req.file.filename
 
-        User.create(userToCreate);
+            };
+            try {
+                await db.Usuario.create(userToCreate);
 
-        return res.redirect('/usuario/login');
+            } catch (error) {
+                console.log("error al registrar el usuario en db", error)
+            }
+
+            return res.redirect('/usuario/login');
+        });
+
+
+
 
     },
 
@@ -72,7 +116,7 @@ let usuarioControllers = {
 
     },
 
-    processLogin: (req, res) => {
+    processLogin: async (req, res) => {
 
         const errors = validationResult(req);
 
@@ -83,24 +127,33 @@ let usuarioControllers = {
             })
         };
 
-        const userToLogin = User.findByField('email', req.body.email);       
+        let userToLogin;
+        try {
+            userToLogin = await db.Usuario.findOne({
+                where: {
+                    'email': req.body.email
+                }
+            });
+        } catch (error) {
+            console.log("fallo al validar el usuario", error)
+        }
 
-        if(userToLogin) {         
+        if (userToLogin) {
 
             const isOkThePassword = bcryptjs.compareSync(req.body.password, userToLogin.password);
 
-            if(isOkThePassword){
+            if (isOkThePassword) {
 
                 delete userToLogin.password;
-				req.session.userLogged = userToLogin;
+                req.session.userLogged = userToLogin;
 
                 if (req.body.mantenerSesion == 'on') {
                     res.cookie('userEmail', userToLogin.email, {
-                        maxAge:  365 * 24 * 60 * 60 * 1000 // one year
+                        maxAge: 365 * 24 * 60 * 60 * 1000 // one year
                     })
-            };
+                };
 
-            return res.redirect('/usuario/perfil');
+                return res.redirect('/usuario/perfil');
 
 
             } else {
@@ -110,29 +163,32 @@ let usuarioControllers = {
                         password: {
                             msg: 'Datos de acceso invalidos'
                         }
-                    }, 
+                    },
                     oldData: req.body
                 });
 
-            }        
-			
-    } 
+            }
+
+        }
         return res.render('user/login', {
             errors: {
                 password: {
                     msg: 'Datos de acceso invalidos'
                 }
-            }, 
+            },
             oldData: req.body
         });
-},
+    },
 
     logout: (req, res) => {
         res.clearCookie('userEmail');
-		req.session.destroy();
-		return res.redirect('/');
+        req.session.destroy();
+        return res.redirect('/');
     },
-        
+
+
+
+
 }
 
 /*Exporto*/

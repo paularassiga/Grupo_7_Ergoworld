@@ -5,10 +5,16 @@ const db = require('../index');
 
 const Usuario = db.define(
 	"usuarios", {
-		name: {
+		id: {
 
 			type: Sequelize.STRING,
 			primaryKey: true,
+			allowNull: false,
+			autoIncrement: true
+		},
+		apellido: {
+
+			type: Sequelize.STRING,
 			allowNull: false,
 			autoIncrement: true
 		},
