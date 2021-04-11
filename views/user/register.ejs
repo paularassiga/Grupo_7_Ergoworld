@@ -24,15 +24,15 @@
             </figure>
             <form method='POST' action='/usuario/register' enctype='multipart/form-data' class = 'contenedor-formulario-1'>
                 <div class='contenedor-input-register'>
-                    <input required class='text-input-register' type='text' id='nombreUsuario' placeholder="Nombre" name='nombreUsuario'  value='<%=locals.oldData? oldData.nombreUsuario : null %>'>
-                    <% if(locals.errors && errors.nombreUsuario) { %> 
-                        <p style='color:red' class="feedback"><%= errors.nombreUsuario.msg %>  </p>
+                    <input required class='text-input-register' type='text' id='name' placeholder="Nombre" name='name'  value='<%=locals.oldData? oldData.name : null %>'>
+                    <% if(locals.errors && errors.name) { %> 
+                        <p style='color:red' class="feedback"><%= errors.name.msg %>  </p>
                     <% } %>
                 </div>
                 <div class='contenedor-input-register'>
-                    <input required class='text-input-register' type='text' id='apellidoUsuario' placeholder="Apellido" name='apellidoUsuario'minlength="3" value='<%=locals.oldData? oldData.apellidoUsuario : null %>'>
-                    <% if(locals.errors && errors.apellidoUsuario) { %> 
-                        <p style='color:red' class="feedback"><%= errors.apellidoUsuario.msg %>  </p>
+                    <input required class='text-input-register' type='text' id='last_name' placeholder="Apellido" name='last_name'minlength="3" value='<%=locals.oldData? oldData.last_name : null %>'>
+                    <% if(locals.errors && errors.last_name) { %> 
+                        <p style='color:red' class="feedback"><%= errors.last_name.msg %>  </p>
                     <% } %>
                 </div>
                 <div class='contenedor-input-register'>

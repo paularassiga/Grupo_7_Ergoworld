@@ -2,7 +2,7 @@ CREATE DATABASE  IF NOT EXISTS `ergoworld_db` /*!40100 DEFAULT CHARACTER SET utf
 USE `ergoworld_db`;
 -- MySQL dump 10.13  Distrib 5.7.17, for macos10.12 (x86_64)
 --
--- Host: localhost    Database: ergoworld_db-test
+-- Host: localhost    Database: ergoworld_db
 -- ------------------------------------------------------
 -- Server version	5.7.32
 
@@ -153,7 +153,7 @@ CREATE TABLE `productos` (
   PRIMARY KEY (`id`),
   KEY `productos_ibfk_1_idx` (`category_id`),
   CONSTRAINT `productos_ibfk_1` FOREIGN KEY (`category_id`) REFERENCES `categorias` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -228,10 +228,11 @@ CREATE TABLE `usuarios` (
   `email` varchar(29) DEFAULT NULL,
   `password` varchar(255) NOT NULL,
   `avatar` varchar(255) DEFAULT NULL,
+  `last_name` varchar(45) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `usuarios_ibfk_1_idx` (`rol_id`),
   CONSTRAINT `usuarios_ibfk_1` FOREIGN KEY (`rol_id`) REFERENCES `roles` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -240,7 +241,7 @@ CREATE TABLE `usuarios` (
 
 LOCK TABLES `usuarios` WRITE;
 /*!40000 ALTER TABLE `usuarios` DISABLE KEYS */;
-INSERT INTO `usuarios` VALUES (1,2,'Paula','paularassiga@gmail.com','$2a$10$1NPM0h.8mdEMg6uazDw4LOW2aMiCn0iAIyBpHxQj8yLtdUyG.pGwe','1616457547249_img_.png');
+INSERT INTO `usuarios` VALUES (1,2,'Paula','paularassiga@gmail.com','$2a$10$1NPM0h.8mdEMg6uazDw4LOW2aMiCn0iAIyBpHxQj8yLtdUyG.pGwe','1616457547249_img_.png',''),(4,1,'Admin','admin@admin.com','$2a$10$i2UkauHjIl/uSW5UA6tAt.gUwuZlN03.a5KwYabf63iDrLmZmB2HW',NULL,'Admin'),(6,3,'Viewer','viewer@viewer.com','$2a$10$AciP9Okgpjlxt/LhkUHEp.DN3Jmdy4hszbMmM/o53EAXthK/44RtG',NULL,'Viewer');
 /*!40000 ALTER TABLE `usuarios` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -289,4 +290,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-04-11 12:45:34
+-- Dump completed on 2021-04-11 13:50:30

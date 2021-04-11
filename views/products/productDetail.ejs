@@ -2,7 +2,7 @@
 <html lang="en">
 <!-- Head -->
 <%- include('../partials/head', 
-{title: `Producto: ${detalleProducto.name.toLowerCase()} `, 
+{title: `Producto: ${(detalleProducto.name) ? detalleProducto.name.toLowerCase() : '' } `, 
 css: ['/css/productDetails.css']}) %>
 
 <body>
@@ -52,7 +52,7 @@ css: ['/css/productDetails.css']}) %>
 
                 </div>
                 <div class='container-bottons'>
-                    <% if (locals.isLogged && locals.userLogged.user != 3) { %>
+                    <% if (locals.isLogged && locals.userLogged.rol_id != 3) { %>
                         <section>
                             <button class="editarProducto">
                                 <a href='/productos/editar/<%= detalleProducto.id%>'>

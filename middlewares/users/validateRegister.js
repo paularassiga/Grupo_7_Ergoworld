@@ -2,8 +2,8 @@
 const {check} = require("express-validator");
 
 const validateRegister = [
-    check('nombreUsuario').notEmpty().withMessage('Debes ingresar un nombre'),
-    check('apellidoUsuario').notEmpty().withMessage('Debes ingresar un apellido'),
+    check('name').notEmpty().withMessage('Debes ingresar un nombre'),
+    check('last_name').notEmpty().withMessage('Debes ingresar un apellido'),
     check('email')
         .notEmpty().withMessage('Debes ingresar un email').bail()
         .isEmail().withMessage('Debes ingresar un formato de email válido'),

@@ -5,22 +5,21 @@ const cookieParser = require('cookie-parser');
 const path = require('path');
 const db = require('../database/models');
 // const sequelize = db.sequelize;
-const {
-    Op
-} = require("sequelize");
+const {Op} = require("sequelize");
 const moment = require('moment');
 const fetch = require('node-fetch');
 
 
 
 
-const {
-    validationResult
-} = require("express-validator");
+const {validationResult} = require("express-validator");
 
 const Usuario = require('../database/models/Usuario')
 
 const bcryptjs = require('bcryptjs');
+
+const fs = require("fs");
+const sequelize = db.sequelize;
 
 
 /*Funciones*/
@@ -93,7 +92,8 @@ let usuarioControllers = {
             const userToCreate = {
                 ...userData,
 
-                avatar: req.file.filename
+                avatar: req.file.filename,
+                rol_id: 3
 
             };
             try {

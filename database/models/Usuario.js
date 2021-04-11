@@ -10,13 +10,13 @@ module.exports =(sequelize, dataTypes) =>{
                 allowNull: false,
                 autoIncrement: true
             },
-            nombreUsuario: {
+            name: {
     
                 type: dataTypes.STRING,
                 
                 allowNull: false,
                
-            }, apellidoUsuario: {
+            }, last_name: {
     
                 type: dataTypes.STRING,
                 

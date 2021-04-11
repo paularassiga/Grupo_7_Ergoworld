@@ -94,8 +94,12 @@ let productoControllers = {
 	},
 
   delete: (req, res)=> {
-    
-    Product.delete(req.params.id)
+
+    db.Product.destroy({
+      where:{
+        id: req.params.id
+      } 
+    })
 
  		res.redirect('/productos/borrado-exitoso');
     

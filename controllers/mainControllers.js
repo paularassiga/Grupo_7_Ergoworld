@@ -7,14 +7,21 @@ const products = require("../data/productModel.js");
 const {validationResult} = require("express-validator");
 const {report} = require('../routers/productoRoutes.js');
 const {getAll} = require('../data/productModel')
+const db = require('../database/models');
+const sequelize = db.sequelize;
+const { Op } = require("sequelize");
+
 
 /*Funciones*/
 
 let mainControllers = {
     index: (req,res) => {
-        let productos = getAll();  
-
-        res.render("index", {'productos':productos})
+        db.Product.findAll({
+            include: [ {association: 'categoria'} ]
+        })
+            .then(productos => {
+                res.render('products/products', {productos})
+            });
     },
     
     login: (req,res) => {
