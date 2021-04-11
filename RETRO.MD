@@ -140,5 +140,31 @@
 ###### Este documento esta inspirado en la Starfish retrospective
 
 
+# RETRO SPRINT 5
+### Start Doing 
+##### (cosas innovadoras o que por cierta curiosidad queremos probar)
+- Sprint 7
 
+------------
 
+### More of
+##### (cosas que estamos usando o haciendo y que queremos que mejoren)
+- Empezar con más tiempo, este sprint lo logramos y fue un proceso mucho más relajado.
+------------
+
+### Keep Doing
+##### (Es aquello que venimos haciendo y que nos brinda valor. Debemos seguir haciéndolo pero no será preocupación mejorarlo.)
+- Proactividad y responsabilidad por parte de los miembros, siempre todos estamos buscando avanzar y contribuir con el trabajo sin que nadie tenga que estar pidiéndolo.
+- Ayuda mutua, ante cualquier problema, todos ayudamos y nos apoyamos.
+
+------------
+### Less of
+##### (Aquello que intentamos pero no nos dan tanto beneficio como se esperaba. Está bien, démosle como una segunda oportunidad, pero no esta en nuestras prioridades.)
+- Mejorar los detalles y la experiencia del usuario
+
+------------
+### Stop Doing
+##### ( aquellas practicas que a pesar de ser [Less of] pues podemos eliminarlas.)
+- Empezar tarde a realizar los sprints.
+------------
+###### Este documento esta inspirado en la Starfish retrospective
