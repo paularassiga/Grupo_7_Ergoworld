@@ -16,7 +16,15 @@ module.exports =(sequelize, dataTypes) =>{
                 
                 allowNull: false,
                
-            }, last_name: {
+            }, 
+            avatar: {
+    
+                type: dataTypes.STRING,
+                
+                allowNull: false,
+               
+            },
+            last_name: {
     
                 type: dataTypes.STRING,
                 
@@ -32,7 +40,7 @@ module.exports =(sequelize, dataTypes) =>{
                 allowNull: false
             },
         }, {
-            tableName: "Usuarios",
+            tableName: "usuarios",
             timestamps: false
         }
     );

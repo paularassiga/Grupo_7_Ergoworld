@@ -1,20 +1,11 @@
 /* Acá van todos los controladores/funciones que NO estén relacionados a los Usuarios de Ergoworld, por ahora, sólo HOME*/
-const express = require('express');
-const cookieParser = require('cookie-parser');
 
-const path = require('path');
 const db = require('../database/models');
 // const sequelize = db.sequelize;
 const {Op} = require("sequelize");
-const moment = require('moment');
-const fetch = require('node-fetch');
-
-
 
 
 const {validationResult} = require("express-validator");
-
-const Usuario = require('../database/models/Usuario')
 
 const bcryptjs = require('bcryptjs');
 
@@ -66,13 +57,6 @@ let usuarioControllers = {
         console.log(req.body.email);
         console.log(emailExist);
 
-
-
-
-
-
-
-
         if (emailExist) {
             return res.render('user/register', {
                 errors: {
@@ -88,6 +72,7 @@ let usuarioControllers = {
         await bcryptjs.hash(userData['password'], 10, async (err, palabraSecretaEncriptada) => {
             userData['password'] = palabraSecretaEncriptada;
             console.log("Nuevo Password", userData)
+            console.log("test", req.file.filename);
 
             const userToCreate = {
                 ...userData,
@@ -185,10 +170,6 @@ let usuarioControllers = {
         req.session.destroy();
         return res.redirect('/');
     },
-
-
-
-
 }
 
 /*Exporto*/
