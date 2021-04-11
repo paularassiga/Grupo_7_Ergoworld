@@ -2,7 +2,7 @@ CREATE DATABASE  IF NOT EXISTS `ergoworld_db` /*!40100 DEFAULT CHARACTER SET utf
 USE `ergoworld_db`;
 -- MySQL dump 10.13  Distrib 5.7.17, for macos10.12 (x86_64)
 --
--- Host: localhost    Database: ergoworld_db
+-- Host: localhost    Database: ergoworld_db-test
 -- ------------------------------------------------------
 -- Server version	5.7.32
 
@@ -25,7 +25,7 @@ DROP TABLE IF EXISTS `categoria_producto`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `categoria_producto` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `id` int(10) NOT NULL AUTO_INCREMENT,
   `category_id` int(10) unsigned NOT NULL,
   `product_id` int(10) unsigned NOT NULL,
   PRIMARY KEY (`id`)
@@ -49,10 +49,10 @@ DROP TABLE IF EXISTS `categorias`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `categorias` (
-  `id` int(11) NOT NULL,
+  `id` int(10) NOT NULL AUTO_INCREMENT,
   `name` varchar(100) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -73,18 +73,18 @@ DROP TABLE IF EXISTS `detalle_ventas`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `detalle_ventas` (
-  `id` int(11) NOT NULL,
+  `id` int(10) NOT NULL AUTO_INCREMENT,
   `price` decimal(10,0) NOT NULL,
   `discount` decimal(10,0) DEFAULT NULL,
   `quantity` decimal(10,0) NOT NULL,
   `total` decimal(10,0) NOT NULL,
   `date` date DEFAULT NULL,
-  `product_id` int(11) NOT NULL,
-  `payment_method_id` int(11) NOT NULL,
+  `product_id` int(10) NOT NULL,
+  `payment_method_id` int(10) NOT NULL,
   PRIMARY KEY (`id`),
-  KEY `product_id` (`product_id`),
-  CONSTRAINT `detalle_ventas_ibfk_1` FOREIGN KEY (`product_id`) REFERENCES `productos` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  KEY `detalle_ventas_ibfk_1_idx` (`product_id`),
+  CONSTRAINT `detalle_ventas_ibfk_1` FOREIGN KEY (`product_id`) REFERENCES `productos` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -105,10 +105,10 @@ DROP TABLE IF EXISTS `medios_de_pago`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `medios_de_pago` (
-  `id` int(11) NOT NULL,
+  `id` int(10) NOT NULL AUTO_INCREMENT,
   `name` varchar(100) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -129,7 +129,7 @@ DROP TABLE IF EXISTS `productos`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `productos` (
-  `id` int(11) NOT NULL,
+  `id` int(10) NOT NULL AUTO_INCREMENT,
   `name` varchar(100) NOT NULL,
   `shortDescription` varchar(255) NOT NULL,
   `price` decimal(10,0) NOT NULL,
@@ -145,15 +145,15 @@ CREATE TABLE `productos` (
   `description2` varchar(255) NOT NULL,
   `titleDescription3` varchar(255) NOT NULL,
   `description3` varchar(255) NOT NULL,
-  `category_id` int(11) NOT NULL,
+  `category_id` int(10) NOT NULL,
   `image_1` varchar(100) NOT NULL,
   `image_2` varchar(100) NOT NULL,
   `image_3` varchar(100) NOT NULL,
   `image_4` varchar(100) NOT NULL,
   PRIMARY KEY (`id`),
-  KEY `category_id` (`category_id`),
-  CONSTRAINT `productos_ibfk_1` FOREIGN KEY (`category_id`) REFERENCES `categorias` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  KEY `productos_ibfk_1_idx` (`category_id`),
+  CONSTRAINT `productos_ibfk_1` FOREIGN KEY (`category_id`) REFERENCES `categorias` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -174,7 +174,7 @@ DROP TABLE IF EXISTS `roles`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `roles` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id` int(10) NOT NULL AUTO_INCREMENT,
   `name` varchar(100) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
@@ -198,10 +198,10 @@ DROP TABLE IF EXISTS `status`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `status` (
-  `id` int(11) NOT NULL,
+  `id` int(10) NOT NULL AUTO_INCREMENT,
   `name` varchar(100) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -222,16 +222,16 @@ DROP TABLE IF EXISTS `usuarios`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `usuarios` (
-  `id` int(11) NOT NULL,
-  `rol_id` int(11) DEFAULT NULL,
+  `id` int(10) NOT NULL AUTO_INCREMENT,
+  `rol_id` int(10) DEFAULT NULL,
   `name` varchar(100) NOT NULL,
   `email` varchar(29) DEFAULT NULL,
   `password` varchar(255) NOT NULL,
   `avatar` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`),
-  KEY `rol_id` (`rol_id`),
-  CONSTRAINT `usuarios_ibfk_1` FOREIGN KEY (`rol_id`) REFERENCES `ROLES` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  KEY `usuarios_ibfk_1_idx` (`rol_id`),
+  CONSTRAINT `usuarios_ibfk_1` FOREIGN KEY (`rol_id`) REFERENCES `roles` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -252,21 +252,21 @@ DROP TABLE IF EXISTS `ventas`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `ventas` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id` int(10) NOT NULL AUTO_INCREMENT,
   `total` decimal(10,0) NOT NULL,
   `address` varchar(29) DEFAULT NULL,
   `country` varchar(29) DEFAULT NULL,
   `date` date DEFAULT NULL,
-  `user_id` int(11) NOT NULL,
-  `detail_id` int(11) NOT NULL,
-  `status_id` int(11) NOT NULL,
+  `user_id` int(10) NOT NULL,
+  `detail_id` int(10) NOT NULL,
+  `status_id` int(10) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `user_id` (`user_id`),
-  KEY `detail_id` (`detail_id`),
-  KEY `status_id` (`status_id`),
-  CONSTRAINT `ventas_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `USUARIOS` (`id`),
-  CONSTRAINT `ventas_ibfk_2` FOREIGN KEY (`detail_id`) REFERENCES `detalle_ventas` (`id`),
-  CONSTRAINT `ventas_ibfk_3` FOREIGN KEY (`status_id`) REFERENCES `status` (`id`)
+  KEY `ventas_ibfk_2_idx` (`detail_id`),
+  KEY `ventas_ibfk_3_idx` (`status_id`),
+  CONSTRAINT `ventas_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `usuarios` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  CONSTRAINT `ventas_ibfk_2` FOREIGN KEY (`detail_id`) REFERENCES `detalle_ventas` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  CONSTRAINT `ventas_ibfk_3` FOREIGN KEY (`status_id`) REFERENCES `status` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -289,4 +289,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-04-09 16:16:02
+-- Dump completed on 2021-04-11 12:45:34
