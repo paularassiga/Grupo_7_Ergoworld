@@ -232,7 +232,7 @@ CREATE TABLE `usuarios` (
   PRIMARY KEY (`id`),
   KEY `usuarios_ibfk_1_idx` (`rol_id`),
   CONSTRAINT `usuarios_ibfk_1` FOREIGN KEY (`rol_id`) REFERENCES `roles` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -241,7 +241,7 @@ CREATE TABLE `usuarios` (
 
 LOCK TABLES `usuarios` WRITE;
 /*!40000 ALTER TABLE `usuarios` DISABLE KEYS */;
-INSERT INTO `usuarios` VALUES (1,2,'Paula','paularassiga@gmail.com','$2a$10$1NPM0h.8mdEMg6uazDw4LOW2aMiCn0iAIyBpHxQj8yLtdUyG.pGwe','1616457547249_img_.png',''),(4,1,'Admin','admin@admin.com','$2a$10$i2UkauHjIl/uSW5UA6tAt.gUwuZlN03.a5KwYabf63iDrLmZmB2HW',NULL,'Admin'),(6,3,'Viewer','viewer@viewer.com','$2a$10$AciP9Okgpjlxt/LhkUHEp.DN3Jmdy4hszbMmM/o53EAXthK/44RtG',NULL,'Viewer');
+INSERT INTO `usuarios` VALUES (1,2,'Paula','paularassiga@gmail.com','$2a$10$1NPM0h.8mdEMg6uazDw4LOW2aMiCn0iAIyBpHxQj8yLtdUyG.pGwe','1616457547249_img_.png',''),(7,3,'Viewer','viewer@viewer.com','$2a$10$.Z8ITv9GSvE1Jh.2cGsE1.X1Ml8I7J6Jwg9QU/QcLe7I8/IDMgQ8a','1618234134765_img_.png','Viewer'),(8,1,'Admin','admin@admin.com','$2a$10$3ZuqvJxv8H/i4X5s6LPmwOkbjiJB3YHHKQr.2Hg0Q.vBWL2uC6UIC','1618234192963_img_.jpeg','Admin');
 /*!40000 ALTER TABLE `usuarios` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -290,4 +290,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-04-11 13:50:30
+-- Dump completed on 2021-04-12 10:31:37

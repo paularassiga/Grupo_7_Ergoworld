@@ -20,7 +20,7 @@ let mainControllers = {
             include: [ {association: 'categoria'} ]
         })
             .then(productos => {
-                res.render('products/products', {productos})
+                res.render('index', {productos})
             });
     },
     
