@@ -3,7 +3,10 @@
     <!-- Head -->
     <%- include('../partials/head', 
     {title: 'Ingresá a tu cuenta', 
-    css: ['/css/login.css']}) %>
+    css: ['/css/login.css'],
+    js: ["/js/login.js"]
+
+}) %>
 <body>
 
     <!--Barra de navagacion -->
@@ -22,9 +25,9 @@
                 <source src="./images/Typing.mp4" type="video/webm">
                 <source src="./images/Typing.mp4" type="video/mp4">
               </video>
-            <form action='/usuario/login' method='POST' class = 'contenedor-formulario-1'>
+            <form action='/usuario/login' method='POST' id="loginForm" class = 'contenedor-formulario-1'>
                 <div class='contenedor-input-login'>
-                    <input class='text-input-login' type='email' id='email' placeholder="Email" name='email' value='<%=locals.oldData? oldData.email : null %>' required>
+                    <input class='text-input-login' type='email' id='emailInput' placeholder="Email" name='email' value='<%=locals.oldData? oldData.email : null %>' required>
                     <% if(locals.errors && errors.email) { %> 
                         <p style='color:red' class="feedback"><%= errors.email.msg %>  </p>
                     <% } %> 
