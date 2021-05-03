@@ -1,8 +1,8 @@
 module.exports = {
   "development": {
     "username": "root",
-    "password": "root",
-    "port": 8889, // 8889 3306
+    "password": null,
+    "port": 3306, // 8889 3306
     "database": "ergoworld_db",
     "host": "127.0.0.1",
     "dialect": "mysql"
