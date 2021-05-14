@@ -20,7 +20,7 @@ const router = express.Router();
  router.post('/crear', uploadFile.any(), validateCrearProducto,  productoControllers.store);
 
    /*EDITAR PRODUCTO*/
- router.get('/editar/:id', userNoLoggenIn,  productoControllers.edit); 
+ router.get('/editar/:id', /*userNoLoggenIn,*/  productoControllers.edit); 
  router.put('/editar/:id', uploadFile.any(), validateEditProducto,  productoControllers.update); 
 
   /*BORRAR PRODUCTO*/

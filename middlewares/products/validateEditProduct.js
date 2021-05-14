@@ -3,7 +3,7 @@ const {check} = require("express-validator");
 const path = require('path');
 
 const validateEditProducto = [
-    check('name').notEmpty().isLength({ min: 5 }).withMessage('Debes ingresar un nombre para el producto con 5 caractéres como mínimo'),
+    check('name').notEmpty().withMessage('Debes ingresar un nombre para el producto').isLength({ min: 5 }).withMessage('Debes ingresar un nombre para el producto con 5 caractéres como mínimo'),
     check('shortDescription').notEmpty().withMessage('Debes ingresar una descripcion corta'),
     check('price').notEmpty().isInt().withMessage("Debes ingresar un precio valido"),
     check('stock').notEmpty().isInt().withMessage("Debes ingresar la cantidad de stock disponible"),
@@ -12,11 +12,11 @@ const validateEditProducto = [
     check('characteristic3').notEmpty().withMessage('Debes ingresar una caracteritica valida'),
     check('characteristic4').notEmpty().withMessage('Debes ingresar una caracteritica valida'),
     check('titleDescription1').notEmpty().withMessage('Debes ingresar una titulo valido'),
-    check('description1').notEmpty().isLength({ min: 20 }).withMessage('Debes ingresar una descripcion valida de 20 caractéres como mínimo'),
+    check('description1').notEmpty().withMessage('Debes ingresar una descripción para el producto').isLength({ min: 20 }).withMessage('Debes ingresar una descripcion valida de 20 caractéres como mínimo'),
     check('titleDescription2').notEmpty().withMessage('Debes ingresar una titulo valido'),
-    check('description2').notEmpty().isLength({ min: 20 }).withMessage('Debes ingresar una descripcion valida de 20 caractéres como mínimo'),
+    check('description2').notEmpty().withMessage('Debes ingresar una descripción para el producto').isLength({ min: 20 }).withMessage('Debes ingresar una descripcion valida de 20 caractéres como mínimo'),
     check('titleDescription3').notEmpty().withMessage('Debes ingresar una titulo valido'),
-    check('description3').notEmpty().isLength({ min: 20 }).withMessage('Debes ingresar una descripcion valida de 20 caractéres como mínimo'),
+    check('description3').notEmpty().withMessage('Debes ingresar una descripción para el producto').isLength({ min: 20 }).withMessage('Debes ingresar una descripcion valida de 20 caractéres como mínimo'),
     check('category_id').notEmpty().withMessage("Debes Elegir al menos una categoria"),
     
     /* check('image1').custom((value, {req}) => { 

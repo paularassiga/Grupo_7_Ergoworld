@@ -24,6 +24,12 @@ textarea{
     font-weight: 300;
 }
 
+.error{
+    color: red;
+    margin: auto;
+    text-align: center;
+}
+
 .feedback{
     background-color: #396fb7;
     color: white;
@@ -60,10 +66,18 @@ textarea{
     font-size:1.125rem;
 }
 
+.form-input-name, .form-input-price, .form-input-descr, .form-input-stock, .form-input-characteristic1, .form-input-characteristic2, .form-input-characteristic3, .form-input-characteristic4, .form-input-titleDescription1, .form-input-titleDescription2, .form-input-titleDescription3, .form-input-description1, .form-input-description2, .form-input-description3
+{
+    background-color: white;
+    margin:0.625rem auto;
+    
+}
+
 .form-input{
     background-color: white;
     margin:0.625rem auto;
 }
+
 
 .text-input-edit::placeholder{
     color:#9e9a9c;
