@@ -64,33 +64,46 @@ let productoControllers = {
   },
   // Update - Method to update
   update: (req, res) => {
+
+    let errors = validationResult(req);
+
+    if (errors.isEmpty()) {
+
+      const productId = req.params.id;
+  
+      db.Product.update(
+              {
+                ...req.body,
+                image_1: req.files.filter((e)  => {
+                  return e.fieldname == "image_1"
+                   }).map(e => e.filename).toString() || undefined,
+                image_2: req.files.filter((e)  => {
+                  return e.fieldname == "image_2"
+                   }).map(e => e.filename).toString() || undefined,
+                image_3: req.files.filter((e)  => {
+                  return e.fieldname == "image_3"
+                   }).map(e => e.filename).toString() || undefined,
+                image_4: req.files.filter((e)  => {
+                  return e.fieldname == "image_4"
+                   }).map(e => e.filename).toString() || undefined,
+              },
+              {
+                  where: {id: productId}
+              })
+          .then(()=> {
+              return res.redirect('/productos/detalle/' + productId)})            
+          .catch(error => res.send(error))
+    }  else {
+
+      db.Product.findByPk(req.params.id)
+      .then(productToEdit => {
+          res.render('products/product-edit-form', {productToEdit, oldData:req.body, errors:errors.mapped()});
+      })
+
+    }
     
 		//  let products = Product.getAll();
-    const productId = req.params.id;
-  
-    db.Product.update(
-            {
-              ...req.body,
-              image_1: req.files.filter((e)  => {
-                return e.fieldname == "image_1"
-                 }).map(e => e.filename).toString() || undefined,
-              image_2: req.files.filter((e)  => {
-                return e.fieldname == "image_2"
-                 }).map(e => e.filename).toString() || undefined,
-              image_3: req.files.filter((e)  => {
-                return e.fieldname == "image_3"
-                 }).map(e => e.filename).toString() || undefined,
-              image_4: req.files.filter((e)  => {
-                return e.fieldname == "image_4"
-                 }).map(e => e.filename).toString() || undefined,
-            },
-            {
-                where: {id: productId}
-            })
-        .then(()=> {
-            return res.redirect('/productos/detalle/' + productId)})            
-        .catch(error => res.send(error))
-  
+    
 	},
 
   delete: (req, res)=> {

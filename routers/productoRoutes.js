@@ -6,6 +6,7 @@ const router = express.Router();
  // Middlewares
  const uploadFile = require('../middlewares/products/multer');
  const validateCrearProducto = require('../middlewares/products/validateProduct');
+ const validateEditProducto = require('../middlewares/products/validateEditProduct');
  const userNoLoggenIn = require('../middlewares/users/userNoLoggedIn');
 
   /*Acá van todas las rutas*/
@@ -20,7 +21,7 @@ const router = express.Router();
 
    /*EDITAR PRODUCTO*/
  router.get('/editar/:id', userNoLoggenIn,  productoControllers.edit); 
- router.put('/editar/:id', uploadFile.any(),  productoControllers.update); 
+ router.put('/editar/:id', uploadFile.any(), validateEditProducto,  productoControllers.update); 
 
   /*BORRAR PRODUCTO*/
   router.delete('/borrar/:id', userNoLoggenIn,  productoControllers.delete); 

@@ -4,6 +4,7 @@
     <%- include('../partials/head', 
     {title: 'Creá tu producto', 
     css: ['/css/create-form.css']}) %>
+    <script src='../../js/productCreateFormValidation.js'></script>
 <body>
 
     <!--Barra de navagacion -->
@@ -23,107 +24,112 @@
             </figure>
 
             <!--Sólo vista estática sin variables dinámicas por ahora -->
-            <form action="/productos/crear" method="POST" enctype="multipart/form-data">
+            <form action="/productos/crear" method="POST" enctype="multipart/form-data" class='create-form'>
+                <div>
+                    <ul class='errores'>
+
+                    </ul>
+                </div>
                 <div class='contenedor-input-create'>
                     <label for="name" class="form-label">Nombre del producto:</label>
-                    <input type="text" id="name" name="name"  placeholder="Ej: Teclado Ergonómico" class="form-input" value="<%= typeof oldData != 'undefined' ? oldData.name : '' %>">
+                    <input type="text" id="name" name="name"  placeholder="Ej: Teclado Ergonómico" class="form-input-name" value="<%= typeof oldData != 'undefined' ? oldData.name : '' %>">
                 <% if(locals.errors && errors.name) { %> 
                     <p class="feedback"><%= errors.name.msg %>  </p>
                 <% } %> 
                 </div>
                 <div class='contenedor-input-create'>
                     <label for="shortDescription" class="form-label">Resumen del producto:</label>
-                    <input type="description" id="shortDescription" name="shortDescription" placeholder="Ej: Eleva la pantalla entre 15 y 25 centímetros por encima de la mesa. Fácil de usar y extremadamente portátil. Se adapta a casi todas las computadoras portátiles. Se abre y cierra con un sól movimiento." class="form-input">
+                    <input type="description" id="shortDescription" name="shortDescription" placeholder="Ej: Eleva la pantalla entre 15 y 25 centímetros por encima de la mesa. Fácil de usar y extremadamente portátil. Se adapta a casi todas las computadoras portátiles. Se abre y cierra con un sól movimiento." class="form-input-descr" value="<%= typeof oldData != 'undefined' ? oldData.shortDescription : '' %>">
                     <% if(locals.errors && errors.shortDescription) { %> 
-                        <p class="feedback"><%= errors.shortDescription%>  </p>
+                        <p class="feedback"><%= errors.shortDescription.msg%>  </p>
                     <% } %> 
                 </div>
                 <div class='contenedor-input-create'>
                     <label for="price" class="form-label">Precio:</label>
-                    <input type="number" id="price" name="price" placeholder="Ej: $2000" class="form-input" required>
+                    <input type="number" id="price" name="price" placeholder="Ej: $2000" class="form-input-price"  value="<%= typeof oldData != 'undefined' ? oldData.price : '' %>">
                 
                     <% if(locals.errors && errors.price) { %> 
-                        <p class="feedback"><%= errors.price %>  </p>
+                        <p class="feedback"><%= errors.price.msg %>  </p>
                     <% } %> 
                 
                     </div>
                 <div class='contenedor-input-create'>
                     <label for="name" class="form-label">Stock disponible:</label>
-                    <input type="number" id="stock" name="stock" placeholder="2000" class="form-input" required>
+                    <input type="number" id="stock" name="stock" placeholder="2000" class="form-input-stock"  value="<%= typeof oldData != 'undefined' ? oldData.stock : '' %>">
                     <% if(locals.errors && errors.stock) { %> 
-                        <p class="feedback"><%= errors.stock %>  </p>
+                        <p class="feedback"><%= errors.stock.msg %>  </p>
                     <% } %> 
                 
                 </div>
                 <div class='contenedor-input-create'>
                     <label for="name" class="form-label">Características:</label>
-                    <input type="text" id="characteristic1" name="characteristic1" placeholder="Ej: Garantía por 2 años" class="form-input" required>
+                    <input type="text" id="characteristic1" name="characteristic1" placeholder="Ej: Garantía por 2 años" class="form-input-characteristic1"  value="<%= typeof oldData != 'undefined' ? oldData.characteristic1 : '' %>">
                     <% if(locals.errors && errors.characteristic1) { %> 
-                        <p class="feedback"><%= errors.characteristic1 %>  </p>
+                        <p class="feedback"><%= errors.characteristic1.msg %>  </p>
                     <% } %> 
                     
-                    <input type="text" id="characteristic2" name="characteristic2" placeholder="Ej: Hecho con plástico reciclado" class="form-input" required>
+                    <input type="text" id="characteristic2" name="characteristic2" placeholder="Ej: Hecho con plástico reciclado" class="form-input-characteristic2"  value="<%= typeof oldData != 'undefined' ? oldData.characteristic2 : '' %>" >
                     
                     <% if(locals.errors && errors.characteristic2) { %> 
-                        <p class="feedback"><%= errors.characteristic2 %>  </p>
+                        <p class="feedback"><%= errors.characteristic2.msg %>  </p>
                     <% } %> 
                     
                     
-                    <input type="text" id="characteristic3" name="characteristic3" placeholder="Ej: Libre de BPA" class="form-input" required>
+                    <input type="text" id="characteristic3" name="characteristic3" placeholder="Ej: Libre de BPA" class="form-input-characteristic3"  value="<%= typeof oldData != 'undefined' ? oldData.characteristic3 : '' %>">
                     <% if(locals.errors && errors.characteristic3) { %> 
-                        <p class="feedback"><%= errors.characteristic3 %>  </p>
+                        <p class="feedback"><%= errors.characteristic3.msg %>  </p>
                     <% } %> 
                    
-                    <input type="text" id="characteristic4" name="characteristic4" placeholder="Ej: La mejor calidad del mercado." class="form-input" required>
+                    <input type="text" id="characteristic4" name="characteristic4" placeholder="Ej: La mejor calidad del mercado." class="form-input-characteristic4"  value="<%= typeof oldData != 'undefined' ? oldData.characteristic4 : '' %>">
                     <% if(locals.errors && errors.characteristic4) { %> 
-                        <p class="feedback"><%= errors.characteristic4 %>  </p>
+                        <p class="feedback"><%= errors.characteristic4.msg %>  </p>
                     <% } %> 
                 
                 </div>
                 <div class='contenedor-input-create'>
                     <label for="titleDescription1" class="form-label">Titulo Descripción 1:</label>
-                    <input type="text" id="titleDescription1" name="titleDescription1" placeholder="Ej: Altura ajustable" class="form-input" required>
+                    <input type="text" id="titleDescription1" name="titleDescription1" placeholder="Ej: Altura ajustable" class="form-input-titleDescription1"  value="<%= typeof oldData != 'undefined' ? oldData.titleDescription1 : '' %>">
                     <% if(locals.errors && errors.titleDescription1) { %> 
-                        <p class="feedback"><%= errors.titleDescription1 %>  </p>
+                        <p class="feedback"><%= errors.titleDescription1.msg %>  </p>
                     <% } %> 
                 </div>
                 <div class='contenedor-input-create'>
                     <label for="description1" class="form-label">Descripción 1:</label>
-                    <input type="text" id="description1" name="description1" placeholder="Ej: Ajustar la altura de la pantalla de su computadora portátil es fundamental para lograr la máxima comodidad y productividad." class="form-input" required>
+                    <input type="text" id="description1" name="description1" placeholder="Ej: Ajustar la altura de la pantalla de su computadora portátil es fundamental para lograr la máxima comodidad y productividad." class="form-input-description1"  value="<%= typeof oldData != 'undefined' ? oldData.description1 : '' %>">
                     <% if(locals.errors && errors.description1) { %> 
-                        <p class="feedback"><%= errors.description1 %>  </p>
+                        <p class="feedback"><%= errors.description1.msg %>  </p>
                     <% } %> 
                 </div>
                 <div class='contenedor-input-create'>
                     <label for="name" class="form-label">Titulo Descripción 2:</label>
-                    <input type="text" id="titleDescription2" name="titleDescription2" placeholder="Ej: Fácil de usar y extremadamente portátil" class="form-input" required>
+                    <input type="text" id="titleDescription2" name="titleDescription2" placeholder="Ej: Fácil de usar y extremadamente portátil" class="form-input-titleDescription2"  value="<%= typeof oldData != 'undefined' ? oldData.titleDescription2 : '' %>">
                     <% if(locals.errors && errors.titleDescription2) { %> 
-                        <p class="feedback"><%= errors.titleDescription2 %>  </p>
+                        <p class="feedback"><%= errors.titleDescription2.msg %>  </p>
                     <% } %> 
                 
                 
                 </div>
                 <div class='contenedor-input-create'>
                     <label for="name" class="form-label">Descripción 2:</label>
-                    <input type="text" id="description2" name="description2" placeholder="Ej: Un simple movimiento abre y cierra el Roost Stand. Peso: 6 onzas (170 g) Cerrado: 1,30 x 1,17 x 13 pulgadas (3,3 x 3,0 x 33,0 cm)" class="form-input" required>
+                    <input type="text" id="description2" name="description2" placeholder="Ej: Un simple movimiento abre y cierra el Roost Stand. Peso: 6 onzas (170 g) Cerrado: 1,30 x 1,17 x 13 pulgadas (3,3 x 3,0 x 33,0 cm)" class="form-input-description2"  value="<%= typeof oldData != 'undefined' ? oldData.description2 : '' %>">
                 
                     <% if(locals.errors && errors.description2) { %> 
-                        <p class="feedback"><%= errors.description2 %>  </p>
+                        <p class="feedback"><%= errors.description2.msg %>  </p>
                     <% } %> 
                 </div>
                 <div class='contenedor-input-create'>
                     <label for="name" class="form-label">Titulo Descripción 3:</label>
-                    <input type="text" id="titleDescription3" name="titleDescription3" placeholder="Ej: Se adapta a casi todas las computadoras portátiles" class="form-input" required>
+                    <input type="text" id="titleDescription3" name="titleDescription3" placeholder="Ej: Se adapta a casi todas las computadoras portátiles" class="form-input-titleDescription3"  value="<%= typeof oldData != 'undefined' ? oldData.titleDescription3 : '' %>">
                     <% if(locals.errors && errors.titleDescription3) { %> 
-                        <p class="feedback"><%= errors.titleDescription3 %>  </p>
+                        <p class="feedback"><%= errors.titleDescription3.msg %>  </p>
                     <% } %> 
                
                 </div>
                 <div class='contenedor-input-create'>
                     <label for="name" class="form-label">Descripción 3:</label>
-                    <input type="text" id="description3" name="description3" placeholder="Ej: Este fantástico stand se ajusta automáticamente para adaptarse a tu computadora portátil." class="form-input" required>
+                    <input type="text" id="description3" name="description3" placeholder="Ej: Este fantástico stand se ajusta automáticamente para adaptarse a tu computadora portátil." class="form-input-description3"  value="<%= typeof oldData != 'undefined' ? oldData.description3 : '' %>">
                     <% if(locals.errors && errors.description3) { %> 
-                        <p class="feedback"><%= errors.description3 %>  </p>
+                        <p class="feedback"><%= errors.description3.msg %>  </p>
                     <% } %> 
                 
                 </div>
@@ -131,19 +137,19 @@
                     <label for="name" class="form-label">Imágenes:</label>
                     <input type="file" id="image1" name="image_1" class="form-input" required>
                     <% if(locals.errors && errors.image1) { %> 
-                        <p class="feedback"><%= errors.image1 %>  </p>
+                        <p class="feedback"><%= errors.image1.msg %>  </p>
                     <% } %> 
                     <input type="file" id="image2" name="image_2" class="form-input" required>
                     <% if(locals.errors && errors.image2) { %> 
-                        <p class="feedback"><%= errors.image2 %>  </p>
+                        <p class="feedback"><%= errors.image2.msg %>  </p>
                     <% } %> 
                     <input type="file" id="image3" name="image_3" class="form-input" required>
                     <% if(locals.errors && errors.image3) { %> 
-                        <p class="feedback"><%= errors.image3 %>  </p>
+                        <p class="feedback"><%= errors.image3.msg %>  </p>
                     <% } %> 
                     <input type="file" id="image4" name="image_4" class="form-input" required>
                     <% if(locals.errors && errors.image4) { %> 
-                        <p class="feedback"><%= errors.image4 %>  </p>
+                        <p class="feedback"><%= errors.image4.msg %>  </p>
                     <% } %> 
                 </div>
                 <div class= 'contenedor-options'>
@@ -152,43 +158,43 @@
                     margin: 0;">Categoría:</label>
                     <div class='contenedor-specific-options'>
                     <label class='categories'>
-                        <input type='checkbox' name='category_id' value=1 class='options'>
+                        <input type='checkbox' name='category_id' value=1 class='options'  <%= locals.oldData && oldData.category == 1 ? 'checked' : '' %>>
                         Sillas
                     </label>
                     <label class='categories'>
-                        <input type='checkbox' name='category_id' value=2 class='options'>
+                        <input type='checkbox' name='category_id' value=2 class='options' <%= locals.oldData && oldData.category == 2 ? 'checked' : '' %>>
                         Monitores
                     </label>
                     <label class='categories'>
-                        <input type='checkbox' name='category_id' value=3 class='options'>
+                        <input type='checkbox' name='category_id' value=3 class='options' <%= locals.oldData && oldData.category == 3 ? 'checked' : '' %>>
                         Escritorios
                     </label>
                     <label class='categories'>
-                        <input type='checkbox' name='category_id' value=4 class='options'>
+                        <input type='checkbox' name='category_id' value=4 class='options' <%= locals.oldData && oldData.category == 4 ? 'checked' : '' %>>
                         Stands
                     </label>
                     <label class='categories'>
-                        <input type='checkbox' name='category_id' value=5 class='options'>
+                        <input type='checkbox' name='category_id' value=5 class='options' <%= locals.oldData && oldData.category == 5 ? 'checked' : '' %>>
                         Iluminación
                     </label>
                     <label class='categories'>
-                        <input type='checkbox' name='category_id' value=6 class='options'>
+                        <input type='checkbox' name='category_id' value=6 class='options' <%= locals.oldData && oldData.category == 6 ? 'checked' : '' %>>
                         Teclados
                     </label>
                     <label class='categories'>
-                        <input type='checkbox' name='category_id' value=7 class='options'>
+                        <input type='checkbox' name='category_id' value=7 class='options' <%= locals.oldData && oldData.category == 7 ? 'checked' : '' %>>
                         Paneles de separación
                     </label>
                     <label class='categories'>
-                        <input type='checkbox' name='category_id' value=8 class='options'>
+                        <input type='checkbox' name='category_id' value=8 class='options' <%=locals.oldData && oldData.category == 8 ? 'checked' : '' %>>
                         Organizador de cables
                     </label>
                     <label class='categories'>
-                        <input type='checkbox' name='category_id' value=9 class='options'>
+                        <input type='checkbox' name='category_id' value=9 class='options' <%= locals.oldData && oldData.category == 9 ? 'checked' : '' %>>
                         Mouses
                     </label>
                     <% if(locals.errors && errors.category_id) { %> 
-                        <p class="feedback"><%= errors.category_id %>  </p>
+                        <p class="feedback"><%= errors.category_id.msg %>  </p>
                     <% } %> 
                 </div>
                 </div>

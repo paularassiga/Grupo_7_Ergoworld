@@ -15,6 +15,12 @@ body {
     background-color: #4a4a4a;
 }
 
+.error{
+    color: red;
+    margin: auto;
+    text-align: center;
+}
+
 .mensaje-creado{
     background-color: #396fb7;
     color: white;
@@ -53,6 +59,12 @@ body {
     font-weight: 500;
     color:rgb(219, 219, 219);
     font-size:1.125rem;
+}
+
+.form-input-name, .form-input-price, .form-input-descr, .form-input-stock, .form-input-characteristic1, .form-input-characteristic2, .form-input-characteristic3, .form-input-characteristic4, .form-input-titleDescription1, .form-input-titleDescription2, .form-input-titleDescription3, .form-input-description1, .form-input-description2, .form-input-description3
+{
+    background-color: white;
+    margin:0.625rem auto;
 }
 
 .form-input{
