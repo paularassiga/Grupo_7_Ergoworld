@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- Head -->
+    <%- include('../partials/head', 
+    {title: 'Error 404', 
+    css: ['/css/login.css']}) %>
+<body>
+
+    <!--Barra de navagacion -->
+
+    <%- include('../partials/navbar') %>
+
+
+    <!-- Cuerpo de la pagina -->
+    <main>
+        <section class='contenedor-formulario'>
+            <h2 class='h-login'>Error 404</h2>
+            <figure>
+               <img class='linea' src="/images/line-black.png">
+            </figure>
+            
+            <section>
+                <a class='text-inciarsesion' id='last' href='/'>Regresar a la tienda</a>
+            </section>
+        </section>
+    </main>
+    <%- include('../partials/footer') %> 
+
+</body>
+</html>

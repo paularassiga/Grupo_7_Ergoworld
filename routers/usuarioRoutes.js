@@ -26,6 +26,7 @@ const userNoLoggenIn = require('../middlewares/users/userNoLoggedIn');
 router.get('/register', userLoggenIn, usuarioControllers.register);
 router.post('/register', uploadFile.single('avatar'), validateRegister, usuarioControllers.processRegister);
 
+router.get('/404', usuarioControllers.error404);
 // Logout
 router.get('/logout/', usuarioControllers.logout);
 
