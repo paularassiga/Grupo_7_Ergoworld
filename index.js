@@ -33,6 +33,9 @@ app.use('/productos', productoRoutes);
 app.use('/usuario', userRoutes);
 // app.use('/productCart', mainRoutes);
 // app.use('/productDetail', mainRoutes);
+app.use(function(req,res){
+  res.status(404).render('user/404');
+});
 
 
 //Para deployar

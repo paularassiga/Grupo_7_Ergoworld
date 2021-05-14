@@ -33,6 +33,10 @@ let usuarioControllers = {
         res.render("user/denegado")
     },
 
+    error404: (req, res) => {
+        res.render("user/404")
+    },
+
     processRegister: async (req, res) => {
         const errors = validationResult(req);
 
@@ -76,7 +80,6 @@ let usuarioControllers = {
 
             const userToCreate = {
                 ...userData,
-
                 avatar: req.file.filename,
                 rol_id: 3
 
