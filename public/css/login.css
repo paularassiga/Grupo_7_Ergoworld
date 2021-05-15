@@ -25,6 +25,26 @@ video {
     z-index:-1;
   }
 
+  .error{
+    padding:5px;
+    margin:10px auto;
+    background-color: rgb(163, 30, 30);
+    color: white;
+    text-align: center;
+    list-style-type: none;
+    width:70%;
+}
+
+.errors_2{
+    padding:5px;
+    margin:10px auto;
+    background-color: rgb(163, 30, 30);
+    color: white;
+    text-align: center;
+    list-style-type: none;
+    width:70%;
+}
+
  .contenedor-formulario-1{
       background-color:rgba(79, 79, 79, 0.8);
       padding: 30px 0;
@@ -54,7 +74,7 @@ video {
     width: 90%;
 }
 
-.text-input-login{
+.text-input-login-email, .text-input-login-pass{
     background-color: white;
     margin:0.625rem auto;
 }

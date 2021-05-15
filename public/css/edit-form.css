@@ -25,16 +25,23 @@ textarea{
 }
 
 .error{
-    color: red;
-    margin: auto;
+    padding:5px;
+    margin:10px auto;
+    background-color: rgb(163, 30, 30);
+    color: white;
     text-align: center;
+    list-style-type: none;
+    width:70%;
 }
 
 .feedback{
-    background-color: #396fb7;
+    padding:5px;
+    margin:10px auto;
+    background-color: rgb(163, 30, 30);
     color: white;
-    font-weight: 400;
-    padding: 10px;
+    text-align: center;
+    list-style-type: none;
+    width:70%;
 }
 
 .contenedor-formulario{
