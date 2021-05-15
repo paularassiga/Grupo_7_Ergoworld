@@ -23,11 +23,14 @@
                <img class='linea' src="/images/line.png">
             </figure>
 
+            
             <!--Sólo vista estática sin variables dinámicas por ahora -->
             <form action="/productos/crear" method="POST" enctype="multipart/form-data" class='create-form'>
                 <div>
                     <ul class='errores'>
-
+                        <% if(locals.errors && errors.formato) { %> 
+                            <li class="feedback"><%= errors.formato.msg %>  </li>
+                        <% } %> 
                     </ul>
                 </div>
                 <div class='contenedor-input-create'>
