@@ -31,6 +31,18 @@ let productoControllers = {
   store: (req, res) => {
     
     let errors = validationResult(req);
+    console.log(errors.mapped())
+
+    if (req.fileValidationError) {
+      return res.render('products/product-create-form', {
+          errors: {
+              formato: {
+                  msg: 'Only .png, .jpg and .jpeg format allowed!'
+              }
+          },
+          oldData: req.body
+      });
+    };
 
     if (errors.isEmpty()) {
       
@@ -46,9 +58,10 @@ let productoControllers = {
             res.redirect('/productos');
         });           
       }  else {
+        console.log(errors.mapped())
       res.render('products/product-create-form', {
         oldData: req.body,
-        errors: errors.mapped()
+        errors: errors.mapped(),
       });
 
     }
