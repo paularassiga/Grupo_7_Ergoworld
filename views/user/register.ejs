@@ -31,30 +31,30 @@
                 <div class='contenedor-input-register'>
                     <input  class='text-input-register-name' type='text' id='name' placeholder="Nombre" name='name'  value='<%=locals.oldData? oldData.name : null %>'>
                     <% if(locals.errors && errors.name) { %> 
-                        <p style='color:red' class="feedback"><%= errors.name.msg %>  </p>
+                        <p  class="feedback"><%= errors.name.msg %>  </p>
                     <% } %>
                 </div>
                 <div class='contenedor-input-register'>
-                    <input  class='text-input-register-last-name' type='text' id='last_name' placeholder="Apellido" name='last_name'minlength="3" value='<%=locals.oldData? oldData.last_name : null %>'>
+                    <input  class='text-input-register-last-name' type='text' id='last_name' placeholder="Apellido" name='last_name' value='<%=locals.oldData? oldData.last_name : null %>'>
                     <% if(locals.errors && errors.last_name) { %> 
-                        <p style='color:red' class="feedback"><%= errors.last_name.msg %>  </p>
+                        <p class="feedback"><%= errors.last_name.msg %>  </p>
                     <% } %>
                 </div>
                 <div class='contenedor-input-register'>
                     <input  class='text-input-register-email' type='email' id='email' placeholder="Email" name='email' value='<%=locals.oldData? oldData.email : null %>'>
                     <% if(locals.errors && errors.email) { %> 
-                        <p style='color:red' class="feedback"><%= errors.email.msg %>  </p>
+                        <p class="feedback"><%= errors.email.msg %>  </p>
                     <% } %>
                 </div>
                 <div class='contenedor-input-register'>
                     <input  class='text-input-register-password' type='password' id='password' placeholder="Contraseña" name='password'>
                     <% if(locals.errors && errors.password) { %> 
-                        <p style='color:red' class="feedback"><%= errors.password.msg %>  </p>
+                        <p  class="feedback"><%= errors.password.msg %>  </p>
                     <% } %>
                 </div>
                 <div class='contenedor-input-register'>
                     <label class='label'>Elige tu foto de perfil</label>
-                    <input type="file" id="avatar" name="avatar" class="form-input" style="
+                    <input required type="file" id="avatar" name="avatar" class="form-input" style="
                     margin-top: 10px;">
                 </div>
                 <div class='contenedor-button'>
