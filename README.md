@@ -102,11 +102,15 @@ Para descargar las fuentes:
 * [Diseño](https://drive.google.com/file/d/1yEr-7pDpfpjbGvcX3Yy398CQk6TZ0DLJ/view?usp=sharing)
 * [Script](https://drive.google.com/file/d/1-C2Si1Fe16wYjxp9ugPIEzwfc6SB6lUA/view?usp=sharing)
 
-## Users de prueba
+## Users
 
-admin@admin.com
-pass: adminadmin
+Dejamos a disposición dos accesos para poder explorar las distintas funcionalidades.
 
-viewer@viewer.com
-pass: viewerviewer
+* Usuario administrador
+email: admin@admin.com
+password: adminadmin
+
+* Usuario estándar
+email: viewer@viewer.com
+password: viewerviewer
 
