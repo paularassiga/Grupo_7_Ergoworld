@@ -107,10 +107,12 @@ Para descargar las fuentes:
 Dejamos a disposición dos accesos para poder explorar las distintas funcionalidades.
 
 * Usuario administrador
+
 email: admin@admin.com
 password: adminadmin
 
 * Usuario estándar
+
 email: viewer@viewer.com
 password: viewerviewer
 
