@@ -43,6 +43,19 @@ let mainControllers = {
 
         res.render("products/productDetail")
 
+    },
+    searcProduct:(req, res)=>{
+        db.Product.findAll({
+              where:  {
+                    name:{
+                        [Op.substring]: req.query.headerSearchHome
+                    } 
+                }, 
+            include: [ {association: 'categoria'} ]
+        })
+            .then(productos => {
+                res.render('products/productsList', {productos})
+            });
     }
 }
 

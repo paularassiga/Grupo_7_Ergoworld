@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+    <!-- Head -->
+    <%- include('../partials/head', 
+    {title: 'Inicio', 
+    css: ['/css/home.css']}) %>
+<body>
+
+     <%- include('../partials/navbar') %>  
+    <!-- Cuerpo de la pagina -->
+
+    <!-- <section class="hero-wrapper">
+        <div class="hero-content">
+            <figure>
+                <img src="/images/logo-fondo-blanco.jpg" alt="logo Ergoworld hero">
+            </figure>
+            <h1>Mejorá tu productividad y tu salud.</h1>
+        </div>
+    </section> -->
+
+    <!-- home 1 -->
+
+    <!-- <section class="home1">
+        <div class="hero-content">
+            <h2 id='h-home1'>Llevá tu <br> HOME OFFICE<br> a otro nivel</h2>
+            <p id='sabias-que'>¿Sabías que usar tu computadora por más de 4 horas diarias aumenta el riesgo de sufrir daños en tu cuerpo de por vida?</p>
+            <p id= 'p-home1'>ERGOWORLD tiene todo lo que necesitas para cuidar de tu trabajo y de tu cuerpo.</p>
+        </div>
+    </section> -->
+
+    <!-- home 2 -->
+
+    <section class = 'contenedor-general'>
+        <% for (let i=0; i<productos.length; i++){ %>
+        <section class="home2">
+            <div class="home2-wrap">
+                <div id='contendedor-home2-1' class="home2-content1">
+                    <h2><%=productos[i].name%></h2>
+                    <p><%=productos[i].shortDescription%></p>
+    
+                    <div class="botones-hom2">
+                        <a class="contenido-boton-home2" href="/productos/detalle/<%=productos[i].id%>">Leer más<i id='flecha-home2' class="fas fa-chevron-right" aria-hidden="true"></i></a>
+                        <a class="contenido-boton-home2" href="#">Comprar<i id='flecha-home2' class="fas fa-chevron-right" aria-hidden="true"></i></a>
+                    </div>
+                    <figure>
+                        <img src="/images/products/<%=productos[i].image_1%>">
+                    </figure>
+                </div>
+            </div>
+        </section>
+        <% } %>
+        </section>
+        
+    <!-- Home 3 -->
+    <section class="contenedor-home3">
+        <article class='contenedor-seccion-home3'>
+            <figure class='contenedorIcon-home3'>
+                <i id= 'icon-home3' class="fas fa-brain"></i>
+            </figure>
+            <h3 class='titulo-home3'>
+                Diseñado por expertos
+            </h3>
+            <p class='p-home3'>
+                Priorizando  el confort y la productividad.
+            </p>
+        </article>
+        <article class='contenedor-seccion-home3'>
+            <figure class='contenedorIcon-home3'>
+                <i id= 'icon-home3' class="fas fa-cogs"></i>
+            </figure>
+            <h3 class='titulo-home3'>
+                Hecho a tu medida
+            </h3>
+            <p class='p-home3'>
+                Cada producto es 100% personalizable para que se ajuste perfectamente a tus necesidades.
+            </p>
+        </article>
+        <article class='contenedor-seccion-home3'>
+            <figure class='contenedorIcon-home3'>
+                <i id= 'icon-home3' class="fas fa-luggage-cart"></i>
+            </figure>
+            <h3 class='titulo-home3'>
+                100% transportable
+            </h3>
+            <p class='p-home3'>
+                Para que puedas llevar tu oficina a donde más te guste.
+            </p>
+        </article>
+    </section>
+
+    <%- include('../partials/footer') %> 
+
+</body>
+
+</html>

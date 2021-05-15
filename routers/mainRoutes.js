@@ -13,6 +13,7 @@ const express = require('express');
  router.get('/', mainControllers.index);
  router.get('/productCart', mainControllers.productCart);
  router.get('/productDetail', mainControllers.productDetail);
+ router.get('/search/', mainControllers.searcProduct);
 
   /*Exporto módulo para llevarlo al entry point*/
 
