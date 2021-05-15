@@ -4,7 +4,7 @@
     <%- include('../partials/head', 
     {title: 'Creá tu cuenta', 
     css: ['/css/register.css']}) %>
-
+<script src='../../js/userRegisterValidation.js'></script>
 <body>
     <!--Barra de navagacion -->
     <%- include('../partials/navbar') %> 
@@ -14,7 +14,7 @@
 
     <main>
         <section class='contenedor-formulario'>
-            <video playsinline autoplay muted loop poster="./images/poster.jpg" id="bgvid">
+            <video playsinline autoplay muted loop poster="../../images/poster.jpg" id="bgvid">
                 <source src="../../images/Typing.mp4" type="video/webm">
                 <source src="../../images/Typing.mp4" type="video/mp4">
               </video>
@@ -23,26 +23,31 @@
                <img class='linea' src="../../images/line-black.png">
             </figure>
             <form method='POST' action='/usuario/register' enctype='multipart/form-data' class = 'contenedor-formulario-1'>
+                <div>
+                    <ul class='errores'>
+
+                    </ul>
+                </div>
                 <div class='contenedor-input-register'>
-                    <input required class='text-input-register' type='text' id='name' placeholder="Nombre" name='name'  value='<%=locals.oldData? oldData.name : null %>'>
+                    <input  class='text-input-register-name' type='text' id='name' placeholder="Nombre" name='name'  value='<%=locals.oldData? oldData.name : null %>'>
                     <% if(locals.errors && errors.name) { %> 
                         <p style='color:red' class="feedback"><%= errors.name.msg %>  </p>
                     <% } %>
                 </div>
                 <div class='contenedor-input-register'>
-                    <input required class='text-input-register' type='text' id='last_name' placeholder="Apellido" name='last_name'minlength="3" value='<%=locals.oldData? oldData.last_name : null %>'>
+                    <input  class='text-input-register-last-name' type='text' id='last_name' placeholder="Apellido" name='last_name'minlength="3" value='<%=locals.oldData? oldData.last_name : null %>'>
                     <% if(locals.errors && errors.last_name) { %> 
                         <p style='color:red' class="feedback"><%= errors.last_name.msg %>  </p>
                     <% } %>
                 </div>
                 <div class='contenedor-input-register'>
-                    <input required class='text-input-register' type='email' id='email' placeholder="Email" name='email' value='<%=locals.oldData? oldData.email : null %>'>
+                    <input  class='text-input-register-email' type='email' id='email' placeholder="Email" name='email' value='<%=locals.oldData? oldData.email : null %>'>
                     <% if(locals.errors && errors.email) { %> 
                         <p style='color:red' class="feedback"><%= errors.email.msg %>  </p>
                     <% } %>
                 </div>
                 <div class='contenedor-input-register'>
-                    <input required class='text-input-register' type='password' id='password' placeholder="Contraseña" name='password'>
+                    <input  class='text-input-register-password' type='password' id='password' placeholder="Contraseña" name='password'>
                     <% if(locals.errors && errors.password) { %> 
                         <p style='color:red' class="feedback"><%= errors.password.msg %>  </p>
                     <% } %>
@@ -50,7 +55,7 @@
                 <div class='contenedor-input-register'>
                     <label class='label'>Elige tu foto de perfil</label>
                     <input type="file" id="avatar" name="avatar" class="form-input" style="
-                    margin-top: 10px;" required>
+                    margin-top: 10px;">
                 </div>
                 <div class='contenedor-button'>
                     <button type='reset' id='boton-reset-register'><a class='texto-enviar' id='boton-reset' href="/">Borrar</a></button>
