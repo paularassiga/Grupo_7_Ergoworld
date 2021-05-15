@@ -98,3 +98,13 @@ Para descargar las fuentes:
 
 [Tablero.](https://trello.com/b/r2BVXQWz/ecoworld-project-board)
 
+## Database 
+
+## Users de prueba
+
+admin@admin.com
+pass: adminadmin
+
+viewer@viewer.com
+pass: viewerviewer
+
