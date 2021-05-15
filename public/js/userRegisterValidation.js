@@ -43,6 +43,7 @@ window.addEventListener('load',function(){
 
        if(errores.length>0){
            e.preventDefault();
+           alert('Hay errores en los campos')
            let ulErrores = document.querySelector('.errores');
            ulErrores.innerHTML = '';
            for (let i=0; i<errores.length; i++){

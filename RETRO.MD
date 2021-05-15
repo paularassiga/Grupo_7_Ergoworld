@@ -168,3 +168,37 @@
 - Empezar tarde a realizar los sprints.
 ------------
 ###### Este documento esta inspirado en la Starfish retrospective
+
+
+# RETRO SPRINT 6
+### Start Doing 
+##### (cosas innovadoras o que por cierta curiosidad queremos probar)
+- Menu desplegable
+- CRUD para editar perfil del usuario
+- Carrito de compras
+
+------------
+
+### More of
+##### (cosas que estamos usando o haciendo y que queremos que mejoren)
+- Empezar con más tiempo, este sprint lo logramos pero tuvimos que hacerlo todo el día antes de la correción, pasada la fecha de entrega.
+------------
+
+### Keep Doing
+##### (Es aquello que venimos haciendo y que nos brinda valor. Debemos seguir haciéndolo pero no será preocupación mejorarlo.)
+- Proactividad y responsabilidad por parte de los miembros.
+- Trabajo en equipo.
+- Disponibilidad para ayudarnos entre todos.
+
+------------
+### Less of
+##### (Aquello que intentamos pero no nos dan tanto beneficio como se esperaba. Está bien, démosle como una segunda oportunidad, pero no esta en nuestras prioridades.)
+- Mejorar los detalles y la experiencia del usuario para que se vea mucho mejor.
+- Agregar máa usabilidad.
+
+------------
+### Stop Doing
+##### ( aquellas practicas que a pesar de ser [Less of] pues podemos eliminarlas.)
+- Empezar tarde a realizar los sprints.
+------------
+###### Este documento esta inspirado en la Starfish retrospective

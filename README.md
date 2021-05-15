@@ -96,9 +96,10 @@ Para descargar las fuentes:
 
 ## Tablero Trello:
 
-[Tablero.](https://trello.com/b/r2BVXQWz/ecoworld-project-board)
+[Tablero - Sprint 7](https://trello.com/b/r2BVXQWz/ecoworld-project-board)
 
 ## Database 
+* [Diseño](https://drive.google.com/file/d/1yEr-7pDpfpjbGvcX3Yy398CQk6TZ0DLJ/view?usp=sharing)
 
 ## Users de prueba
 
