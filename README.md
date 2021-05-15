@@ -109,10 +109,12 @@ Dejamos a disposición dos accesos para poder explorar las distintas funcionalid
 * Usuario administrador
 
 email: admin@admin.com
+
 password: adminadmin
 
 * Usuario estándar
 
 email: viewer@viewer.com
+
 password: viewerviewer
 
