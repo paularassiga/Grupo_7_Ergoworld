@@ -31,7 +31,6 @@ let productoControllers = {
   store: (req, res) => {
     
     let errors = validationResult(req);
-    console.log(errors.mapped())
 
     if (req.fileValidationError) {
       return res.render('products/product-create-form', {

@@ -40,6 +40,17 @@ let usuarioControllers = {
     processRegister: async (req, res) => {
         const errors = validationResult(req);
 
+        if (req.fileValidationError) {
+            return res.render('user/register', {
+                errors: {
+                    formato: {
+                        msg: 'Only .png, .jpg and .jpeg format allowed!'
+                    }
+                },
+                oldData: req.body
+            });
+          };
+
         if (!errors.isEmpty()) {
             return res.render('user/register', {
                 errors: errors.mapped(),

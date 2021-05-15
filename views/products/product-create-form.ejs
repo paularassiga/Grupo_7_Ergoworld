@@ -138,19 +138,19 @@
                 </div>
                 <div class='contenedor-input-create'>
                     <label for="name" class="form-label">Imágenes:</label>
-                    <input type="file" id="image1" name="image_1" class="form-input" required>
+                    <input accept="image/png,image/jpeg" onchange="ValidarImagen(this);" type="file" type="file" id="image1" name="image_1" class="form-input" required>
                     <% if(locals.errors && errors.image1) { %> 
                         <p class="errors_2"><%= errors.image1.msg %>  </p>
                     <% } %> 
-                    <input type="file" id="image2" name="image_2" class="form-input" required>
+                    <input accept="image/png,image/jpeg" type="file" type="file" id="image2" name="image_2" class="form-input" required>
                     <% if(locals.errors && errors.image2) { %> 
                         <p class="errors_2"><%= errors.image2.msg %>  </p>
                     <% } %> 
-                    <input type="file" id="image3" name="image_3" class="form-input" required>
+                    <input accept="image/png,image/jpeg" type="file" type="file" id="image3" name="image_3" class="form-input" required>
                     <% if(locals.errors && errors.image3) { %> 
                         <p class="errors_2"><%= errors.image3.msg %>  </p>
                     <% } %> 
-                    <input type="file" id="image4" name="image_4" class="form-input" required>
+                    <input accept="image/png,image/jpeg" type="file" type="file" id="image4" name="image_4" class="form-input" required>
                     <% if(locals.errors && errors.image4) { %> 
                         <p class="errors_2"><%= errors.image4.msg %>  </p>
                     <% } %> 

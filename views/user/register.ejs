@@ -4,7 +4,6 @@
     <%- include('../partials/head', 
     {title: 'Creá tu cuenta', 
     css: ['/css/register.css']}) %>
-<script src='../../js/userRegisterValidation.js'></script>
 <body>
     <!--Barra de navagacion -->
     <%- include('../partials/navbar') %> 
@@ -54,9 +53,13 @@
                 </div>
                 <div class='contenedor-input-register'>
                     <label class='label'>Elige tu foto de perfil</label>
-                    <input required type="file" id="avatar" name="avatar" class="form-input" style="
+                    <input required onchange="ValidarImagen(this);"  type="file" id="avatar" name="avatar" class="form-input" style="
                     margin-top: 10px;">
                 </div>
+                
+                <% if(locals.errors && errors.formato) { %> 
+                    <p  class="feedback"><%= errors.formato.msg %>  </p>
+                <% } %>
                 <div class='contenedor-button'>
                     <button type='reset' id='boton-reset-register'><a class='texto-enviar' id='boton-reset' href="/">Borrar</a></button>
                    </div>
@@ -70,6 +73,6 @@
         </section>
     </main>
     <%- include('../partials/footer') %> 
-
+    <script src='../../js/userRegisterValidation.js'></script>
 </body>
 </html>
