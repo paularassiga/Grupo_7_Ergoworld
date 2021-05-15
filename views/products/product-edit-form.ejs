@@ -17,7 +17,7 @@
         <section class='contenedor-formulario'>
             <h2 class='h-edit'>Estás editando el producto: <br> <%= typeof productToEdit != 'undefined' ? productToEdit.name : 'Producto no encontrado' %></h2>
             <figure>
-                <img class='imagen-producto' src="../images/line.png">
+                <img class='linea' src="../../images/line.png">
              </figure>
             <!--Sólo vista estática sin variables dinámicas por ahora -->             
                     <form action="/productos/editar/<%= productToEdit.id %>?_method=PUT" method="POST" enctype="multipart/form-data" class='edit-form'>

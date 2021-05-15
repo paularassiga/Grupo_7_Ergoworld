@@ -6,7 +6,9 @@
     css: ['/css/login.css'],
     js: ["/js/login.js"]
 
+
 }) %>
+<script src='../../js/userLoginValidation.js'></script>
 <body>
 
     <!--Barra de navagacion -->
@@ -19,23 +21,28 @@
         <section class='contenedor-formulario'>
             <h2 class='h-login'>Ingresá a tu cuenta</h2>
             <figure>
-               <img class='linea' src="./images/line-black.png">
+               <img class='linea' src="../../images/line-black.png">
             </figure>
-            <video playsinline autoplay muted loop poster="./images/poster.jpg" id="bgvid">
-                <source src="./images/Typing.mp4" type="video/webm">
-                <source src="./images/Typing.mp4" type="video/mp4">
+            <video playsinline autoplay muted loop poster="../../images/poster.jpg" id="bgvid">
+                <source src="../../images/Typing.mp4" type="video/webm">
+                <source src="../../images/Typing.mp4" type="video/mp4">
               </video>
             <form action='/usuario/login' method='POST' id="loginForm" class = 'contenedor-formulario-1'>
+                <div>
+                    <ul class='errores'>
+
+                    </ul>
+                </div>
                 <div class='contenedor-input-login'>
-                    <input class='text-input-login' type='email' id='emailInput' placeholder="Email" name='email' value='<%=locals.oldData? oldData.email : null %>' required>
+                    <input class='text-input-login-email' type='email' id='emailInput' placeholder="Email" name='email' value='<%=locals.oldData? oldData.email : null %>' >
                     <% if(locals.errors && errors.email) { %> 
-                        <p style='color:red' class="feedback"><%= errors.email.msg %>  </p>
+                        <p class="errors_2"><%= errors.email.msg %>  </p>
                     <% } %> 
                 </div>
                 <div class='contenedor-input-login'>
-                    <input class='text-input-login' type='password' id='password' placeholder="Contraseña" name='password' required>
+                    <input class='text-input-login-pass' type='password' id='password' placeholder="Contraseña" name='password' >
                     <% if(locals.errors && errors.password) { %> 
-                        <p style='color:red' class="feedback"><%= errors.password.msg %>  </p>
+                        <p class="errors_2"><%= errors.password.msg %>  </p>
                     <% } %>
                 </div>
                 <div class='contenedor-mantener-sesion'>

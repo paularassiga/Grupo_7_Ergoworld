@@ -16,9 +16,23 @@ body {
 }
 
 .error{
-    color: red;
-    margin: auto;
+    padding:5px;
+    margin:10px auto;
+    background-color: rgb(163, 30, 30);
+    color: white;
     text-align: center;
+    list-style-type: none;
+    width:70%;
+}
+
+.errors_2{
+    padding:5px;
+    margin:10px auto;
+    background-color: rgb(163, 30, 30);
+    color: white;
+    text-align: center;
+    list-style-type: none;
+    width:70%;
 }
 
 .mensaje-creado{

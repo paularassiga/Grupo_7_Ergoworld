@@ -36,6 +36,26 @@ video {
   
 }
 
+.error{
+    padding:5px;
+    margin:10px auto;
+    background-color: rgb(163, 30, 30);
+    color: white;
+    text-align: center;
+    list-style-type: none;
+    width:70%;
+}
+
+.errors_2{
+    padding:5px;
+    margin:10px auto;
+    background-color: rgb(163, 30, 30);
+    color: white;
+    text-align: center;
+    list-style-type: none;
+    width:70%;
+}
+
 .label{
     padding-bottom:10px;
     font-weight: 500;
@@ -60,12 +80,13 @@ video {
     width: 90%;
 }
 
-.text-input-register{
+.text-input-register-name, .text-input-register-last-name, .text-input-register-email, .text-input-register-password   {
     background-color: white;
     margin:0.625rem auto;
 }
 
-.text-input-register::placeholder{
+.text-input-register-name, .text-input-register-last-name, .text-input-register-email, .text-input-register-password   {
+
     color:#9e9a9c;
 }
 
