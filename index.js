@@ -5,6 +5,11 @@ const cookieParser = require('cookie-parser')
 const session = require('express-session')
 const authMiddleware = require("./middlewares/users/authMidleware")
 
+//Aquí llamo a la ruta de las api de users
+const apiUsersRouter = require('./routers/api/users')
+//Aquí llamo a la ruta de las api de products
+const apiProductsRouter = require('./routers/api/products')
+
 const app = express();
 
 //Definiendo la carpeta public
@@ -33,6 +38,11 @@ app.use('/productos', productoRoutes);
 app.use('/usuario', userRoutes);
 // app.use('/productCart', mainRoutes);
 // app.use('/productDetail', mainRoutes);
+
+//APIs
+app.use('/api/users',apiUsersRouter);
+app.use('/api/products',apiProductsRouter);
+
 app.use(function(req,res){
   res.status(404).render('user/404');
 });
