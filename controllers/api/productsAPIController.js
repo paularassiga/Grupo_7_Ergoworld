@@ -27,7 +27,7 @@ const productsAPIController = {
                         total: product.length,
                         url: '/api/products/:id'
                     },
-                    product: product //Acá faltan poner las relaciones con las otras tablas y la URL para ver la imagen del producto.
+                    product: productFinal //Acá faltan poner las relaciones con las otras tablas y la URL para ver la imagen del producto.
                 }
                 res.json(respuesta);
             });
