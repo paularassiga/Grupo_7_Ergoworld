@@ -60,6 +60,7 @@ img {
 .cantidad{
   background-color: white; 
   text-align: center;
+  padding: 0;
   font-size: 1.2rem;
   font-weight: bold;
   border: none;
@@ -322,6 +323,7 @@ img {
 
     .cantidadContainer {
         margin-top: 5vh;
+        
     }
 
     .cantidadContainer button {
@@ -414,6 +416,7 @@ img {
     .cantidadContainer {
         justify-content: flex-start;
         margin-bottom: 4vh;
+        max-width:18.75rem;
     }
 
     .mainImage {
