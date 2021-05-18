@@ -25,6 +25,7 @@ app.use(methodOverride('_method')); // Pasar poder pisar el method="POST" en el 
 app.use(cookieParser())
 app.use(session({
     secret: 'node secret key',
+    maxAge: 365 * 24 * 60 * 60 * 1000
   }))
 //Requiero el módulo que contiene las rutas (mainRoutes)
 let mainRoutes = require("./routers/mainRoutes.js");

@@ -26,7 +26,7 @@ module.exports = {
                     cartId: null
                      
                 }) 
-                .then(item  => res.redirect('/'))
+                .then(item  => res.redirect('products/productCart'))
                 .catch(error => console.log(error)) 
             })
         }else{
@@ -51,8 +51,11 @@ module.exports = {
         })        
         .then((items)=>{
             let total = items.reduce((total,item)=> (total = total + Number(item.subtotal)),0)
+   
+            
 
-            res.render(path.resolve(__dirname, '..','views','carrito','carrito'), {cartProducto :items , total  } );
+            console.log(items[0].product.name);
+            res.render('products/productCart', {productos :items , total  } );
         })
 
     },

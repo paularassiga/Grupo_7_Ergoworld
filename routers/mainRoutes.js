@@ -11,7 +11,6 @@ const express = require('express');
   /*Acá van todas las rutas*/
 
  router.get('/', mainControllers.index);
- router.get('/productCart', mainControllers.productCart);
  router.get('/productDetail', mainControllers.productDetail);
  router.get('/search/', mainControllers.searcProduct);
 
