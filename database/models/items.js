@@ -1,37 +1,4 @@
-// DROP TABLE IF EXISTS `items`;
-// /*!40101 SET @saved_cs_client     = @@character_set_client */;
-// /*!40101 SET character_set_client = utf8 */;
-// CREATE TABLE `items` (
-//   `id` int(11) NOT NULL AUTO_INCREMENT,
-//   `salePrice` decimal(10,2) DEFAULT NULL,
-//   `quantity` int(11) DEFAULT NULL,
-//   `subtotal` decimal(10,2) DEFAULT NULL,
-//   `state` tinyint(4) DEFAULT NULL,
-//   `userId` int(11) DEFAULT NULL,
-//   `productId` int(11) DEFAULT NULL,
-//   `cartId` int(11) DEFAULT NULL,
-//   `createdAt` timestamp NULL DEFAULT NULL,
-//   `updatedAt` timestamp NULL DEFAULT NULL,
-//   `deletedAt` timestamp NULL DEFAULT NULL,
-//   PRIMARY KEY (`id`)
-// ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
-
-
-
-// DROP TABLE IF EXISTS `carts`;
-// /*!40101 SET @saved_cs_client     = @@character_set_client */;
-// /*!40101 SET character_set_client = utf8 */;
-// CREATE TABLE `carts` (
-//   `id` int(11) NOT NULL AUTO_INCREMENT,
-//   `orderNumber` int(11) DEFAULT NULL,
-//   `total` decimal(10,2) DEFAULT NULL,
-//   `userId` int(11) DEFAULT NULL,
-//   `createdAt` timestamp NULL DEFAULT NULL,
-//   `updatedAt` timestamp NULL DEFAULT NULL,
-//   `deletedAt` timestamp NULL DEFAULT NULL,
-//   PRIMARY KEY (`id`)
-// ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 
 
