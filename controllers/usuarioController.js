@@ -69,8 +69,8 @@ let usuarioControllers = {
             console.log("Error al corroborar el email ", error)
         }
 
-        console.log(req.body.email);
-        console.log(emailExist);
+        //console.log(req.body.email);
+        //console.log(emailExist);
 
         if (emailExist) {
             return res.render('user/register', {
