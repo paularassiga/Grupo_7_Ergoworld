@@ -57,7 +57,7 @@ let productoControllers = {
             res.redirect('/productos');
         });           
       }  else {
-        console.log(errors.mapped())
+        //console.log(errors.mapped())
       res.render('products/product-create-form', {
         oldData: req.body,
         errors: errors.mapped(),
@@ -78,7 +78,7 @@ let productoControllers = {
   update: (req, res) => {
 
     let errors = validationResult(req);
-    console.log(errors)
+    //console.log(errors)
 
     if (errors.isEmpty()) {
 
