@@ -30,6 +30,7 @@ app.use(session({
 let mainRoutes = require("./routers/mainRoutes.js");
 let productoRoutes = require("./routers/productoRoutes.js");
 let userRoutes = require("./routers/usuarioRoutes.js");
+let carritoRoutes = require("./routers/carritoRoutes.js");
 
 //Definiendo las vistas
 app.use(authMiddleware);
@@ -38,6 +39,7 @@ app.use('/productos', productoRoutes);
 app.use('/usuario', userRoutes);
 // app.use('/productCart', mainRoutes);
 // app.use('/productDetail', mainRoutes);
+app.use('/carrito',carritoRoutes);
 
 //APIs
 app.use('/api/users',apiUsersRouter);

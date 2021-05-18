@@ -15,6 +15,7 @@ css: ['/css/productDetails.css']}) %>
 
         <!-- seccion con titulo y precio -->
         <section class="mainDescriptionContainer">
+            <form method="POST" action="/carrito/adicionarAlCarrito/<%= detalleProducto.id%>">
 
             <% if(locals.message && message) { %> 
                 <p class="descriptionTitle-msg"><%= message %>  </p>
@@ -48,7 +49,7 @@ css: ['/css/productDetails.css']}) %>
                 </div>
                 <div class="cantidadContainer">
                     <button class="masButton"><i class="fas fa-plus"></i></button>
-                    <p class="cantidad">1</p>
+                    <input type="number" min="1" name="cantidad" value="1" class="cantidad"/>
                     <button class="menosBotton"><i class="fas fa-minus"></i></button>
 
                 </div>
@@ -71,10 +72,12 @@ css: ['/css/productDetails.css']}) %>
                     <% } else { %>
                         <div></div>
                     <% } %>
-                <button class="agregarAlCarritoBoton">
+               
+                <button type="submit" class="agregarAlCarritoBoton" >
                     <i class="fas fa-cart-plus"></i>
                     Agregar Al Carrito
                 </button>
+            </form>
             </div>
             </div>
             </div>
@@ -119,7 +122,10 @@ css: ['/css/productDetails.css']}) %>
                 <div></div>
             <% } %>     
             </form>
-            <button class="agregarAlCarritoBoton">
+
+
+            
+            <button class="agregarAlCarritoBoton" >
                 <i class="fas fa-cart-plus"></i>
                 Agregar Al Carrito
             </button>

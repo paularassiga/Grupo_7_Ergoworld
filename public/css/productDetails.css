@@ -57,6 +57,18 @@ img {
     font-size:1.5625rem;
 }
 
+.cantidad{
+  background-color: white; 
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border: none;
+}
+.cantidad:focus{
+    outline: none;
+}
+
+
 .precioContainer {
     display: flex;
     justify-content: center;
