@@ -69,8 +69,8 @@ let usuarioControllers = {
             console.log("Error al corroborar el email ", error)
         }
 
-        console.log(req.body.email);
-        console.log(emailExist);
+        //console.log(req.body.email);
+        //console.log(emailExist);
 
         if (emailExist) {
             return res.render('user/register', {
@@ -142,9 +142,10 @@ let usuarioControllers = {
             const isOkThePassword = bcryptjs.compareSync(req.body.password, userToLogin.password);
 
             if (isOkThePassword) {
-
+                console.log("Guardado en session: " + userToLogin)
                 delete userToLogin.password;
                 req.session.userLogged = userToLogin;
+                console.log("Usuario Guardado en session: " + userToLogin)
 
                 if (req.body.mantenerSesion == 'on') {
                     res.cookie('userEmail', userToLogin.email, {

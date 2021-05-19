@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<!-- Head -->
+<%- include('../partials/head', 
+    {title: 'Inicio', 
+    css: ['/css/home.css', '/css/checkout.css']}) %>
+
+<body>
+
+    <%- include('../partials/navbar') %>
+    <!-- Cuerpo de la pagina -->
+
+
+   
+
+    <section class='contenedor-checkout'>
+
+        <h1>Pago Existoso!</h1>
+
+
+        <figure class="aprobadoImg">
+            <img src="/images/aprobado.png" class="aprobadoImg" alt="aprobado">
+        </figure>
+        <br>
+
+        <h1>Su producto sera enviado en las proximas 48 horas!</h1>
+
+
+
+    </section>
+
+    <!-- Home 3 -->
+    <section class="contenedor-home3">
+        <article class='contenedor-seccion-home3'>
+            <figure class='contenedorIcon-home3'>
+                <i id='icon-home3' class="fas fa-brain"></i>
+            </figure>
+            <h3 class='titulo-home3'>
+                Diseñado por expertos
+            </h3>
+            <p class='p-home3'>
+                Priorizando el confort y la productividad.
+            </p>
+        </article>
+        <article class='contenedor-seccion-home3'>
+            <figure class='contenedorIcon-home3'>
+                <i id='icon-home3' class="fas fa-cogs"></i>
+            </figure>
+            <h3 class='titulo-home3'>
+                Hecho a tu medida
+            </h3>
+            <p class='p-home3'>
+                Cada producto es 100% personalizable para que se ajuste perfectamente a tus necesidades.
+            </p>
+        </article>
+        <article class='contenedor-seccion-home3'>
+            <figure class='contenedorIcon-home3'>
+                <i id='icon-home3' class="fas fa-luggage-cart"></i>
+            </figure>
+            <h3 class='titulo-home3'>
+                100% transportable
+            </h3>
+            <p class='p-home3'>
+                Para que puedas llevar tu oficina a donde más te guste.
+            </p>
+        </article>
+    </section>
+
+    <%- include('../partials/footer') %>
+
+</body>
+
+</html>

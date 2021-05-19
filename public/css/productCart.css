@@ -196,7 +196,7 @@
     margin:10px auto;
 }
 
-.agregarAlCarritoBoton{
+.comprarBoton{
     display:flex;
     flex-direction:row;
     align-items: center;

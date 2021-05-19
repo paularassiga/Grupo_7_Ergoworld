@@ -118,3 +118,9 @@ email: viewer@viewer.com
 
 password: viewerviewer
 
+## Dashboard con métricas del negocio
+
+En el siguiente link se encuentra el repositorio donde se encuentra a disposición el dashboard desarrollado en REACT que toma la información de nuestra API para mostrar las principales métricas del negocio.
+
+* [Repositorio](https://github.com/paularassiga/ergoworld-dashboard-react)
+

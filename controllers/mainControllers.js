@@ -33,11 +33,7 @@ let mainControllers = {
         res.render("user/register")
 
     },
-    productCart: (req,res) => {
-
-        res.render("products/productCart")
-
-    },
+  
     productDetail: (req,res) => {
 
 

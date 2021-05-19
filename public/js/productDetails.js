@@ -4,12 +4,16 @@ window.addEventListener('load', function () {
     let cantidad = document.querySelector('.cantidad');
 
     botonMas.addEventListener('click', function (e) {
-        cantidad.innerHTML = parseInt(cantidad.innerHTML) + 1
+        e.preventDefault();
+
+        cantidad.value = parseInt(cantidad.value) + 1
     })
 
     botonMenos.addEventListener('click', function (e) {
-        if (parseInt(cantidad.innerHTML) > 1) {
-            cantidad.innerHTML = parseInt(cantidad.innerHTML) - 1
+
+        e.preventDefault();
+        if (parseInt(cantidad.value) > 1) {
+            cantidad.value = parseInt(cantidad.value) - 1
         }
     })
 })
