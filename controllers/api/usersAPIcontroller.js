@@ -4,6 +4,10 @@ const usersAPIController = {
     'list': (req, res) => {
         db.Usuario.findAll()
         .then(users => {
+            users.map(usuario =>{
+                usuario.password = undefined;
+                return usuario
+            })
             let respuesta = {
                 meta: {
                     status : 200,
@@ -20,7 +24,10 @@ const usersAPIController = {
     'detail': (req, res) => {
         db.Usuario.findByPk(req.params.id)
             .then(user => {
+                user.password = undefined;
+
                 let respuesta = {
+
                     meta: {
                         status: 200,
                         url: '/api/products/:id'
