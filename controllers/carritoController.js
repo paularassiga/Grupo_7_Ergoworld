@@ -3,6 +3,31 @@ const {validationResult} = require('express-validator');
 const {Cart, Product, Item, Usuario} = require('../database/models');
 
 module.exports = {
+    checkout : (req,res) =>{
+        Item.findAll({
+            where : {
+                state: 1,
+                userId : req.session.userLogged.id
+            },
+            include: {
+                all: true,
+                nested: true
+            }
+        })        
+        .then((items)=>{
+            let total = items.reduce((total,item)=> (total = total + Number(item.subtotal)),0)
+   
+            
+
+            console.log(items[0].product.name);
+            res.render('products/checkout', {productos :items , total  } );
+        })
+
+    },
+
+
+
+
     addCart: (req,res) =>{
         const errores = validationResult(req);
         if(errores.isEmpty()){
@@ -26,7 +51,7 @@ module.exports = {
                     cartId: null
                      
                 }) 
-                .then(item  => res.redirect('products/productCart'))
+                .then(item  => res.redirect('../../carrito/productCart'))
                 .catch(error => console.log(error)) 
             })
         }else{
@@ -56,7 +81,9 @@ module.exports = {
 
             console.log(items[0].product.name);
             res.render('products/productCart', {productos :items , total  } );
-        })
+        }).catch(
+            (error)=>res.render('products/productCart', {error :"El carrito esta vacio"  } ));
+        
 
     },
     deleteCart: (req,res) =>{
@@ -102,7 +129,7 @@ module.exports = {
             }
             )
         })
-        .then(()=> res.redirect('/carrito/historialCompra'))
+        .then(()=>             res.render('products/resultadoPago' ))
         .catch(error => console.log(error))
     },
     history : (req,res) =>{

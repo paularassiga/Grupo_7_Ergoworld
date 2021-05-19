@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Head -->
+<%- include('../partials/head', 
+{title: `Checkout`, 
+css: ['/css/productDetails.css', '/css/register.css']}) %>
+<script src='../../js/productDetails.js'></script>
+
+<body>
+
+    <%- include('../partials/navbar') %> 
+
+    <!-- formulario checkout -->
+    
+
+    <section>
+        <form method='POST' action='/carrito/shop' class = 'contenedor-formulario-1'>
+            <div>
+                <ul class='errores'>
+
+                </ul>
+            </div>
+            <div class='contenedor-input-register'>
+                <input  class='text-input-register-name' type='text' id='name' placeholder="Nombre" name='name'  value='<%=locals.oldData? oldData.name : null %>'>
+                <% if(locals.errors && errors.name) { %> 
+                    <p  class="feedback"><%= errors.name.msg %>  </p>
+                <% } %>
+            </div>
+            <div class='contenedor-input-register'>
+                <input  class='text-input-register-last-name' type='text' id='last_name' placeholder="Apellido" name='last_name' value='<%=locals.oldData? oldData.last_name : null %>'>
+                <% if(locals.errors && errors.last_name) { %> 
+                    <p class="feedback"><%= errors.last_name.msg %>  </p>
+                <% } %>
+            </div>
+            <div class='contenedor-input-register'>
+                <input  class='text-input-register-email' type='email' id='email' placeholder="Email" name='email' value='<%=locals.oldData? oldData.email : null %>'>
+                <% if(locals.errors && errors.email) { %> 
+                    <p class="feedback"><%= errors.email.msg %>  </p>
+                <% } %>
+            </div>
+
+
+            <div class='contenedor-input-register'>
+                <input  class='text-input-register-method' type='text' id='metodoPago' placeholder="Metodo de Pago" name='metodoPago' value='<%=locals.oldData? oldData.metodoPago : null %>'>
+                <% if(locals.errors && errors.email) { %> 
+                    <p class="feedback"><%= errors.email.msg %>  </p>
+                <% } %>
+            </div>
+            <div class='contenedor-input-register'>
+                <input  class='text-input-register-direccion' type='text' id='direccion' placeholder="Direccion" name='direccion'>
+                <% if(locals.errors && errors.direccion) { %> 
+                    <p  class="feedback"><%= errors.direccion.msg %>  </p>
+                <% } %>
+            </div>
+         
+            
+            <% if(locals.errors && errors.formato) { %> 
+                <p  class="feedback"><%= errors.formato.msg %>  </p>
+            <% } %>
+            <div class='contenedor-button'>
+                <button type='reset' id='boton-reset-register'><a class='texto-enviar' id='boton-reset' href="/">Borrar</a></button>
+               </div>
+            <div class='contenedor-button'>
+             <button type='submit' id='boton-enviar-register'>Pagar</button>
+            </div>
+        </form>
+    </section>
+
+
+       
+
+
+
+
+
+
+    <section class="contenedor-home3">
+        <article class='contenedor-seccion-home3'>
+            <figure class='contenedorIcon-home3'>
+                <i id='icon-home3' class="fas fa-brain"></i>
+            </figure>
+            <h3 class='titulo-home3'>
+                Diseñado por expertos
+            </h3>
+            <p class='p-home3'>
+                Priorizando el confort y la productividad.
+            </p>
+        </article>
+        <article class='contenedor-seccion-home3'>
+            <figure class='contenedorIcon-home3'>
+                <i id='icon-home3' class="fas fa-cogs"></i>
+            </figure>
+            <h3 class='titulo-home3'>
+                Hecho a tu medida
+            </h3>
+            <p class='p-home3'>
+                Cada producto es 100% personalizable para que se ajuste perfectamente a tus necesidades.
+            </p>
+        </article>
+        <article class='contenedor-seccion-home3'>
+            <figure class='contenedorIcon-home3'>
+                <i id='icon-home3' class="fas fa-luggage-cart"></i>
+            </figure>
+            <h3 class='titulo-home3'>
+                100% transportable
+            </h3>
+            <p class='p-home3'>
+                Para que puedas llevar tu oficina a donde más te guste.
+            </p>
+        </article>
+    </section>
+
+    <%- include('../partials/footer') %> 
+
+</body>
+
+</html>

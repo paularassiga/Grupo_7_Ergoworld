@@ -14,49 +14,61 @@ css: ['/css/productCart.css', '/css/home.css']}) %>
 
     <!-- Cuerpo de la pagina -->
     <main>
+
+        <form method="POST" action="/carrito/compra"">
         <section class='contenedor-main-carrito'>
+
             <section class='titulo-carrito'>
                 <h2 class='h-login'>Tu Carrito</h2>
                 <figure class='contenedor-linea-carrito'>
-                    <img class='linea-carrito' src="/images/line-black.png">
-                </figure>
-            </section>
-
-
-            <section class='contenedor-general'>
-                <% for (let i=0; i<productos.length; i++){ %>
+                    <img class='linea-carrito' src="/images/line-black.png"> </figure> </section> <section
+            class='contenedor-general'>
+            <% if( !locals.productos ){%> 
                 <section class="home2">
                     <div class="home2-wrap">
                         <div id='contendedor-home2-1' class="home2-content1">
-                            <h2><%=productos[i].product.name%></h2>
-                            <!-- <p><%=productos[i].product.shortDescription%></p> -->
+                            <h1>Tu carrito esta vacio</h1>
+                        </div>
+                    </div>
+                </div>
 
-                            <!-- <div class="botones-hom2">
+
+            </section>
+<% }else{ %> 
+
+            <% for (let i=0; i<productos.length; i++){ %>
+            <section class="home2">
+                <div class="home2-wrap">
+                    <div id='contendedor-home2-1' class="home2-content1">
+                        <h2><%=productos[i].product.name%></h2>
+                        <!-- <p><%=productos[i].product.shortDescription%></p> -->
+
+                        <!-- <div class="botones-hom2">
                                 <a class="contenido-boton-home2" href="/productos/detalle/<%=productos[i].id%>">Leer más<i id='flecha-home2' class="fas fa-chevron-right" aria-hidden="true"></i></a>
                                 <a class="contenido-boton-home2" href="#">Comprar<i id='flecha-home2' class="fas fa-chevron-right" aria-hidden="true"></i></a>
                             </div> -->
-                            <figure>
-                                <img src="/images/products/<%=productos[i].product.image_1%>">
-                            </figure>
+                        <figure>
+                            <img src="/images/products/<%=productos[i].product.image_1%>">
+                        </figure>
 
-                                <div class="precioContainer">
-                                    <p>Precio por unidad: $<%= productos[i].product.price%></p>
-                                   
-    
-                                </div>
-                                <div class="cantidadContainer">
-                                    <p>Cantidad Solicitada: <%= productos[i].quantity%></p>
-                                    
-    
+                        <div class="precioContainer">
+                            <p>Precio por unidad: $<%= productos[i].product.price%></p>
 
 
-                                </div>
-                              </div>
                         </div>
+                        <div class="cantidadContainer">
+                            <p>Cantidad Solicitada: <%= productos[i].quantity%></p>
 
-                        
-                </section>
-                <% } %>
+
+
+
+                        </div>
+                    </div>
+                </div>
+
+
+            </section>
+            <% } %>
             </section>
 
 
@@ -129,9 +141,9 @@ css: ['/css/productCart.css', '/css/home.css']}) %>
         <section>-->
             <section class='contenedor-subtotal'>
                 <h2 class='subtotal'>
-                    SUBTOTAL  $<%= total  %>
+                    SUBTOTAL $<%= total  %>
                 </h2>
-                
+
             </section>
             <section class='impuestos-carrito'>
                 <p> Impuestos y envíos calculados en el checkout</p>
@@ -142,17 +154,20 @@ css: ['/css/productCart.css', '/css/home.css']}) %>
                 </button>
             </section> -->
             <section class='contenedor-boton-comprar'>
-                <button class="comprarBoton">
+                <button class="comprarBoton" href="carrito/checkout">
                     <i class="fas fa-lock" style="
                 margin: 0px 9px"></i>
                     CONFIRMAR COMPRA
                 </button>
+
             </section>
             <section class='terminos-condiciones-carrito'>
                 <p> Al hacer click, estás aceptando los <a href='#'>Terminos y Condiciones.</a></p>
             </section>
-        </section>
-        </section>
+            </section>
+            </section>
+            <%}%>
+        </form>
     </main>
     <!--Email Opt In -->
     <%- include('../partials/footer') %>

@@ -14,6 +14,7 @@ router.post('/borrarElementoCarrito', authMiddleware, carritoController.deleteCa
 router.post('/compra', authMiddleware, carritoController.shop);
 router.get('/historialCompra', authMiddleware, carritoController.history);
 router.get('/detalleCompra/:id', authMiddleware, carritoController.buyDetail);
+router.get('/checkout/', authMiddleware, carritoController.checkout);
 
 module.exports = router;
 
