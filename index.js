@@ -39,7 +39,7 @@ app.use(function(req,res){
 
 
 //Para deployar
-app.set('puerto', process.env.PORT || 3000);
+app.set('puerto', process.env.PORT || 3002);
 
 // Llamando al servidor
 
