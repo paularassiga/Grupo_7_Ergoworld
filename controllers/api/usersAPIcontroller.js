@@ -1,7 +1,10 @@
 const db = require('../../database/models');
 
+
+
 const usersAPIController = {
     'list': (req, res) => {
+        const fullUrl = req.protocol + '://' + req.get('host') + req.originalUrl;
         db.Usuario.findAll()
         .then(users => {
             let respuesta = {
@@ -10,7 +13,14 @@ const usersAPIController = {
                     url: 'api/users'
                 },
                 count: users.length,
-                users: users //Acá falta agregar la URL para ver el detalle del usuario.
+                users: users.map(user => {
+                    return {
+                        id: user.id,
+                        name: user.name,
+                        email: user.email,
+                        detail: `${fullUrl}/${user.id}`
+                    }
+                }) //Acá falta agregar la URL para ver el detalle del usuario.
             }
                 res.json(respuesta);
             })
