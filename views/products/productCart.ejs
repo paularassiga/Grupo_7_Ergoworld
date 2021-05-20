@@ -24,16 +24,16 @@ css: ['/css/productCart.css', '/css/home.css']}) %>
                     <img class='linea-carrito' src="../../images/line-black.png"> </figure> </section> <section
             class='contenedor-general'>
             <% if( !locals.productos ){%> 
-                <section class="home2">
-                    <div class="home2-wrap">
+            
                         <div id='carrito-vacio' class="carrito-vacio">
                             <h1>Tu carrito esta vacio</h1>
                         </div>
-                    </div>
-                </div>
+                    
+                            <a class='text-regresar' id='last' href='/'>Regresar a la tienda</a>
+                   
 
 
-            </section>
+
 <% }else{ %> 
 
             <% for (let i=0; i<productos.length; i++){ %>
