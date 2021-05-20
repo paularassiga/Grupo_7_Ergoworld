@@ -47,7 +47,6 @@ const usersAPIController = {
                 res.json(respuesta);
             });
     }
-    
 }
 
 module.exports = usersAPIController;

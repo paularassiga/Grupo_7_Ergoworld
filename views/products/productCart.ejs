@@ -37,108 +37,31 @@ css: ['/css/productCart.css', '/css/home.css']}) %>
 <% }else{ %> 
 
             <% for (let i=0; i<productos.length; i++){ %>
-            <section class="home2">
-                <div class="home2-wrap">
-                    <div id='contendedor-home2-1' class="home2-content1">
-                        <h2><%=productos[i].product.name%></h2>
-                        <!-- <p><%=productos[i].product.shortDescription%></p> -->
-
-                        <!-- <div class="botones-hom2">
-                                <a class="contenido-boton-home2" href="/productos/detalle/<%=productos[i].id%>">Leer más<i id='flecha-home2' class="fas fa-chevron-right" aria-hidden="true"></i></a>
-                                <a class="contenido-boton-home2" href="#">Comprar<i id='flecha-home2' class="fas fa-chevron-right" aria-hidden="true"></i></a>
-                            </div> -->
-                        <figure>
-                            <img src="/images/products/<%=productos[i].product.image_1%>">
-                        </figure>
-
-                        <div class="precioContainer">
-                            <p>Precio por unidad: $<%= productos[i].product.price%></p>
-
-
-                        </div>
-                        <div class="cantidadContainer">
-                            <p>Cantidad Solicitada: <%= productos[i].quantity%></p>
-
-
-
-
-                        </div>
-                    </div>
-                </div>
-
-
-            </section>
-            <% } %>
-            </section>
-
-
-
-
-
-
-
-
-
-            <!-- 
-
             <article class='contenedor-producto-carrito'>
                 <section class='carrito-seccion-1'>
                     <figure class='contenedor-imagen-producto-carrito'>
-                        <img id='imagen-producto-carrito' src="./images/pro_click_3.png" alt="pro click mouse">
+                        <img id='imagen-producto-carrito' src="/images/products/<%=productos[i].product.image_1%>" alt="pro click mouse">
                     </figure>
                 </section>
                 <section class='carrito-seccion-2'>
-                    <h2>PRO CLICK ERGONOMIC MOUSE</h2>
+                    <h2><%=productos[i].product.name%></h2>
                     <section class="cantidadContainer">
-                        <button class="masButton"><i class="fas fa-plus" style="
-                            margin: 0;
-                        "></i></button>
-                        <p class="cantidad">1</p>
-                        <button class="menosBotton"><i class="fas fa-minus"style="
-                            margin: 0;
-                        "></i></button>
+                        
+                        <p class="cantidad">Cantidad: <%= productos[i].quantity%></p>
+                        
                     </section>
                 </section>
                 <section class='carrito-seccion-3'>
-                    <figure class='contendor-cruz'>
-                        <i class="fas fa-times-circle"></i>
-                    </figure>
                     <h2 class='precio-carrito'>
-                        $5476
+                        $<%= productos[i].product.price %> c/u
                     </h2>
                 </section>
             </article>
-            <article class='contenedor-producto-carrito'>
-                <section class='carrito-seccion-1' id='imagen-laptop'>
-                    <figure class='contenedor-imagen-producto-carrito'>
-                        <img id='imagen-producto-carrito' src="./images/base-laptop.jpg" alt="base laptop">
-                    </figure>
-                </section>
-                <section class='carrito-seccion-2'>
-                    <h2>SOPORTE PARA COMPUTADORA PORTÁTIL</h2>
-                    <section class="cantidadContainer">
-                        <button class="masButton"><i class="fas fa-plus" style="
-                            margin: 0;
-                        "></i></button>
-                        <p class="cantidad">1</p>
-                        <button class="menosBotton"><i class="fas fa-minus"style="
-                            margin: 0;
-                        "></i></button>
-                    </section>
-                </section>
-                <section class='carrito-seccion-3'>
-                    <figure class='contendor-cruz'>
-                        <i class="fas fa-times-circle"></i>
-                    </figure>
-                    <h2 class='precio-carrito'>
-                        $2000
-                    </h2>
-                </section>
-            </article>
+            <% } %>
         </section>
         <section class='contenedor-ultimo-carrito'>
         <section></section>
-        <section>-->
+        <section>
             <section class='contenedor-subtotal'>
                 <h2 class='subtotal'>
                     SUBTOTAL $<%= total  %>
