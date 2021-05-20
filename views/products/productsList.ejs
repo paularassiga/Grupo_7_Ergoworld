@@ -31,6 +31,14 @@
     <!-- home 2 -->
 
     <section class = 'contenedor-general'>
+        <% if(productos.length == 0) { %>
+            
+            <div class='resultados'><h2 class='noBusqueda'>No hay resultados que coincidan con la búsqueda</h2>
+                <a class='text-inciarsesion' id='last' href='/'>Regresar a la tienda</a>
+            </div>
+            <br>   
+            
+            <% } else { %>
         <% for (let i=0; i<productos.length; i++){ %>
         <section class="home2">
             <div class="home2-wrap">
@@ -48,6 +56,7 @@
                 </div>
             </div>
         </section>
+        <% } %>
         <% } %>
         </section>
         
