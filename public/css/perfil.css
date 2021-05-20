@@ -53,6 +53,10 @@ h1{
 
 #cerrar{
     font-weight: 400;
+    background-color: #518cd8;
+    padding: 10px;
+    border-radius: 2px;
+    color: white;
 }
 
 .main-section{

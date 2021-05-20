@@ -184,7 +184,7 @@ let usuarioControllers = {
         res.clearCookie('userEmail');
         req.session.destroy();
         return res.redirect('/');
-    },
+    }
 }
 
 /*Exporto*/
