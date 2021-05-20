@@ -15,6 +15,44 @@ body {
     background-color: #e8e8e8;
 }
 
+.button-products{
+    background-color: #396fb5;
+    color: white;
+    margin:50px auto;
+    width: 80%;
+    max-width: 350px;
+    margin-bottom: 20px;
+}
+
+.button-products a{
+text-decoration: none;
+color:white;
+
+}
+
+.button-products:hover{
+    background-color:  #254e85;
+}
+
+.agregarProducto{
+    background-color: #396fb5;
+    color: white;
+    margin:50px auto;
+    width: 80%;
+    max-width: 350px;
+    margin-top:0px;
+}
+
+.agregarProducto a{
+text-decoration: none;
+color:white;
+
+}
+
+.agregarProducto:hover{
+    background-color:  #254e85;
+}
+
 .hero-wrapper {
     min-height: 85vh;
     background: rgb(60, 65, 68);

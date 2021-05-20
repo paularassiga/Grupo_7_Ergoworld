@@ -50,6 +50,20 @@
         </section>
         <% } %>
         </section>
+        <section> 
+            <button class= "button-products"><a href='/productos'>Ver todos los productos</a></button>
+        </section>
+        <% if (locals.isLogged && locals.userLogged.user != 3) { %>
+            <section>
+                <button class="agregarProducto">
+                    <a href='/productos/crear'>
+                    Agregar un nuevo Producto
+                </a>
+                </button>
+                </section>
+        <% } else { %>
+            <div></div>
+        <% } %>
         
     <!-- Home 3 -->
     <section class="contenedor-home3">
