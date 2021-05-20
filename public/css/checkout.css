@@ -1,12 +1,35 @@
-.contenedor-checkout{
-    
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
 
-    text-align: center
-    ma
+.contenedor-checkout{
+    background-color: white;
+    padding: 200px;
+}
+
+.h1-check{
+    font-size: 20px;
+    text-align: center;
+    margin: auto;
+    padding: 10px 0px;
+}
+
+.p-check{
+    font-size: 16px;
+    text-align: center;
+    margin: auto;
+    padding-bottom: 21px;
 }
 
 
-
 .aprobadoImg{
-    max-width: 80vw;
+    max-width: 5vw;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    margin:auto;
+    background-color: white;
 }
