@@ -1,6 +1,41 @@
 const db = require('../../database/models');
 
 const productsAPIController = {
+
+    'ultimoProductoCreado':(req, res)=>{
+        const fullUrl = req.protocol + '://' + req.get('host') + req.originalUrl;  
+        db.Product.findAll({
+            limit: 1,
+            order: [ [ 'id','DESC' ]],
+        
+            })
+            .then(products => {
+                let respuesta = {
+                    meta: {
+                        status: 200,
+                        url: 'api/ultimoProductoCreado'
+                    },
+                    count: 1,
+                    countByCategory: "FALTA TERMINAR ESTO",
+                    products: products.map(product => {
+                        return{
+                            id: product.id,
+                            name: product.name,
+                            description: product.shortDescription,
+                            image: '/images/products/'+  product.image_1,
+                            //Falta el array con principal relación de uno a muchos con categorias
+                            detail: `${fullUrl}/${product.id}`
+                        }
+                    }) //Acá faltan poner las relaciones con la categoria y la URL para ver el detalle del producto.
+                }
+                res.json(respuesta);
+            })
+    },
+
+
+
+
+
     'list': (req, res) => {
         const fullUrl = req.protocol + '://' + req.get('host') + req.originalUrl;  
         db.Product.findAll({
