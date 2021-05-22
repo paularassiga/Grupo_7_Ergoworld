@@ -1,19 +1,23 @@
   <!--Barra de navagacion -->
-
+<script src='/js/navbar.js'></script>
   <nav class="navBar" id="homeHeader">
     <ul>
-        <li class="logoErgoworldDestokp">
-            <figure>
-                <a href="/"><img src="../../images/logo-4.png" alt="logoErgoworld"></a>
-            </figure>
-        </li>
-        <section class=iconTextContainer-1>
-            <li>
-                <div class="onlyMovilIcon">
-                    <a href="#"><i class="fas fa-bars"></i></a>
-                </div>
-
+        <div>
+            <li class="logoErgoworldDestokp">
+                <figure>
+                    <a href="/"><img src="../../images/logo-4.png" alt="logoErgoworld"></a>
+                </figure>
             </li>
+            <li class='container-logo-blanco'>
+                <figure>
+                    <a href="/"><img src="/images/logo-blanco-transparente.png" alt="logoErgoworldMovil" class="onlyMovilLogo"></a>
+                </figure>
+    
+            </li>
+
+        </div>
+       <div class='div2'>
+        <section class=iconTextContainer-1>
             <li class="searchFormContainer">
                 <form class="searchForm input-container" action="/search" method="get">                        
                         <i id='lupita' class="fas fa-search"></i>
@@ -21,12 +25,6 @@
                 </form>
             </li>
         </section>
-        <li class='container-logo-blanco'>
-            <figure>
-                <a href="/"><img src="/images/logo-blanco-transparente.png" alt="logoErgoworldMovil" class="onlyMovilLogo"></a>
-            </figure>
-
-        </li>
         <section class=iconTextContainer>
             <li>
                 <% if (locals.isLogged) { %>
@@ -49,6 +47,20 @@
                     <a class='a-header' href="/carrito/productCart"><p class="iconTextOnlyDesktop">Mis Compras</p></a>
                 </div>
             </li>
+            <li class='lupita2'>
+                <i id='lupita2' class="fas fa-search"></i>
+            </li>
         </section>
+       </div>
+        
+       
+       
     </ul>
+</nav>
+<nav class='mobile' id='homeHeader2'>
+    <li class="searchFormContainer2">
+        <form class="searchForm input-container" action="/search" method="get">                        
+                <input type="search" placeholder="Buscar En Ergoworld" name="headerSearchHome" class="searchBarOnlyDesktop2 " id="searchTextHome2" />
+        </form>
+    </li>
 </nav>

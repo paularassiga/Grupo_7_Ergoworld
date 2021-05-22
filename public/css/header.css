@@ -8,6 +8,15 @@ nav {
     color: #ffffff;
 }
 
+.lupita2{
+    margin:0
+}
+
+.div2{
+    display: flex;
+    flex-direction: row;
+}
+
 nav ul {
     display: flex;
     list-style: none;
@@ -15,6 +24,28 @@ nav ul {
     justify-content: space-around;
     align-items: center;
 
+}
+
+
+#searchTextHome2{
+    padding-left:0;
+    padding: 20px 20px;
+}
+
+
+.searchFormContainer2{
+    display:none;
+    list-style-type: none;
+    width: 60%;
+    padding: 10px;
+
+}
+
+.searchBarOnlyDesktop2 {
+    display: block;
+    font-family: roboto;
+    font-weight: 300;
+    background-color: white;
 }
 
 
@@ -61,11 +92,13 @@ input {
 
 .iconTextContainer{
     display: flex;
-    align-items: center
+    align-items: center;    
+    margin: 0;
 }
 
 .iconTextContainer-1{
-    display:flex;
+    display:none;
+    margin: 0;
 }
 
 .fa, .fas {
@@ -100,6 +133,40 @@ input {
 }
 
 @media(min-width:583px){
+
+    #lupita2{
+       display:none;
+    }
+
+    .searchFormContainer2 {
+        display: none;
+    }
+
+    .mobile{
+        display:none;
+    }
+
+    #homeHeader2 {
+    padding: 0.625rem;
+    margin: auto;
+    display: none;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+    .iconTextContainer-1{
+        display:flex;
+        margin: 0;
+    }
+
+    .div2{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        width: 60%;
+    }
+    }
+
    
     .a-header{
         text-decoration: none;
@@ -136,9 +203,8 @@ input {
     .iconTextContainer{
         display:flex;
         flex-direction: row;
-        flex-wrap: wrap;
         align-items: center;
-        width:30%;
+      
     }
 
     nav {
@@ -202,12 +268,15 @@ input {
 
     .iconoContainer {
         font-weight: bold;
+        display:flex;
+        align-items:center;
     }
     
 
     .container-logo-blanco{
         width: 30%;
         order:-1;
+        margin: 0
     
     }
 
@@ -222,6 +291,13 @@ input {
         align-items: center;
         flex-wrap: nowrap;
     }
+    #homeHeader2{
+        padding:0.625rem;
+        margin:auto;
+        display: none;
+        align-items: center;
+        flex-wrap: nowrap;
+    }
 
     #lupita {
         padding: 19.5px 8px 19.5px 19.5px;
@@ -231,9 +307,20 @@ input {
         margin:0;
         color:black;
     }
-}
+
 
 @media(min-width:1400px) {
+   #lupita2{
+        display:none;
+     }
+
+    .mobile{
+        display:none;
+    }
+
+    #homeHeader2{
+        display: none;
+    }
     .logoErgoworldDestokp {
         display: inline;
         width:30%;

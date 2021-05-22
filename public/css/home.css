@@ -14,13 +14,21 @@ body {
     overflow-x: hidden;
     background-color: #e8e8e8;
 }
-
+.noBusqueda{
+    text-align: center;
+}
 .resultados{
     padding:50px;
     display:flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
+}
+
+.text-regresar{
+    text-decoration: none;
+    padding: 20px;
+    color: #396fb5;
 }
 
 .button-products{
