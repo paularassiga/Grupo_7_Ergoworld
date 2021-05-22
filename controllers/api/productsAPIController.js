@@ -55,7 +55,9 @@ const productsAPIController = {
                             name: product.name,
                             description: product.shortDescription,
                             //Falta el array con principal relación de uno a muchos con categorias
-                            detail: `${fullUrl}/${product.id}`
+                            detail: `${fullUrl}/${product.id}`,
+                            image: '/images/products/'+  product.image_1,
+
                         }
                     }) //Acá faltan poner las relaciones con la categoria y la URL para ver el detalle del producto.
                 }
