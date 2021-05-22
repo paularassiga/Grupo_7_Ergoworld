@@ -39,6 +39,9 @@ css: ['/css/productDetails.css']}) %>
                     200 reviews
                 </p>
             </div>
+            <figure class="mainImageMobile">
+                <img src="/images/products/<%= detalleProducto.image_1%>" alt="base para laptop">
+            </figure>
 
             <div class="onlyDesktop">
 
@@ -123,14 +126,12 @@ css: ['/css/productDetails.css']}) %>
             <% } else { %>
                 <div></div>
             <% } %>     
+            
             </form>
 
 
             
-            <button class="agregarAlCarritoBoton" >
-                <i class="fas fa-cart-plus"></i>
-                Agregar Al Carrito
-            </button>
+            
         </div>
 
 

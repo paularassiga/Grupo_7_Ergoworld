@@ -10,6 +10,7 @@ img {
     width: 100%;
 }
 
+
 .descriptionTitle-msg{
     background-color: #396fb7;
     color: white;
@@ -88,6 +89,8 @@ img {
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 60%;
+    margin: auto;
 
 }
 
@@ -233,7 +236,10 @@ img {
 
 /* eliminamos lo que es solo escritor */
 .onlyDesktop {
-    display: none;
+    display: block;
+}
+#button-mobile{
+    display:block;
 }
 
 
@@ -283,11 +289,23 @@ img {
 #ultimo-container{
     margin-bottom:6.25rem;
 }
-
+.onlyMovile {
+    display: none;
+}
+.mainImage{
+    display:none;
+}
 
 
 /* adaptacion a escritorio */
 @media(min-width:700px) {
+    .mainImage{
+        display:flex;
+    }
+
+    .mainImageMobile{
+        display:none;
+    }
 
     /* Eliminamos lo marcado como solo movil y activamos solo Desktop */
     .onlyDesktop {
@@ -323,6 +341,7 @@ img {
 
     .cantidadContainer {
         margin-top: 5vh;
+        margin: 4vh 4vh 4vh 0vh;
         
     }
 
