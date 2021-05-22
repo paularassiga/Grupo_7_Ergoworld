@@ -5,6 +5,8 @@ const usersAPIController = require('../../controllers/api/usersAPIcontroller');
 //Rutas
 //Listado de todos los usuarios
 router.get('/', usersAPIController.list);
+router.get('/lastCreatedUser', usersAPIController.lastCreatedUser);
+
 //Detalle del usuario
 router.get('/:id', usersAPIController.detail);
 //Detalle del ultimo usuario
