@@ -5,11 +5,15 @@
     font-family: 'Montserrat', sans-serif;
 }
 
+.contenedor-general{
+    padding: 20px;
+    text-align: center;
+}
+
 .carrito-vacio{
     background-color: white;
     width:100%;
     text-align: center;
-    padding: 00px 80px 0px;
     color: black;
 }
 
