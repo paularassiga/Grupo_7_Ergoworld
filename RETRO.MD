@@ -202,3 +202,21 @@
 - Empezar tarde a realizar los sprints.
 ------------
 ###### Este documento esta inspirado en la Starfish retrospective
+
+
+# RETRO SPRINT FINAL
+
+------------
+
+### More of
+Estamos muy conformes con la dinámica y el trabajo en equipo que nos permitió llegar a la presentación final con tiempo y un trabajo solido y pensado centrado en la experiencia del usuario.
+
+- Proactividad y responsabilidad por parte de los miembros.
+- Trabajo en equipo.
+- Disponibilidad para ayudarnos entre todos.
+
+------------
+### Less of
+- Si bien contamos con tiempo de sobra, es algo a seguir trabajando, no dejar las cosas para último momento.
+------------
+###### Este documento esta inspirado en la Starfish retrospective
