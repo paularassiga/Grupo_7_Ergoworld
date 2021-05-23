@@ -39,7 +39,13 @@ window.addEventListener('load',function(){
         errores.push('La contraseña debe tener 8 caractéres como mínimo')
         }
 
-    
+        let foto = document.querySelector('.foto')
+       console.log(foto.value)
+       if(foto.value.length == 0){
+            errores.push('Sube una foto de perfil');
+        } else if (!(/\.(jpg|png|gif|jpeg)$/i).test(foto.value)) {
+            errores.push('Solo se permiten los formatos jpg, png y gif');
+       }   
 
        if(errores.length>0){
            e.preventDefault();
@@ -56,26 +62,4 @@ window.addEventListener('load',function(){
 
 
     })
-
-    function validarImagen(obj){
-        var uploadFile = obj.files[0];
-    
-        if (!window.FileReader) {
-            alert('El navegador no soporta la lectura de archivos');
-            return;
-        }
-    
-        if (!(/\.(jpg|png|gif)$/i).test(uploadFile.name)) {
-            alert('El archivo a adjuntar no es una imagen');
-        }
-        else {
-            var img = new Image();
-            img.onload = function () {   
-                
-                    alert('Imagen correcta :)')                
-                
-            };
-            img.src = URL.createObjectURL(uploadFile);
-        }                 
-    }
 })
