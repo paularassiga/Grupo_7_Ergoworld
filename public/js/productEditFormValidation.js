@@ -1,5 +1,5 @@
 window.addEventListener('load',function(){
-    let formulario = document.querySelector('form.edit-form');
+    let formulario = document.querySelector('.edit-form');
 
     formulario.addEventListener('submit', function(e){
 
@@ -83,15 +83,18 @@ window.addEventListener('load',function(){
            errores.push('El campo descripción 3 debe contener al menos 20 caracteres')
        }
 
-
-
        if(errores.length>0){
            e.preventDefault();
+           alert('Hay errores en los campos');
            let ulErrores = document.querySelector('.errores');
            ulErrores.innerHTML = '';
            for (let i=0; i<errores.length; i++){
                ulErrores.innerHTML += '<li class="error">' + errores[i] + '</li>'
            }
+
+           document.getElementById('top').scrollIntoView({
+            behavior: 'smooth'
+          });
        }
 
     })

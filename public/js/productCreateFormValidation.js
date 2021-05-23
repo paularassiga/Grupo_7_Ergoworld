@@ -111,16 +111,45 @@ window.addEventListener('load',function(){
            errores.push('El campo descripción 3 debe contener al menos 20 caracteres')
        }
 
+       let imagen1 = document.querySelector('.imagen1')
+       if(imagen1.value.length == 0){
+            errores.push('Por favor subí la imagen 1');
+        } else if (!(/\.(jpg|png|gif|jpeg)$/i).test(imagen1.value)) {
+            errores.push('La imagen 1 tiene un formato invalido');
+       }   
 
+       let imagen2 = document.querySelector('.imagen2')
+       if(imagen1.value.length == 0){
+            errores.push('Por favor subí la imagen 2');
+        } else if (!(/\.(jpg|png|gif|jpeg)$/i).test(imagen2.value)) {
+            errores.push('La imagen 2 tiene un formato invalido');
+       }   
+
+       let imagen3 = document.querySelector('.imagen3')
+       if(imagen1.value.length == 0){
+            errores.push('Por favor subí la imagen 2');
+        } else if (!(/\.(jpg|png|gif|jpeg)$/i).test(imagen3.value)) {
+            errores.push('La imagen 3 tiene un formato invalido');
+       }  
+
+       let imagen4 = document.querySelector('.imagen4')
+       if(imagen1.value.length == 0){
+            errores.push('Por favor subí la imagen 4');
+        } else if (!(/\.(jpg|png|gif|jpeg)$/i).test(imagen4.value)) {
+            errores.push('La imagen 4 tiene un formato invalido');
+       }  
 
        if(errores.length>0){
            e.preventDefault();
-           alert('Hay errores en los campos')
+           alert('Hay errores en los campos');
            let ulErrores = document.querySelector('.errores');
            ulErrores.innerHTML = '';
            for (let i=0; i<errores.length; i++){
                ulErrores.innerHTML += '<li class="error">' + errores[i] + '</li>'
            }
+           document.getElementById('top').scrollIntoView({
+            behavior: 'smooth'
+          });
        }
 
 
