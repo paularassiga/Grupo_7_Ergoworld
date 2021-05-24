@@ -2,12 +2,11 @@ const db = require('../../database/models');
 
 const productsAPIController = {
 
-    'ultimoProductoCreado':(req, res)=>{
+    'ultimoProductoCreado': (req, res) => {
         const fullUrl = req.protocol + '://' + req.get('host') + req.originalUrl;  
         db.Product.findAll({
             limit: 1,
-            order: [ [ 'id','DESC' ]],
-        
+            order: [ [ 'id','DESC' ]],        
             })
             .then(products => {
                 let respuesta = {
@@ -26,29 +25,30 @@ const productsAPIController = {
                             //Falta el array con principal relación de uno a muchos con categorias
                             detail: `${fullUrl}/${product.id}`
                         }
-                    }) //Acá faltan poner las relaciones con la categoria y la URL para ver el detalle del producto.
+                    }) //Acá faltan poner las relaciones con la categoria 
                 }
                 res.json(respuesta);
             })
     },
 
-
-
-
-
     'list': (req, res) => {
         const fullUrl = req.protocol + '://' + req.get('host') + req.originalUrl;  
-        db.Product.findAll({
-                include: ['categoria']
-            })
+        db.Product.findAll( {
+            include: [ {association: 'categoria'} ]
+        } )
             .then(products => {
                 let respuesta = {
                     meta: {
                         status: 200,
-                        url: 'api/products'
+                        url: 'api/products',
                     },
                     count: products.length,
-                    countByCategory: "FALTA TERMINAR ESTO",
+                    countByCategory: {
+                        Stands: products.filter(e => e.category_id == 4).length,
+                        Mouses: products.filter(e => e.category_id == 9).length,
+                        Sillas: products.filter(e => e.category_id == 1).length,
+                         
+                    },
                     products: products.map(product => {
                         return{
                             id: product.id,
@@ -57,7 +57,6 @@ const productsAPIController = {
                             //Falta el array con principal relación de uno a muchos con categorias
                             detail: `${fullUrl}/${product.id}`,
                             image: '/images/products/'+  product.image_1,
-
                         }
                     }) //Acá faltan poner las relaciones con la categoria y la URL para ver el detalle del producto.
                 }
@@ -75,7 +74,7 @@ const productsAPIController = {
                     meta: {
                         status: 200,
                         total: product.length,
-                        url: '/api/products/:id'
+                        url: '/api/products/' + req.params.id,
                     },
                     product: product //Acá faltan poner las relaciones con las otras tablas y la URL para ver la imagen del producto.
                 }
