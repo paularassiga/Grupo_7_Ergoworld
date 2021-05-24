@@ -1,34 +1,5 @@
 window.addEventListener('load',function(){
 
-    function ValidarImagen(obj){
-        var uploadFile = obj.files[0];
-        
-        if (!window.FileReader) {
-            alert('El navegador no soporta la lectura de archivos');
-            return;
-        }
-    
-        if (!(/\.(jpg|png|jpeg)$/i).test(uploadFile.name)) {
-            alert('El archivo a adjuntar no es una imagen');
-        }
-        else {
-            var img = new Image();
-            img.onload = function () {
-                if (this.width.toFixed(0) != 200 && this.height.toFixed(0) != 200) {
-                    alert('Las medidas deben ser: 200 * 200');
-                }
-                else if (uploadFile.size > 20000)
-                {
-                    alert('El peso de la imagen no puede exceder los 200kb')
-                }
-                else {
-                    alert('Imagen correcta :)')                
-                }
-            };
-            img.src = URL.createObjectURL(uploadFile);
-        }                 
-    }
-
     let formulario = document.querySelector('.edit-form');
 
     formulario.addEventListener('submit', function(e){
@@ -116,28 +87,28 @@ window.addEventListener('load',function(){
 
        let imagen1 = document.querySelector('.form-input-imagen1')
        if(imagen1.value.length == 0){
-            errores.push('Por favor subí la imagen 1');
+            
         } else if (!(/\.(jpg|png|gif|jpeg)$/i).test(imagen1.value)) {
             errores.push('La imagen 1 tiene un formato invalido');
        }   
 
        let imagen2 = document.querySelector('.form-input-imagen2')
        if(imagen1.value.length == 0){
-            errores.push('Por favor subí la imagen 2');
+           ;
         } else if (!(/\.(jpg|png|gif|jpeg)$/i).test(imagen2.value)) {
             errores.push('La imagen 2 tiene un formato invalido');
        }   
 
        let imagen3 = document.querySelector('.form-input-imagen3')
        if(imagen1.value.length == 0){
-            errores.push('Por favor subí la imagen 2');
+           ;
         } else if (!(/\.(jpg|png|gif|jpeg)$/i).test(imagen3.value)) {
             errores.push('La imagen 3 tiene un formato invalido');
        }  
 
        let imagen4 = document.querySelector('.form-input-imagen4')
        if(imagen1.value.length == 0){
-            errores.push('Por favor subí la imagen 4');
+           ;
         } else if (!(/\.(jpg|png|gif|jpeg)$/i).test(imagen4.value)) {
             errores.push('La imagen 4 tiene un formato invalido');
        }  
