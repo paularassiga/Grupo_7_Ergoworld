@@ -49,10 +49,13 @@ module.exports = function (sequelize, dataTypes) {
 
     }
 
+    let config = {
+        tableName: 'items',
+        timestamps: false,
+        deletedAt: false
+    }
 
-
-
-    let Item = sequelize.define(alias, cols);
+    let Item = sequelize.define(alias, cols, config);
     Item.associate = function (models) {
         Item.belongsTo(models.Cart, {
             as: "cart",

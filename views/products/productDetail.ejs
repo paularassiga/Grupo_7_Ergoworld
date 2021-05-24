@@ -58,34 +58,39 @@ css: ['/css/productDetails.css']}) %>
                     
 
                 </div>
-                <div class='container-bottons'>
-                    <% if (locals.isLogged && locals.userLogged.rol_id != 3) { %>
-                        <section>
-                            <button class="editarProducto">
-                                <a href='/productos/editar/<%= detalleProducto.id%>'>
-                                <i class="fas fa-edit"></i>
-                                Editar Producto
-                            </a>
-                            </button>
-                            <form action="/productos/borrar/<%= detalleProducto.id%>?_method=DELETE" method="POST" style="display: inline-flex">
-                                <button type="submit" class="delete-button">
-                                    <i class="fas fa-trash-alt"></i>
-                                    Eliminar Producto
-                                </button>
-                            </form>
-                            </section>
-                    <% } else { %>
-                        <div></div>
-                    <% } %>
+
                
                 <button type="submit" class="agregarAlCarritoBoton" >
                     <i class="fas fa-cart-plus"></i>
                     Agregar Al Carrito
                 </button>
             </form>
+            <div class='container-bottons'>
+                <% if (locals.isLogged && locals.userLogged.rol_id != 3) { %>
+                    <section>
+                        <button class="editarProducto">
+                            <a href='/productos/editar/<%= detalleProducto.id%>'>
+                            <i class="fas fa-edit"></i>
+                            Editar Producto
+                        </a>
+                        </button>
+                        
+                        </section>
+                        <form action="/productos/borrar/<%= detalleProducto.id%>?_method=DELETE" method="POST" style="display: inline-flex">
+                            <button type="submit" class="delete-button">
+                                <i class="fas fa-trash-alt"></i>
+                                Eliminar Producto
+                            </button>
+                        </form>
+                    </div>
+                <% } else { %>
+                    <div></div>
+                <% } %>
             </div>
             </div>
             </div>
+
+        
 
         </section>
         <section>
