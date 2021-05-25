@@ -22,10 +22,15 @@ module.exports = function (sequelize, dataTypes) {
             allowNull: false
         },
     }
-    
+
+    let config = {
+        tableName: 'carts',
+        timestamps: false,
+        deletedAt: false
+    }   
  
     
-    let Cart = sequelize.define(alias, cols);
+    let Cart = sequelize.define(alias, cols, config);
     
     Cart.associate = function (models){
         Cart.hasMany(models.Item, {
